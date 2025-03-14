@@ -13,10 +13,15 @@ import clean from "./plugins/plugin-clean.mjs";
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
 
-// 读取 packages 目录下非_开头的一级目录
+// 读取 packages 目录下非_开头文件夹中的所有文件夹
 const packages = readdirSync(resolve(__dirname, "packages"), { withFileTypes: true })
   .filter(dirent => dirent.isDirectory() && !dirent.name.startsWith('_'))
-  .map(dirent => `packages/${dirent.name}`);
+  .flatMap(category => {
+    const categoryPath = resolve(__dirname, "packages", category.name);
+    return readdirSync(categoryPath, { withFileTypes: true })
+      .filter(dirent => dirent.isDirectory() && dirent.name !== 'dist')
+      .map(dirent => `packages/${category.name}/${dirent.name}`);
+  });
 
 // 读取 package.json 并获取所有依赖
 const pkg = JSON.parse(readFileSync("./package.json", "utf8"));
@@ -34,7 +39,15 @@ export default defineConfig([
       },
       output: [
         {
-          dir: `${pkg}/dist`,
+          dir: `${pkg.split("/")[0]}/dist`,
+          format: "esm",
+        },
+        {
+          dir: `${pkg.split("/")[0]}/${pkg.split("/")[1]}/dist`,
+          format: "esm",
+        },
+        {
+          dir: `${pkg.split("/")[0]}/${pkg.split("/")[1]}/${pkg.split("/")[2]}/dist`,
           format: "esm",
           entryFileNames: "index.js",
         },
@@ -76,9 +89,19 @@ export default defineConfig([
       },
       output: [
         {
-          dir: `${pkg}/dist`,
+          dir: `${pkg.split("/")[0]}/dist`,
           format: "esm",
-          entryFileNames: "index.d.ts",
+          entryFileNames: "[name].d.ts",
+        },
+        {
+          dir: `${pkg.split("/")[0]}/${pkg.split("/")[1]}/dist`,
+          format: "esm",
+          entryFileNames: "[name].d.ts",
+        },
+        {
+          dir: `${pkg.split("/")[0]}/${pkg.split("/")[1]}/${pkg.split("/")[2]}/dist`,
+          format: "esm",
+          entryFileNames: "[name].d.ts",
         },
       ],
       plugins: [dts()],
