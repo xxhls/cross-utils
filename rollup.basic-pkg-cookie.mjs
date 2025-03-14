@@ -15,7 +15,17 @@ import clean from "./plugins/plugin-clean.mjs";
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
 
-const packages = ["."]
+// 读取 packages 目录下非_开头文件夹中的所有文件夹
+// const packages = readdirSync(resolve(__dirname, "packages"), { withFileTypes: true })
+//   .filter(dirent => dirent.isDirectory() && !dirent.name.startsWith('_'))
+//   .flatMap(category => {
+//     const categoryPath = resolve(__dirname, "packages", category.name);
+//     return readdirSync(categoryPath, { withFileTypes: true })
+//       .filter(dirent => dirent.isDirectory() && dirent.name !== 'dist')
+//       .map(dirent => `packages/${category.name}/${dirent.name}`);
+//   });
+
+const packages = ["packages/basic/packages/cookie"]
 
 // 读取 package.json 并获取所有依赖
 const pkg = JSON.parse(readFileSync("./package.json", "utf8"));
@@ -29,7 +39,7 @@ export default defineConfig([
     const name = pkg.split("/").pop();
     return {
       input: {
-        [name]: `${pkg}/main/index.ts`,
+        [name]: `${pkg}/index.ts`,
       },
       output: [
         {
@@ -84,7 +94,7 @@ export default defineConfig([
     const name = pkg.split("/").pop();
     return {
       input: {
-        [name]: `${pkg}/main/index.ts`,
+        [name]: `${pkg}/index.ts`,
       },
       output: [
         {
