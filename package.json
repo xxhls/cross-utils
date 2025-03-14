@@ -3,9 +3,9 @@
   "scripts": {
     "build:main": "rollup --config rollup.main.mjs --configPlugin typescript --bundleConfigAsCjs",
     "build:atom": "rollup --config rollup.atom.mjs --configPlugin typescript --bundleConfigAsCjs",
-    "build:atom:djtext": "rollup --config rollup.atom-pkg-djtext.mjs --configPlugin typescript --bundleConfigAsCjs",
+    "build:atom:pkg": "rollup --config rollup.atom-pkg.mjs --configPlugin typescript --bundleConfigAsCjs",
     "build:basic": "rollup --config rollup.basic.mjs --configPlugin typescript --bundleConfigAsCjs",
-    "build:basic:cookie": "rollup --config rollup.basic-pkg-cookie.mjs --configPlugin typescript --bundleConfigAsCjs",
+    "build:basic:cookie": "rollup --config rollup.basic-pkg.mjs --configPlugin typescript --bundleConfigAsCjs",
     "lint:fix": "eslint . --fix",
     "format": "prettier -w ."
   },

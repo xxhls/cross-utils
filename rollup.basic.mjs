@@ -25,7 +25,7 @@ const __dirname = fileURLToPath(new URL(".", import.meta.url));
 //       .map(dirent => `packages/${category.name}/${dirent.name}`);
 //   });
 
-const packages = ["packages/basic"]
+const packages = ["packages/basic"];
 
 // 读取 package.json 并获取所有依赖
 const pkg = JSON.parse(readFileSync("./package.json", "utf8"));
@@ -43,7 +43,7 @@ export default defineConfig([
       },
       output: [
         {
-          dir: `${pkg}/dist`,
+          dir: `${pkg}/main/dist`,
           format: "esm",
           entryFileNames: "index.js",
         },
@@ -98,7 +98,7 @@ export default defineConfig([
       },
       output: [
         {
-          dir: `${pkg}/dist`,
+          dir: `${pkg}/main/dist`,
           format: "esm",
           entryFileNames: "index.d.ts",
         },

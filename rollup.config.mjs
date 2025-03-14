@@ -15,7 +15,7 @@ import clean from "./plugins/plugin-clean.mjs";
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
 
-const packages = ["."]
+const packages = ["."];
 
 // 读取 package.json 并获取所有依赖
 const pkg = JSON.parse(readFileSync("./package.json", "utf8"));

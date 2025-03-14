@@ -1,5 +1,5 @@
 {
-  "name": "@test/cross-utils",
+  "name": "@test/cross-djview",
   "version": "0.0.1",
   "files": [
     "dist"

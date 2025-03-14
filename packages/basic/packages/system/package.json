@@ -1,4 +1,10 @@
 {
-  "name": "@cross-utils/system",
-  "version": "0.0.1"
+  "name": "@test/cross-system",
+  "version": "0.0.1",
+  "type": "module",
+  "files": [
+    "./dist"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts"
 }

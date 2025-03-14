@@ -1,11 +1,10 @@
 {
-  "name": "@cross-utils/basic",
+  "name": "@test/cross-basic",
   "version": "0.0.1",
   "type": "module",
   "files": [
     "./dist"
   ],
   "main": "./dist/index.js",
-  "module": "./dist/index.js",
   "types": "./dist/index.d.ts"
 }
