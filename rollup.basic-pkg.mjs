@@ -14,7 +14,8 @@ import autoprefixer from "autoprefixer";
 import clean from "./plugins/plugin-clean.mjs";
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
-const packages = ["packages/basic/packages/system"];
+const pkgName = process.argv[7];
+const packages = [`packages/basic/packages/${pkgName}`];
 
 // 读取 package.json 并获取所有依赖
 const pkg = JSON.parse(readFileSync("./package.json", "utf8"));

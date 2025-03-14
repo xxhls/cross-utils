@@ -81,7 +81,7 @@ export default defineConfig([
           tsconfig: resolve(__dirname, "tsconfig.json"),
         }),
         babel({
-          babelHelpers: "bundled",
+          babelHelpers: "runtime",
           exclude: "node_modules/**",
           presets: ["@babel/preset-env"],
           plugins: ["@babel/plugin-transform-runtime"],

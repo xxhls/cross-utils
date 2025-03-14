@@ -1,7 +1,7 @@
 import { defineConfig } from "rollup";
 import { resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import { readFileSync, readdirSync } from "node:fs";
+import { readFileSync } from "node:fs";
 import alias from "@rollup/plugin-alias";
 import commonjs from "@rollup/plugin-commonjs";
 import nodeResolve from "@rollup/plugin-node-resolve";
@@ -71,7 +71,7 @@ export default defineConfig([
           tsconfig: resolve(__dirname, "tsconfig.json"),
         }),
         babel({
-          babelHelpers: "bundled",
+          babelHelpers: "runtime",
           exclude: "node_modules/**",
           presets: ["@babel/preset-env"],
           plugins: ["@babel/plugin-transform-runtime"],

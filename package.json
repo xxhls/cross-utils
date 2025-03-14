@@ -2,12 +2,13 @@
   "type": "module",
   "scripts": {
     "build:main": "rollup --config rollup.main.mjs --configPlugin typescript --bundleConfigAsCjs",
-    "build:atom": "rollup --config rollup.atom.mjs --configPlugin typescript --bundleConfigAsCjs",
-    "build:atom:pkg": "rollup --config rollup.atom-pkg.mjs --configPlugin typescript --bundleConfigAsCjs",
+    "build:atoms": "rollup --config rollup.atom.mjs --configPlugin typescript --bundleConfigAsCjs",
+    "build:atoms:pkg": "rollup --config rollup.atom-pkg.mjs --configPlugin typescript --bundleConfigAsCjs",
     "build:basic": "rollup --config rollup.basic.mjs --configPlugin typescript --bundleConfigAsCjs",
-    "build:basic:cookie": "rollup --config rollup.basic-pkg.mjs --configPlugin typescript --bundleConfigAsCjs",
+    "build:basic:pkg": "rollup --config rollup.basic-pkg.mjs --configPlugin typescript --bundleConfigAsCjs",
     "lint:fix": "eslint . --fix",
-    "format": "prettier -w ."
+    "format": "prettier -w .",
+    "cli": "node cli/index.cjs"
   },
   "devDependencies": {
     "@babel/core": "7.26.10",
@@ -28,8 +29,10 @@
     "@types/node": "22.13.10",
     "@types/react": "18.2.0",
     "autoprefixer": "10.4.21",
+    "commander": "13.1.0",
     "eslint": "9.22.0",
     "eslint-config-unjs": "0.4.2",
+    "inquirer": "8.2.5",
     "jiti": "2.4.2",
     "postcss": "8.5.3",
     "prettier": "3.5.3",

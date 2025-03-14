@@ -14,7 +14,8 @@ import autoprefixer from "autoprefixer";
 import clean from "./plugins/plugin-clean.mjs";
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
-const packages = ["packages/atoms/packages/DJView"];
+const pkgName = process.argv[7];
+const packages = [`packages/atoms/packages/${pkgName}`];
 
 // 读取 package.json 并获取所有依赖
 const pkg = JSON.parse(readFileSync("./package.json", "utf8"));
@@ -70,7 +71,7 @@ export default defineConfig([
           tsconfig: resolve(__dirname, "tsconfig.json"),
         }),
         babel({
-          babelHelpers: "bundled",
+          babelHelpers: "runtime",
           exclude: "node_modules/**",
           presets: ["@babel/preset-env"],
           plugins: ["@babel/plugin-transform-runtime"],
