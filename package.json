@@ -2,7 +2,8 @@
   "type": "module",
   "scripts": {
     "build": "rollup -c --configPlugin typescript --bundleConfigAsCjs",
-    "format": "eslint . --fix && prettier -w ."
+    "lint:fix": "eslint . --fix",
+    "format": "prettier -w ."
   },
   "devDependencies": {
     "@babel/core": "7.26.10",

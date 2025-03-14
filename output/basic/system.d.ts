@@ -1,0 +1,55 @@
+import Taro from '@tarojs/taro';
+
+declare const System$1: {
+    px2px: (n: any) => number;
+    winWidth: number;
+    rpx(value: any): number;
+    scaleByScreen(value: any): number;
+    isAndroid: boolean;
+    isIOS: boolean;
+    isHarmonyOS: boolean;
+    hostVersionName: () => string;
+    isDebug: boolean;
+    bottomSafeArea: number;
+    topSafeArea: number;
+    windowWidth: number;
+    windowHeight: number;
+    statusBarHeight: number;
+    language: string;
+    screenWidth: number;
+    screenHeight: number;
+    deviceOrientation: keyof Taro.getSystemInfo.DeviceOrientation;
+    brand: string;
+    model: string;
+    pixelRatio: number;
+    version?: string;
+    system: string;
+    platform: string;
+    fontSizeSetting?: number;
+    SDKVersion?: string;
+    benchmarkLevel: number;
+    albumAuthorized?: boolean;
+    cameraAuthorized?: boolean;
+    locationAuthorized?: boolean;
+    microphoneAuthorized?: boolean;
+    notificationAuthorized?: boolean;
+    notificationAlertAuthorized?: boolean;
+    notificationBadgeAuthorized?: boolean;
+    notificationSoundAuthorized?: boolean;
+    phoneCalendarAuthorized?: boolean;
+    bluetoothEnabled?: boolean;
+    locationEnabled?: boolean;
+    wifiEnabled?: boolean;
+    safeArea?: TaroGeneral.SafeAreaResult;
+    locationReducedAccuracy?: boolean;
+    theme?: keyof Taro.getSystemInfo.Theme;
+    host?: Taro.getSystemInfo.Host;
+    enableDebug?: boolean;
+    environment?: string;
+    errMsg: string;
+};
+
+declare let System: typeof System$1;
+declare function needHighVersion(version: any): Promise<false | (0 | 1 | -1)>;
+
+export { System as default, needHighVersion };
