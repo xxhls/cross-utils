@@ -19,7 +19,8 @@
     "baseUrl": ".",
     "paths": {
       "@shared/*": ["./shared/*"]
-    }
+    },
+    "typeRoots": ["./node_modules/@types", "./types"]
   },
-  "include": ["basic/**/*.ts"]
+  "include": ["basic/**/*.ts", "types/**/*.d.ts"]
 }
