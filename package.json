@@ -8,7 +8,10 @@
     "build:basic:pkg": "rollup --config rollup.basic-pkg.mjs --configPlugin typescript --bundleConfigAsCjs",
     "lint:fix": "eslint . --fix",
     "format": "prettier -w .",
-    "cli": "node cli/index.cjs"
+    "cli": "node cli/index.cjs",
+    "generate:main": "node scripts/generateMainPackage.cjs",
+    "generate:atoms": "node scripts/generateSubPackage.cjs atoms",
+    "generate:basic": "node scripts/generateSubPackage.cjs basic"
   },
   "devDependencies": {
     "@babel/core": "7.26.10",
