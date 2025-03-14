@@ -1,7 +1,7 @@
 import { defineConfig } from "rollup";
 import { resolve } from "node:path";
-import { fileURLToPath } from 'node:url';
-import { readFileSync } from 'node:fs';
+import { fileURLToPath } from "node:url";
+import { readFileSync } from "node:fs";
 import alias from "@rollup/plugin-alias";
 import commonjs from "@rollup/plugin-commonjs";
 import nodeResolve from "@rollup/plugin-node-resolve";
@@ -11,7 +11,7 @@ import babel from "@rollup/plugin-babel";
 import { dts } from "rollup-plugin-dts";
 import clean from "./plugins/plugin-clean.mjs";
 
-const __dirname = fileURLToPath(new URL('.', import.meta.url));
+const __dirname = fileURLToPath(new URL(".", import.meta.url));
 
 const packages = [
   "basic/cookie",
@@ -19,26 +19,28 @@ const packages = [
   "basic/platform",
   "basic/login",
   "basic/query",
+  "basic/localStorage",
+  "basic/taishan",
 ];
 
 // 读取 package.json 并获取所有依赖
-const pkg = JSON.parse(readFileSync('./package.json', 'utf8'));
+const pkg = JSON.parse(readFileSync("./package.json", "utf8"));
 const external = [
   ...Object.keys(pkg.dependencies || {}),
-  ...Object.keys(pkg.peerDependencies || {})
+  ...Object.keys(pkg.peerDependencies || {}),
 ];
 
 export default defineConfig([
   ...packages.map((pkg) => {
-    const name = pkg.split('/').pop();
+    const name = pkg.split("/").pop();
     return {
       input: {
         [name]: `${pkg}/index.ts`,
       },
       output: [
         {
-          dir: `${pkg.split('/')[0]}/dist`,
-          format: 'esm',
+          dir: `${pkg.split("/")[0]}/dist`,
+          format: "esm",
         },
       ],
       plugins: [
@@ -67,15 +69,15 @@ export default defineConfig([
     };
   }),
   ...packages.map((pkg) => {
-    const name = pkg.split('/').pop();
+    const name = pkg.split("/").pop();
     return {
       input: {
         [name]: `${pkg}/index.ts`,
       },
       output: [
         {
-          dir: `${pkg.split('/')[0]}/dist`,
-          format: 'esm',
+          dir: `${pkg.split("/")[0]}/dist`,
+          format: "esm",
           entryFileNames: "[name].d.ts",
         },
       ],

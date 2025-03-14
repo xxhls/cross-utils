@@ -4,19 +4,22 @@ import rnModule from "./index.rn";
 import wxModule from "./index.weapp";
 import taroModule from "./index.taro";
 
-type LoginModule = typeof h5Module | typeof rnModule | typeof wxModule | typeof taroModule;
+type LoginModule =
+  | typeof h5Module
+  | typeof rnModule
+  | typeof wxModule
+  | typeof taroModule;
 
 let login: LoginModule | undefined = undefined;
 
 if (isWeb) {
-    login = h5Module;
+  login = h5Module;
 } else if (isReactNative) {
-    login = rnModule;
+  login = rnModule;
 } else if (isWxMiniProgram) {
-    login = wxModule;
+  login = wxModule;
 } else {
-    login = taroModule;
+  login = taroModule;
 }
 
 export default login;
-

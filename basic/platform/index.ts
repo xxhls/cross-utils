@@ -11,4 +11,3 @@ platform = isWeb ? h5Module : isReactNative ? rnModule : taroModule;
 
 export default platform;
 export type { PlatformModule };
-

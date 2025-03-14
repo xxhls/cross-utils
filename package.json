@@ -31,6 +31,7 @@
     "typescript": "5.8.2"
   },
   "dependencies": {
+    "@jd/sgm-mp": "4.0.0",
     "@jdreact/jdreact-core-lib": "3.0.25-harmony-develop2",
     "@tarojs/plugin-platform-h5": "3.6.35",
     "@tarojs/taro": "3.6.35",

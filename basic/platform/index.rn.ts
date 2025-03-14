@@ -3,10 +3,10 @@ import System from "../system";
 
 export const isH5 = false;
 export const isHourPRO = false;
-export const isDevelopment= false;
-export const isIOS = Platform.OS == 'ios';
-export const isAndroid = Platform.OS == 'android';
-export const isHarmonyOS =  false;
+export const isDevelopment = false;
+export const isIOS = Platform.OS == "ios";
+export const isAndroid = Platform.OS == "android";
+export const isHarmonyOS = false;
 export const isJDReactNativeWebView = true;
 export const isMiniprogram = false;
 export const isWeixin = false;
