@@ -1,10 +1,10 @@
 {
   "type": "module",
   "scripts": {
-    "build:main": "rollup --config rollup.main.mjs --configPlugin typescript --bundleConfigAsCjs",
-    "build:atoms": "rollup --config rollup.atom.mjs --configPlugin typescript --bundleConfigAsCjs",
+    "build:main": "rollup --config rollup.main.mjs --configPlugin typescript --bundleConfigAsCjs && npm run generate:main",
+    "build:atoms": "rollup --config rollup.atom.mjs --configPlugin typescript --bundleConfigAsCjs && npm run generate:atoms",
     "build:atoms:pkg": "rollup --config rollup.atom-pkg.mjs --configPlugin typescript --bundleConfigAsCjs",
-    "build:basic": "rollup --config rollup.basic.mjs --configPlugin typescript --bundleConfigAsCjs",
+    "build:basic": "rollup --config rollup.basic.mjs --configPlugin typescript --bundleConfigAsCjs && npm run generate:basic",
     "build:basic:pkg": "rollup --config rollup.basic-pkg.mjs --configPlugin typescript --bundleConfigAsCjs",
     "lint:fix": "eslint . --fix",
     "format": "prettier -w .",
