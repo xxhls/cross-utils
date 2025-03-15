@@ -1,7 +1,6 @@
 import { ILogin, TUserInfo } from "./ILogin";
 
-const { JDLogin } = require('@jdreact/jdreact-core-lib');
-
+const { JDLogin } = require("@jdreact/jdreact-core-lib");
 
 // export const goToLogin = () => {
 //     // 京东购物小程序
@@ -33,16 +32,16 @@ const { JDLogin } = require('@jdreact/jdreact-core-lib');
 //     return JDLogin.getUserInfo();
 // }
 class Login implements ILogin {
-    hasLogin():Promise<any> {
-        return JDLogin.isLogin();
-    }
-    isLogin(): Promise<any> {
-        return JDLogin.isLogin();
-    }
+  hasLogin(): Promise<any> {
+    return JDLogin.isLogin();
+  }
+  isLogin(): Promise<any> {
+    return JDLogin.isLogin();
+  }
 
-    doLogin(): Promise<any> {
-        return  JDLogin.doLogin();
-    }
+  doLogin(): Promise<any> {
+    return JDLogin.doLogin();
+  }
 }
 
 const login = new Login();

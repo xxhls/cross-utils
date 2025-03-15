@@ -7,80 +7,71 @@
 import { isHarmonyOS, isJDApp } from "../../Platform";
 
 const configSetting = {
-    newAddress: {
-        jd: {
-            url: 'router://JDBWebAddressModule/pushWebView',
-            version: ''
-        },
-        weapp: {
-            url: '',
-        },
-        h5: {
-            url: 'router://JDBWebAddressModule/pushWebView'
-        }
+  newAddress: {
+    jd: {
+      url: "router://JDBWebAddressModule/pushWebView",
+      version: "",
     },
-    
-    // 20240319 切换H5路由，未来全量稳定时，可删除showAddressSelectPage配置；
-    showAddressSelectPageNew: {
-        jd: {
-            url: 'router://JDBWebAddressModule/showAddressView',
-            version: ''
-        },
-        HarmonyOS: {
-            url: 'router://JDBizHybridModule/openURL'
-        },
-        weapp: {
-            url: '',
-        },
-        h5: {
-
-        }
+    weapp: {
+      url: "",
     },
-    // router://JDAddressModule/getCacheAddress
-    getCacheAddress: {
-        jd: {
-            url: 'router://JDAddressCacheModule/getAddressCache',
-            version: ''
-        },
-        HarmonyOS: {
-            url: 'router://JDAddressCacheModule/getAddressCache'
-        },
-        weapp: {
-            url: '',
-        },
-        h5: {
-
-        }
+    h5: {
+      url: "router://JDBWebAddressModule/pushWebView",
     },
-    getLocationAddress: {
-        jd: {
-            url: 'router://JDAddressModule/getLocationAddress',
-            version: ''
-        },
-        HarmonyOS: {
-            url: ''
-        },
-        weapp: {
-            url: '',
-        },
-        h5: {
+  },
 
-        }
+  // 20240319 切换H5路由，未来全量稳定时，可删除showAddressSelectPage配置；
+  showAddressSelectPageNew: {
+    jd: {
+      url: "router://JDBWebAddressModule/showAddressView",
+      version: "",
     },
-    openAddressListPage :{
-        jd: {
-            url: 'router://JDBWebAddressModule/pushWebView',
-            version: ''
-        },
-        weapp: {
-            url: '',
-        },
-        h5: {
-        }
-    }
-
-}
-
+    HarmonyOS: {
+      url: "router://JDBizHybridModule/openURL",
+    },
+    weapp: {
+      url: "",
+    },
+    h5: {},
+  },
+  // router://JDAddressModule/getCacheAddress
+  getCacheAddress: {
+    jd: {
+      url: "router://JDAddressCacheModule/getAddressCache",
+      version: "",
+    },
+    HarmonyOS: {
+      url: "router://JDAddressCacheModule/getAddressCache",
+    },
+    weapp: {
+      url: "",
+    },
+    h5: {},
+  },
+  getLocationAddress: {
+    jd: {
+      url: "router://JDAddressModule/getLocationAddress",
+      version: "",
+    },
+    HarmonyOS: {
+      url: "",
+    },
+    weapp: {
+      url: "",
+    },
+    h5: {},
+  },
+  openAddressListPage: {
+    jd: {
+      url: "router://JDBWebAddressModule/pushWebView",
+      version: "",
+    },
+    weapp: {
+      url: "",
+    },
+    h5: {},
+  },
+};
 
 /**
  * @description: 获取跳转配置信息
@@ -89,23 +80,20 @@ const configSetting = {
  */
 
 const getConfigSetting = (name: string) => {
-    if (name) {
-        const item = configSetting[name];
-        if (isJDApp) {
-            return item ? item.jd : undefined;
-        } 
-        if(isHarmonyOS){
-            return item ? item.HarmonyOS : undefined;
-        }
-        if (process.env.TARO_ENV === 'weapp') {
-            return item ? item.weapp : undefined;
-        } 
-        return item ? item.h5 : undefined;
-        
-    } 
-        return undefined;   
-}
-
-export {
-    getConfigSetting
+  if (name) {
+    const item = configSetting[name];
+    if (isJDApp) {
+      return item ? item.jd : undefined;
+    }
+    if (isHarmonyOS) {
+      return item ? item.HarmonyOS : undefined;
+    }
+    if (process.env.TARO_ENV === "weapp") {
+      return item ? item.weapp : undefined;
+    }
+    return item ? item.h5 : undefined;
+  }
+  return undefined;
 };
+
+export { getConfigSetting };

@@ -1,6 +1,3 @@
-
-
 export function subscribeAppState(callback) {
-
-    return () => { };
+  return () => {};
 }

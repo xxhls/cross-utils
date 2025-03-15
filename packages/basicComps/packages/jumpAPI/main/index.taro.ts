@@ -11,10 +11,10 @@
  */
 
 export interface jumpOption {
-	isSync?: string;
-	success?: Function;
-	fail?: Function;
-	complete?: Function;
+  isSync?: string;
+  success?: Function;
+  fail?: Function;
+  complete?: Function;
 }
 
 /**
@@ -36,18 +36,14 @@ const jumpToNative = (url: string, params = {}, opt: jumpOption = {}) => {};
  */
 const jumpToWeb = (url: string, params = {}, opt: jumpOption = {}) => {};
 
-const jump = (url: string, params = {}, opt: jumpOption = {}) => {
-};
-const jumpRouter = (url: string, params = {}, opt: jumpOption = {}) => {
-};
-const jumpToMini = (url: string, params = {}, opt: jumpOption = {}) => {
-};
+const jump = (url: string, params = {}, opt: jumpOption = {}) => {};
+const jumpRouter = (url: string, params = {}, opt: jumpOption = {}) => {};
+const jumpToMini = (url: string, params = {}, opt: jumpOption = {}) => {};
 const jumpAPI = {
-	jumpToWeb, //@deprecated 废弃，请使用jump方法替代
-	jump,
-	jumpRouter,
-	jumpToMini
+  jumpToWeb, //@deprecated 废弃，请使用jump方法替代
+  jump,
+  jumpRouter,
+  jumpToMini,
 };
-
 
 export default jumpAPI;

@@ -1,142 +1,151 @@
 /** @format */
 
-import SgmMpSDK from '@jd/sgm-mp';
-import Taro from '@tarojs/taro';
+import SgmMpSDK from "@jd/sgm-mp";
+import Taro from "@tarojs/taro";
 
 import {
-	ErrortType,
-	AddressInfoError,
-	RequestError,
-	BuriedPointException,
-	DataParsingError,
-	LifeCycleError,
-	InteractionError,
-	PageException,
-	ResourceError,
-	ResponseError,
-	ThirdPartyError,
-} from './errorCode';
+  ErrortType,
+  AddressInfoError,
+  RequestError,
+  BuriedPointException,
+  DataParsingError,
+  LifeCycleError,
+  InteractionError,
+  PageException,
+  ResourceError,
+  ResponseError,
+  ThirdPartyError,
+} from "./errorCode";
 
 interface CustomOptionsI {
-	code: ErrortType;
-	type:
-		| AddressInfoError
-		| RequestError
-		| ResponseError
-		| PageException
-		| ThirdPartyError
-		| DataParsingError
-		| LifeCycleError
-		| BuriedPointException
-		| ResourceError
-		| InteractionError;
-	msg: string;
+  code: ErrortType;
+  type:
+    | AddressInfoError
+    | RequestError
+    | ResponseError
+    | PageException
+    | ThirdPartyError
+    | DataParsingError
+    | LifeCycleError
+    | BuriedPointException
+    | ResourceError
+    | InteractionError;
+  msg: string;
 }
 
 class TaishanReport {
-	// Private static variable to store the singleton instance
-	private static instance: TaishanReport | null = null;
-	private instanse: any;
+  // Private static variable to store the singleton instance
+  private static instance: TaishanReport | null = null;
+  private instanse: any;
 
-	// Private constructor to prevent direct instantiation
-	private constructor() {
-		try {
-			// Initialize the SgmMpSDK instance
-			this.instanse = new SgmMpSDK({
-				sid: 'df076d05bfd840f7ae84bdbb0ec7073c',
-				pid: '9HwAEg@KfjKYllLgD34PzrR',
-				options: {
-					devPlatform: Taro, // If using a development framework, specify the framework object (Taro, uni)
-				},
-				openTrace: 'PFINDER',
-			});
-			jd.__sgm__.trace = {
-				PFINDER: {
-					preTrace(spanId) {
-						return { header: { 'X-MLAAS-AT': `wl=0&id=${spanId}&src=sgm-web` }, id: spanId }
-					},
-					postTrace(preReturn, response) {
-						// const key = 'X-MLAAS-AT'
-						const key = 'x-mlaas-at'
-						const val = response.getResponseHeader(key)
-						if (val) {
-							let id
-							val.split("&").some(x => {
-								const bool = !x.indexOf('id=')
-								if (bool) {
-									id = x
-								}
-								return bool
-							})
-							return {
-								name: `${key}:${val}`,
-								id: id && id.substr(3)
-							}
-						}
-					}
-				}
-			}
-		} catch (error) {
-			// console.error('Error initializing SgmMpSDK:', error);
-			// throw error;
-		}
-	}
+  // Private constructor to prevent direct instantiation
+  private constructor() {
+    try {
+      // Initialize the SgmMpSDK instance
+      this.instanse = new SgmMpSDK({
+        sid: "df076d05bfd840f7ae84bdbb0ec7073c",
+        pid: "9HwAEg@KfjKYllLgD34PzrR",
+        options: {
+          devPlatform: Taro, // If using a development framework, specify the framework object (Taro, uni)
+        },
+        openTrace: "PFINDER",
+      });
+      jd.__sgm__.trace = {
+        PFINDER: {
+          preTrace(spanId) {
+            return {
+              header: { "X-MLAAS-AT": `wl=0&id=${spanId}&src=sgm-web` },
+              id: spanId,
+            };
+          },
+          postTrace(preReturn, response) {
+            // const key = 'X-MLAAS-AT'
+            const key = "x-mlaas-at";
+            const val = response.getResponseHeader(key);
+            if (val) {
+              let id;
+              val.split("&").some((x) => {
+                const bool = !x.indexOf("id=");
+                if (bool) {
+                  id = x;
+                }
+                return bool;
+              });
+              return {
+                name: `${key}:${val}`,
+                id: id && id.substr(3),
+              };
+            }
+          },
+        },
+      };
+    } catch (error) {
+      // console.error('Error initializing SgmMpSDK:', error);
+      // throw error;
+    }
+  }
 
-	// Static method to get the singleton instance
-	static getInstance(): TaishanReport {
-		// If the instance is not yet created, create it
-		if (TaishanReport.instance === null) {
-			try {
-				TaishanReport.instance = new TaishanReport();
-			} catch (error) {
-				// console.error('Error creating TaishanReport instance:', error);
-				throw error;
-				// return { custom: () => {} };
-			}
-		}
-		// Return the instance
-		return TaishanReport.instance;
-	}
+  // Static method to get the singleton instance
+  static getInstance(): TaishanReport {
+    // If the instance is not yet created, create it
+    if (TaishanReport.instance === null) {
+      try {
+        TaishanReport.instance = new TaishanReport();
+      } catch (error) {
+        // console.error('Error creating TaishanReport instance:', error);
+        throw error;
+        // return { custom: () => {} };
+      }
+    }
+    // Return the instance
+    return TaishanReport.instance;
+  }
 
-	// Instance methods to call SgmMpSDK methods with try-catch
-	custom({ type, code, msg }: CustomOptionsI, pid?: string) {
-		try {
-			// return this.instanse.custom({ type, code, msg }, pid);
-			return this.instanse.custom({ type, code, msg:msg }, pid);
-		} catch (error) {
-			// console.error('Error in TaishanReport.custom:', error);
-			// throw error;
-		}
-	}
+  // Instance methods to call SgmMpSDK methods with try-catch
+  custom({ type, code, msg }: CustomOptionsI, pid?: string) {
+    try {
+      // return this.instanse.custom({ type, code, msg }, pid);
+      return this.instanse.custom({ type, code, msg: msg }, pid);
+    } catch (error) {
+      // console.error('Error in TaishanReport.custom:', error);
+      // throw error;
+    }
+  }
 
-	error(error: Error, pid?: string) {
-		try {
-			return this.instanse.error(error, pid);
-		} catch (error) {
-			// console.error('Error in TaishanReport.error:', error);
-			// throw error;
-		}
-	}
+  error(error: Error, pid?: string) {
+    try {
+      return this.instanse.error(error, pid);
+    } catch (error) {
+      // console.error('Error in TaishanReport.error:', error);
+      // throw error;
+    }
+  }
 
-	api({ url, status, code, msg, time, requestLength, requestType }, pid?: string) {
-		try {
-			this.instanse.api({ url, status, code, msg, time, requestLength, requestType }, pid);
-		} catch (error) {
-			// console.error('Error in TaishanReport.api:', error);
-			// throw error;
-		}
-	}
-	userInfo({ uid }) {
-		try {
-			// // console.error('获取实例-userInfo', uid);
-			this.instanse.setUserInfo({
-				uid: uid, //
-			});
-		} catch (error) {
-			// console.error('Error in TaishanReport.userInfo:', error);
-			// throw error;
-		}
-	}
+  api(
+    { url, status, code, msg, time, requestLength, requestType },
+    pid?: string,
+  ) {
+    try {
+      this.instanse.api(
+        { url, status, code, msg, time, requestLength, requestType },
+        pid,
+      );
+    } catch (error) {
+      // console.error('Error in TaishanReport.api:', error);
+      // throw error;
+    }
+  }
+  userInfo({ uid }) {
+    try {
+      // // console.error('获取实例-userInfo', uid);
+      this.instanse.setUserInfo({
+        uid: uid, //
+      });
+    } catch (error) {
+      // console.error('Error in TaishanReport.userInfo:', error);
+      // throw error;
+    }
+  }
 }
 
 // Export the singleton instance

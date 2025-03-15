@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback } from 'react';
+import { useState, useEffect, useRef, useCallback } from "react";
 import type { DependencyList } from "react";
 import { CPromise } from "./promise";
 
@@ -8,7 +8,7 @@ import { CPromise } from "./promise";
  * @param value 需要防抖的值
  * @param delay 延迟时间（毫秒）
  * @returns 防抖后的值
- * 
+ *
  * @example
  * const debouncedValue = useDebounce(searchTerm, 500);
  */
@@ -26,13 +26,13 @@ const useDebounceInternal = <T>(value: T, delay: number): T => {
 /**
  * 强制更新 Hook
  * @returns 强制更新函数
- * 
+ *
  * @example
  * const forceUpdate = useForceUpdate();
  * // 需要强制更新组件时调用
  * forceUpdate();
  */
-const useForceUpdateInternal = (): () => void => {
+const useForceUpdateInternal = (): (() => void) => {
   const [, setState] = useState({});
   return useCallback(() => setState({}), []);
 };
@@ -42,7 +42,7 @@ const useForceUpdateInternal = (): () => void => {
  * @template T 值的类型
  * @param value 当前值
  * @returns 上一个值
- * 
+ *
  * @example
  * const prevCount = usePrevious(count);
  */
@@ -60,7 +60,7 @@ const usePreviousInternal = <T>(value: T): T | undefined => {
  * @param value 需要节流的值
  * @param limit 节流时间间隔（毫秒）
  * @returns 节流后的值
- * 
+ *
  * @example
  * const throttledValue = useThrottle(scrollPosition, 100);
  */
@@ -69,12 +69,15 @@ const useThrottleInternal = <T>(value: T, limit: number): T => {
   const lastRan = useRef(Date.now());
 
   useEffect(() => {
-    const handler = setTimeout(() => {
-      if (Date.now() - lastRan.current >= limit) {
-        setThrottledValue(value);
-        lastRan.current = Date.now();
-      }
-    }, limit - (Date.now() - lastRan.current));
+    const handler = setTimeout(
+      () => {
+        if (Date.now() - lastRan.current >= limit) {
+          setThrottledValue(value);
+          lastRan.current = Date.now();
+        }
+      },
+      limit - (Date.now() - lastRan.current),
+    );
 
     return () => clearTimeout(handler);
   }, [value, limit]);
@@ -87,17 +90,21 @@ const useThrottleInternal = <T>(value: T, limit: number): T => {
  * @template T 状态对象的类型
  * @param initialState 初始状态值或返回初始状态的函数
  * @returns [当前状态, 更新状态的函数]
- * 
+ *
  * @example
  * const [state, setState] = useMergeState({ name: '', age: 0 });
  * setState({ name: 'John' }); // 只更新 name，保留其他属性
  */
-const useMergeStateInternal = <T extends Record<string, any>>(initialState?: T | (() => T)) => {
+const useMergeStateInternal = <T extends Record<string, any>>(
+  initialState?: T | (() => T),
+) => {
   const [state, setState] = useState<any>(initialState);
   const refResolve = useRef<any>();
 
-  const setMergedState = (newState?: Partial<T> | ((prevState: T) => Partial<T>)) => {
-    if (typeof newState === 'function') {
+  const setMergedState = (
+    newState?: Partial<T> | ((prevState: T) => Partial<T>),
+  ) => {
+    if (typeof newState === "function") {
       setState(newState);
     } else {
       setState((prevState?: T) => Object.assign({}, prevState, newState));
@@ -117,34 +124,39 @@ const useMergeStateInternal = <T extends Record<string, any>>(initialState?: T |
     };
   }, [state]);
 
-  return [state, setMergedState] as [T, (newState?: Partial<T> | ((prevState: T) => Partial<T>)) => CPromise<never>];
+  return [state, setMergedState] as [
+    T,
+    (newState?: Partial<T> | ((prevState: T) => Partial<T>)) => CPromise<never>,
+  ];
 };
 
 /**
  * 处理动作队列的自定义 Hook
  * 用于按顺序处理异步任务，确保任务按照添加顺序依次执行
- * 
+ *
  * @param callBack 处理每个队列项的回调函数
  * @returns 包含队列控制方法的对象
- * 
+ *
  * @example
  * const { processActionQueue } = useProcessActionQueue(async (args) => {
  *   await processItem(args);
  * });
- * 
+ *
  * // 添加任务到队列
  * await processActionQueue(itemData);
  */
 const useProcessActionQueueInternal = <T = any>(
-  callBack: (args: T, options?: Record<string, any>) => Promise<any>
+  callBack: (args: T, options?: Record<string, any>) => Promise<any>,
 ) => {
   // 是否正在处理任务的标志
   const isProcessing = useRef(false);
   // 存储待处理任务参数的队列
-  const refArgs = useRef<Array<{
-    args: T;
-    [key: string]: any;
-  }>>([]);
+  const refArgs = useRef<
+    Array<{
+      args: T;
+      [key: string]: any;
+    }>
+  >([]);
   // 当前队列状态的 Promise
   const refQueueStatus = useRef<Promise<any>>();
 
@@ -172,26 +184,26 @@ const useProcessActionQueueInternal = <T = any>(
    * @param option 配置选项
    * @param option.reProcess 是否重置队列并重新开始处理
    * @returns Promise 当前队列处理的Promise
-   * 
+   *
    * @example
    * // 普通添加任务
    * await processActionQueue(data);
-   * 
+   *
    * // 重置队列并添加新任务
    * await processActionQueue(data, { reProcess: true });
    */
-  const processActionQueue = useCallback(async (
-    args: T,
-    option?: { reProcess: boolean } & Record<string, any>
-  ) => {
-    if (option?.reProcess) {
-      refArgs.current = [];
-      isProcessing.current = false;
-    }
-    refArgs.current.push({ args, ...(option || {}) });
-    refQueueStatus.current = _processActionQueue();
-    await refQueueStatus.current;
-  }, [_processActionQueue]);
+  const processActionQueue = useCallback(
+    async (args: T, option?: { reProcess: boolean } & Record<string, any>) => {
+      if (option?.reProcess) {
+        refArgs.current = [];
+        isProcessing.current = false;
+      }
+      refArgs.current.push({ args, ...(option || {}) });
+      refQueueStatus.current = _processActionQueue();
+      await refQueueStatus.current;
+    },
+    [_processActionQueue],
+  );
 
   // 组件卸载时清空队列
   useEffect(() => {
@@ -206,7 +218,7 @@ const useProcessActionQueueInternal = <T = any>(
     /** 获取当前队列中的所有任务参数 */
     getArgsQueue: () => refArgs.current,
     /** 获取当前队列的处理状态 */
-    getQueuePendingStatus: () => refQueueStatus.current
+    getQueuePendingStatus: () => refQueueStatus.current,
   };
 };
 
@@ -236,9 +248,12 @@ export const useUnmount = (fn: () => void) => {
   const ref = useRef(fn);
   ref.current = fn;
 
-  useEffect(() => () => {
-    ref.current?.();
-  }, []);
+  useEffect(
+    () => () => {
+      ref.current?.();
+    },
+    [],
+  );
 };
 
 /**
@@ -275,20 +290,20 @@ function isDeepEqualReact(
   if (a === b) return true;
 
   // 如果a和b都是对象，并且不为null
-  if (a && b && typeof a === 'object' && typeof b === 'object') {
+  if (a && b && typeof a === "object" && typeof b === "object") {
     // 如果构造函数不同，则两个对象不相等
     if (a.constructor !== b.constructor) return false;
 
     let length; // 用于存储长度
-    let i;      // 用于循环迭代
-    let keys;   // 用于存储对象的键
+    let i; // 用于循环迭代
+    let keys; // 用于存储对象的键
     // 如果a是数组
     if (Array.isArray(a)) {
       length = a.length;
       // 如果两个数组长度不同，则不相等
       if (length !== b.length) return false;
       // 递归比较数组中的每个元素
-      for (i = length; i-- !== 0;)
+      for (i = length; i-- !== 0; )
         if (!isDeepEqualReact(a[i], b[i], ignoreKeys, debug)) return false;
       return true;
     }
@@ -327,7 +342,7 @@ function isDeepEqualReact(
       if (length !== b.length) return false;
       // 比较每个元素是否相同
       //@ts-ignore
-      for (i = length; i-- !== 0;) if (a[i] !== b[i]) return false;
+      for (i = length; i-- !== 0; ) if (a[i] !== b[i]) return false;
       return true;
     }
 
@@ -347,18 +362,18 @@ function isDeepEqualReact(
     if (length !== Object.keys(b).length) return false;
 
     // 检查b是否有a的所有键
-    for (i = length; i-- !== 0;)
+    for (i = length; i-- !== 0; )
       if (!Object.prototype.hasOwnProperty.call(b, keys[i])) return false;
 
     // 递归比较a和b的每个属性
-    for (i = length; i-- !== 0;) {
+    for (i = length; i-- !== 0; ) {
       const key = keys[i];
 
       // 如果当前键在忽略列表中，则跳过比较
       if (ignoreKeys?.includes(key)) continue;
 
       // React特定：跳过React元素的_owner属性，因为它包含循环引用
-      if (key === '_owner' && a.$$typeof) continue;
+      if (key === "_owner" && a.$$typeof) continue;
 
       // 递归比较对象中的每个属性
       if (!isDeepEqualReact(a[key], b[key], ignoreKeys, debug)) {
@@ -405,11 +420,12 @@ export function useDeepCompareMemoize(value: any, ignoreKeys?: any) {
 export default function useDeepCompareEffect(
   effect: React.EffectCallback, // 定义一个React副作用函数
   dependencies: DependencyList, // 定义副作用函数的依赖项数组
-  ignoreKeys?: string[] // 可选参数，定义在深度比较时需要忽略的对象键数组
+  ignoreKeys?: string[], // 可选参数，定义在深度比较时需要忽略的对象键数组
 ) {
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  useEffect( // 使用React的useEffect钩子
+  useEffect(
+    // 使用React的useEffect钩子
     effect, // 传入副作用函数
-    useDeepCompareMemoize(dependencies || [], ignoreKeys) // 使用自定义的深度比较函数处理依赖项数组，如果依赖项未提供，则传入空数组
+    useDeepCompareMemoize(dependencies || [], ignoreKeys), // 使用自定义的深度比较函数处理依赖项数组，如果依赖项未提供，则传入空数组
   );
 }

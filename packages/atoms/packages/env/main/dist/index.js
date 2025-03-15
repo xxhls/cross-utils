@@ -1,4 +1,4 @@
-import { getEnv, ENV_TYPE } from '@tarojs/taro';
+import { getEnv, ENV_TYPE } from "@tarojs/taro";
 
 const env = getEnv();
 // 微信小程序

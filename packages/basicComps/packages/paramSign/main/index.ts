@@ -1,14 +1,10 @@
-
-import ParamsSign from '@legos/js-security-jdxcx';
-import { SHA256 } from 'crypto-js';
+import ParamsSign from "@legos/js-security-jdxcx";
+import { SHA256 } from "crypto-js";
 
 // 接口加固
 export interface Bridge {
   libs?: {
-    ParamsSign?: (data: {
-      appId: string;
-      debug: boolean;
-    }) => {
+    ParamsSign?: (data: { appId: string; debug: boolean }) => {
       sign: (data: {
         functionId: string;
         appid: string;
@@ -16,9 +12,9 @@ export interface Bridge {
         clientVersion: string;
         t: string;
         body: string;
-      }) => void
+      }) => void;
     };
-  }
+  };
 }
 // export const createSign = async (businessId, colorParams) => {
 //   try {
@@ -47,9 +43,10 @@ const bridge: Bridge = {};
 export const createSign = async (businessId, data) => {
   //区分接口的渠道。https://joyspace.jd.com/pages/RpJtTC4L87KKXYukAUUq  加固文档
 
-  const Fasten = process.env.TARO_ENV === "jd" ? ParamsSign : bridge.libs?.ParamsSign;
+  const Fasten =
+    process.env.TARO_ENV === "jd" ? ParamsSign : bridge.libs?.ParamsSign;
 
-  if (!Fasten ) {
+  if (!Fasten) {
     return data;
   }
 
@@ -58,18 +55,18 @@ export const createSign = async (businessId, data) => {
       timeout: 0.5,
       businessId,
       debug: false, // 测试时开启调试，切记：上线后设置为false。
-      preRequest: false
+      preRequest: false,
     }).sign({
       functionId: data.functionId,
       appid: data.appid,
       client: data.client,
       clientVersion: data.clientVersion,
       t: data.t,
-      body: data.body && SHA256(JSON.stringify(data.body))
+      body: data.body && SHA256(JSON.stringify(data.body)),
     });
     data.h5st = h5st;
   } catch (e) {
     // console.error("请求：", e);
   }
   return data;
-}
+};

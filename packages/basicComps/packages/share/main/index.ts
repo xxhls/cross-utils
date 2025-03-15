@@ -12,13 +12,10 @@
 
 import { isJDApp } from "./Platform";
 
-
-
 // import jdsdk from '@jmfe/jd-jssdk';
-const jdsdk = require('@jmfe/jm-jdshare')
+const jdsdk = require("@jmfe/jm-jdshare");
 
-export interface shareOption {
-}
+export interface shareOption {}
 
 /**
  * @description: 通过OpenApp协议跳转webview容器，加载H5界面
@@ -28,26 +25,23 @@ export interface shareOption {
  * @return {*}
  */
 
-
 const setShare = (param) => {
-    if(isJDApp){
-        try {
-            jdsdk?.setShareInfo(param)
-        } catch (e) {
-            if (e.name === "JdShareException") {
-                // console.error('分享失败',e.toString());
-            } else {
-                // console.error('分享失败',e.message)
-            }
-        }
-    }else{
-        // console.log('非京东场域，无分享能力')
+  if (isJDApp) {
+    try {
+      jdsdk?.setShareInfo(param);
+    } catch (e) {
+      if (e.name === "JdShareException") {
+        // console.error('分享失败',e.toString());
+      } else {
+        // console.error('分享失败',e.message)
+      }
     }
-    
-}
-const shareAPI = {
-    setShare
+  } else {
+    // console.log('非京东场域，无分享能力')
+  }
 };
-
+const shareAPI = {
+  setShare,
+};
 
 export default shareAPI;
