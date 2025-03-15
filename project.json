@@ -1,0 +1,36 @@
+{
+  "name": "@test/cross-utils",
+  "mainPath": "./main",
+  "version": "1.0.0",
+  "packages": [
+    {
+      "name": "@test/cross-atoms",
+      "mainPath": "./packages/atoms/main",
+      "version": "1.0.0",
+      "packages": [
+        {
+          "name": "@test/cross-env",
+          "mainPath": "./packages/atoms/packages/env/main",
+          "version": "1.0.5"
+        }
+      ]
+    },
+    {
+      "name": "@test/cross-utils",
+      "mainPath": "./packages/basic/main",
+      "version": "1.0.0",
+      "packages": [
+        {
+          "name": "@test/cross-cookie",
+          "mainPath": "./packages/basic/packages/cookie/main",
+          "version": "1.0.0"
+        },
+        {
+          "name": "@test/cross-system",
+          "mainPath": "./packages/basic/packages/system/main",
+          "version": "1.0.0"
+        }
+      ]
+    }
+  ]
+}

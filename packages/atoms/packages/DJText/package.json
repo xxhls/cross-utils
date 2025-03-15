@@ -1,9 +1,0 @@
-{
-  "name": "@test/cross-djtext",
-  "version": "0.0.1",
-  "files": [
-    "dist"
-  ],
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts"
-}
