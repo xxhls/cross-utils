@@ -35,6 +35,8 @@
   "scripts": {
     "build": "rollup -c",
     "build:test": "cross-env PACKAGE_NAME=\"@test/cross-env\" rollup -c",
-    "release:test": "cross-env PACKAGE_NAME=\"@test/cross-env\" node scripts/release.mjs"
+    "release:test": "cross-env PACKAGE_NAME=\"@test/cross-env\" node scripts/release.mjs",
+    "generate:project": "node scripts/asyncProject.mjs",
+    "load:submodule": "git submodule update --init --recursive"
   }
 }
