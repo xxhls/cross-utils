@@ -1930,6 +1930,11 @@
   dependencies:
     "@tarojs/api" "3.6.35"
 
+"@test/cross-env@1.0.6":
+  version "1.0.6"
+  resolved "http://registry.m.jd.com/@test/cross-env/download/@test/cross-env-1.0.6.tgz#e78afac33aa23b799776d494f1edb75ea9da2445"
+  integrity sha1-54r6wzqiO3mXdtSU8e23XqnaJEU=
+
 "@types/estree@*", "@types/estree@1.0.6", "@types/estree@^1.0.0", "@types/estree@^1.0.6":
   version "1.0.6"
   resolved "http://registry.m.jd.com/@types/estree/download/@types/estree-1.0.6.tgz#628effeeae2064a1b4e79f78e81d87b7e5fc7b50"

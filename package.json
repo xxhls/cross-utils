@@ -30,7 +30,8 @@
     "@tarojs/helper": "3.6.35",
     "@tarojs/runtime": "3.6.35",
     "@tarojs/shared": "3.6.35",
-    "@tarojs/taro": "3.6.35"
+    "@tarojs/taro": "3.6.35",
+    "@test/cross-env": "1.0.6"
   },
   "scripts": {
     "build": "rollup -c",
