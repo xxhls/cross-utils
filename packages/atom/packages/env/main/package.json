@@ -1,0 +1,9 @@
+{
+  "name": "@test/cross-atom-env",
+  "version": "1.0.2",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts"
+}

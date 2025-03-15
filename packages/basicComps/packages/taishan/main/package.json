@@ -1,0 +1,9 @@
+{
+  "name": "@test/cross-basiccomps-taishan",
+  "version": "1.0.0",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts"
+}

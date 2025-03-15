@@ -20,7 +20,8 @@ async function scanDirectory(dirPath, basePath = "") {
     if (
       !entry.isDirectory() ||
       entry.name.startsWith(".") ||
-      entry.name === "node_modules"
+      entry.name === "node_modules" ||
+      entry.name === "examples"
     ) {
       continue;
     }

@@ -32,10 +32,16 @@
     "noUncheckedIndexedAccess": false,
     "baseUrl": ".",
     "paths": {
-      "@shared/*": ["./packages/_shared/*"]
+      "@types-def/*": ["./types/*"],
+      "@atom/*": ["./packages/atom/*"],
+      "@basicComps/*": ["./packages/basicComps/*"],
+      "@atom-shared/*": ["./packages/atom/packages/_shared/*"],
+      "@basicComps-shared/*": ["./packages/basicComps/packages/_shared/*"],
+      "@atom-pkg/*": ["./packages/atom/packages/*"],
+      "@basicComps-pkg/*": ["./packages/basicComps/packages/*"]
     },
     "typeRoots": ["./node_modules/@types", "./packages/_types"],
     "types": ["node"]
   },
-  "include": ["packages/**/*.ts", "packages/**/*.tsx", "packages/**/*.scss"]
+  "include": ["packages/**/*.ts", "packages/**/*.tsx", "packages/**/*.scss", "types/**/*.d.ts"]
 }

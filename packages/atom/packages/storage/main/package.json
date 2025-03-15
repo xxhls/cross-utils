@@ -1,0 +1,9 @@
+{
+  "name": "@test/cross-atom-storage",
+  "version": "1.0.1",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts"
+}

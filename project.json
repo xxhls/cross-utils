@@ -4,30 +4,160 @@
   "version": "1.0.0",
   "packages": [
     {
-      "name": "@test/cross-atoms",
-      "mainPath": "./packages/atoms/main",
-      "version": "1.0.0",
+      "name": "@test/cross-atom",
+      "mainPath": "./packages/atom/main",
+      "version": "1.0.1",
       "packages": [
         {
-          "name": "@test/cross-env",
-          "mainPath": "./packages/atoms/packages/env/main",
-          "version": "1.0.6"
+          "name": "@test/cross-atom-confirm",
+          "mainPath": "./packages/atom/packages/confirm/main",
+          "version": "1.0.2"
+        },
+        {
+          "name": "@test/cross-atom-cookie",
+          "mainPath": "./packages/atom/packages/cookie/main",
+          "version": "1.0.1"
+        },
+        {
+          "name": "@test/cross-atom-env",
+          "mainPath": "./packages/atom/packages/env/main",
+          "version": "1.0.2"
+        },
+        {
+          "name": "@test/cross-atom-getapp",
+          "mainPath": "./packages/atom/packages/getApp/main",
+          "version": "1.0.1"
+        },
+        {
+          "name": "@test/cross-atom-loading",
+          "mainPath": "./packages/atom/packages/loading/main",
+          "version": "1.0.1"
+        },
+        {
+          "name": "@test/cross-atom-navigate",
+          "mainPath": "./packages/atom/packages/navigate/main",
+          "version": "1.0.1"
+        },
+        {
+          "name": "@test/cross-atom-request",
+          "mainPath": "./packages/atom/packages/request/main",
+          "version": "1.0.3"
+        },
+        {
+          "name": "@test/cross-atom-storage",
+          "mainPath": "./packages/atom/packages/storage/main",
+          "version": "1.0.1"
+        },
+        {
+          "name": "@test/cross-atom-toast",
+          "mainPath": "./packages/atom/packages/toast/main",
+          "version": "1.0.1"
         }
       ]
     },
     {
-      "name": "@test/cross-utils",
-      "mainPath": "./packages/basic/main",
+      "name": "@test/cross-basiccomps",
+      "mainPath": "./packages/basicComps/main",
       "version": "1.0.0",
       "packages": [
         {
-          "name": "@test/cross-cookie",
-          "mainPath": "./packages/basic/packages/cookie/main",
+          "name": "@test/cross-basiccomps-cookie",
+          "mainPath": "./packages/basicComps/packages/Cookie/main",
           "version": "1.0.0"
         },
         {
-          "name": "@test/cross-system",
-          "mainPath": "./packages/basic/packages/system/main",
+          "name": "@test/cross-basiccomps-jdidentitysystem",
+          "mainPath": "./packages/basicComps/packages/JDIdentitySystem/main",
+          "version": "1.0.0"
+        },
+        {
+          "name": "@test/cross-basiccomps-localstorage",
+          "mainPath": "./packages/basicComps/packages/LocalStorage/main",
+          "version": "1.0.0"
+        },
+        {
+          "name": "@test/cross-basiccomps-locationhelper",
+          "mainPath": "./packages/basicComps/packages/LocationHelper/main",
+          "version": "1.0.0"
+        },
+        {
+          "name": "@test/cross-basiccomps-login",
+          "mainPath": "./packages/basicComps/packages/Login/main",
+          "version": "1.0.0"
+        },
+        {
+          "name": "@test/cross-basiccomps-mta",
+          "mainPath": "./packages/basicComps/packages/Mta/main",
+          "version": "1.0.0"
+        },
+        {
+          "name": "@test/cross-basiccomps-native",
+          "mainPath": "./packages/basicComps/packages/Native/main",
+          "version": "1.0.0"
+        },
+        {
+          "name": "@test/cross-basiccomps-navigator",
+          "mainPath": "./packages/basicComps/packages/Navigator/main",
+          "version": "1.0.0"
+        },
+        {
+          "name": "@test/cross-basiccomps-network",
+          "mainPath": "./packages/basicComps/packages/Network/main",
+          "version": "1.0.0"
+        },
+        {
+          "name": "@test/cross-basiccomps-platform",
+          "mainPath": "./packages/basicComps/packages/Platform/main",
+          "version": "1.0.0"
+        },
+        {
+          "name": "@test/cross-basiccomps-getqueryparam",
+          "mainPath": "./packages/basicComps/packages/getQueryParam/main",
+          "version": "1.0.0"
+        },
+        {
+          "name": "@test/cross-basiccomps-globallisten",
+          "mainPath": "./packages/basicComps/packages/globalListen/main",
+          "version": "1.0.0"
+        },
+        {
+          "name": "@test/cross-basiccomps-jdappnav",
+          "mainPath": "./packages/basicComps/packages/jdappNav/main",
+          "version": "1.0.0"
+        },
+        {
+          "name": "@test/cross-basiccomps-jumpapi",
+          "mainPath": "./packages/basicComps/packages/jumpAPI/main",
+          "version": "1.0.0"
+        },
+        {
+          "name": "@test/cross-basiccomps-observerclass",
+          "mainPath": "./packages/basicComps/packages/observerClass/main",
+          "version": "1.0.0"
+        },
+        {
+          "name": "@test/cross-basiccomps-openjdapp",
+          "mainPath": "./packages/basicComps/packages/openJDApp/main",
+          "version": "1.0.0"
+        },
+        {
+          "name": "@test/cross-basiccomps-paramsign",
+          "mainPath": "./packages/basicComps/packages/paramSign/main",
+          "version": "1.0.0"
+        },
+        {
+          "name": "@test/cross-basiccomps-share",
+          "mainPath": "./packages/basicComps/packages/share/main",
+          "version": "1.0.0"
+        },
+        {
+          "name": "@test/cross-basiccomps-system",
+          "mainPath": "./packages/basicComps/packages/system/main",
+          "version": "1.0.0"
+        },
+        {
+          "name": "@test/cross-basiccomps-taishan",
+          "mainPath": "./packages/basicComps/packages/taishan/main",
           "version": "1.0.0"
         }
       ]

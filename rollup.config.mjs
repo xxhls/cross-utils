@@ -2,6 +2,7 @@ import { defineConfig } from "rollup";
 import { existsSync, readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import alias from "@rollup/plugin-alias";
 import commonjs from "@rollup/plugin-commonjs";
 import nodeResolve from "@rollup/plugin-node-resolve";
 import json from "@rollup/plugin-json";
@@ -18,7 +19,9 @@ const projectJson = JSON.parse(
 const packageJson = JSON.parse(
   readFileSync(resolve(__dirname, "./package.json"), "utf-8"),
 );
-const external = Object.keys(packageJson.dependencies || {});
+const external = Object.keys(packageJson.dependencies || {}).filter(
+  (dep) => !dep.startsWith("@test/cross")
+);
 
 const packageName = process.env.PACKAGE_NAME || "@test/cross-utils";
 const mainPath = findMainPath(projectJson, packageName);
@@ -51,6 +54,17 @@ export default defineConfig([
       entryFileNames: "index.js",
     },
     plugins: [
+      alias({
+        entries: [
+          { find: "@types-def", replacement: resolve(__dirname, "./types") },
+          { find: "@atom", replacement: resolve(__dirname, "./packages/atom") },
+          { find: "@basicComps", replacement: resolve(__dirname, "./packages/basicComps") },
+          { find: "@atom-shared", replacement: resolve(__dirname, "./packages/atom/packages/_shared") },
+          { find: "@basicComps-shared", replacement: resolve(__dirname, "./packages/basicComps/packages/_shared") },
+          { find: "@atom-pkg", replacement: resolve(__dirname, "./packages/atom/packages") },
+          { find: "@basicComps-pkg", replacement: resolve(__dirname, "./packages/basicComps/packages") },
+        ],
+      }),
       commonjs({
         transformMixedEsModules: true,
         requireReturnsDefault: "auto",
