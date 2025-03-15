@@ -9,13 +9,14 @@
  * created by: zhangwenshun
  */
 
-import System from "../system";
+import System from "@basicComps-pkg/system/main";
 
 export const isH5 = false;
 export const isHourPRO = !System.isDebug;
 export const isDevelopment = System.isDebug;
 export const isIOS = !!System.isIOS;
 export const isAndroid = !!System.isAndroid;
+// @ts-ignore
 export const isHarmonyOS = !!System.isHarmonyOS;
 export const isJDReactNativeWebView = false;
 export const isMiniprogram = false;

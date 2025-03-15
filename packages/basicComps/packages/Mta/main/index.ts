@@ -1,28 +1,7 @@
-import { IMta } from "./IMta";
-import { ClickParam, ExposureParam, pvParam } from "./Report";
+import { isWeb, isRN } from "@test/cross-atom-env"
+import h5Module from "./index.h5";
+import rnModule from "./index.rn";
+import taroModule from "./index.taro";
 
-const mta = (() => {
-  if (process.env.TARO_ENV == "weapp") {
-    // 这里需要引入京东微信小程序提供的sdk
-    // eslint-disable-next-line global-require
-    const log = require("./weixinAppReport");
-
-    return log;
-  }
-  if (process.env.TARO_ENV == "jd") {
-    return {
-      click: (params: ClickParam) => {
-        jd?.sendClickData?.(params);
-      },
-      pv: (params: pvParam) => {
-        jd?.sendPvData?.(params);
-      },
-      exposure: (params: ExposureParam) => {
-        jd?.sendExposureData?.(params);
-      },
-    };
-  }
-  return null;
-})();
-
-export default mta as IMta;
+const mta = isWeb ? h5Module : isRN ? rnModule : taroModule || {};
+export default mta;

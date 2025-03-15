@@ -1,5 +1,5 @@
-import cookie from "../Cookie";
-import { isJDApp, isJingGouMiniprogram } from "../Platform";
+import cookie from "@basicComps-pkg/Cookie/main";
+import { isJDApp, isJingGouMiniprogram } from "@basicComps-pkg/Platform/main";
 
 /**
  * 获取设备指纹信息
@@ -76,6 +76,7 @@ export const getUUID = () => {
       return;
     } else {
       const openuuid =
+        // @ts-ignore
         cookie.get("openid") || cookie.get("__jda")?.split(".")[1] || "";
       resolve(openuuid);
       return;

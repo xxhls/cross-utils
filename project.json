@@ -63,17 +63,17 @@
         {
           "name": "@test/cross-basiccomps-cookie",
           "mainPath": "./packages/basicComps/packages/Cookie/main",
-          "version": "1.0.0"
+          "version": "1.0.1"
         },
         {
           "name": "@test/cross-basiccomps-jdidentitysystem",
           "mainPath": "./packages/basicComps/packages/JDIdentitySystem/main",
-          "version": "1.0.0"
+          "version": "1.0.1"
         },
         {
           "name": "@test/cross-basiccomps-localstorage",
           "mainPath": "./packages/basicComps/packages/LocalStorage/main",
-          "version": "1.0.0"
+          "version": "1.0.1"
         },
         {
           "name": "@test/cross-basiccomps-locationhelper",
@@ -83,12 +83,12 @@
         {
           "name": "@test/cross-basiccomps-login",
           "mainPath": "./packages/basicComps/packages/Login/main",
-          "version": "1.0.0"
+          "version": "1.0.1"
         },
         {
           "name": "@test/cross-basiccomps-mta",
           "mainPath": "./packages/basicComps/packages/Mta/main",
-          "version": "1.0.0"
+          "version": "1.0.1"
         },
         {
           "name": "@test/cross-basiccomps-native",
@@ -108,22 +108,22 @@
         {
           "name": "@test/cross-basiccomps-platform",
           "mainPath": "./packages/basicComps/packages/Platform/main",
-          "version": "1.0.0"
+          "version": "1.0.1"
         },
         {
           "name": "@test/cross-basiccomps-getqueryparam",
           "mainPath": "./packages/basicComps/packages/getQueryParam/main",
-          "version": "1.0.0"
+          "version": "1.0.3"
         },
         {
           "name": "@test/cross-basiccomps-globallisten",
           "mainPath": "./packages/basicComps/packages/globalListen/main",
-          "version": "1.0.0"
+          "version": "1.0.1"
         },
         {
           "name": "@test/cross-basiccomps-jdappnav",
           "mainPath": "./packages/basicComps/packages/jdappNav/main",
-          "version": "1.0.0"
+          "version": "1.0.1"
         },
         {
           "name": "@test/cross-basiccomps-jumpapi",
@@ -153,7 +153,7 @@
         {
           "name": "@test/cross-basiccomps-system",
           "mainPath": "./packages/basicComps/packages/system/main",
-          "version": "1.0.0"
+          "version": "1.0.2"
         },
         {
           "name": "@test/cross-basiccomps-taishan",

@@ -1,7 +1,7 @@
 import _ from "lodash";
 import Taro from "@tarojs/taro";
-import System from "../basicComps/system";
-import cookie from "../basicComps/Cookie";
+import System from "@basicComps-pkg/system/main";
+import cookie from "@basicComps-pkg/Cookie/main";
 
 const TYPE_UNDEFINED = "undefined";
 const TYPE_NULL = "null";

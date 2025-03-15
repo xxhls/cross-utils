@@ -1,6 +1,6 @@
 import { IMta, TClickParams, TEPParams, TPVParams, STDParams } from "./IMta";
 import { JDMta } from "@jdreact/jdreact-core-lib";
-import { dataConvert, isType } from "../../utils/dataUtils";
+import { dataConvert, isType } from "@basicComps-shared/dataUtils";
 
 class Mta implements IMta {
   constructor() {

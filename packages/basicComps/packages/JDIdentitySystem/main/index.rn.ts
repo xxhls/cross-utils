@@ -1,4 +1,4 @@
-import System from "../system/index.rn";
+import System from "@basicComps-pkg/system/main/index.rn";
 
 /**
  * 获取设备指纹信息

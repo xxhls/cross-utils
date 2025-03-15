@@ -9,7 +9,7 @@
  * created by: zhangwenshun
  */
 import { Platform } from "react-native";
-import System from "../system";
+import System from "@basicComps-pkg/system/main";
 
 export const isH5 = false;
 export const isHourPRO = false;

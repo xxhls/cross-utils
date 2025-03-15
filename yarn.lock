@@ -379,7 +379,7 @@
     "@babel/helper-plugin-utils" "^7.18.6"
     "@babel/plugin-syntax-optional-catch-binding" "^7.8.3"
 
-"@babel/plugin-proposal-optional-chaining@^7.13.12", "@babel/plugin-proposal-optional-chaining@^7.14.5", "@babel/plugin-proposal-optional-chaining@^7.20.0":
+"@babel/plugin-proposal-optional-chaining@^7.13.12", "@babel/plugin-proposal-optional-chaining@^7.14.5", "@babel/plugin-proposal-optional-chaining@^7.20.0", "@babel/plugin-proposal-optional-chaining@^7.21.0":
   version "7.21.0"
   resolved "http://registry.m.jd.com/@babel/plugin-proposal-optional-chaining/download/@babel/plugin-proposal-optional-chaining-7.21.0.tgz#886f5c8978deb7d30f678b2e24346b287234d3ea"
   integrity sha1-iG9ciXjet9MPZ4suJDRrKHI00+o=
@@ -1248,7 +1248,7 @@
   dependencies:
     regenerator-runtime "^0.13.11"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.14.5", "@babel/runtime@^7.8.4":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.14.5", "@babel/runtime@^7.7.6", "@babel/runtime@^7.8.4":
   version "7.26.10"
   resolved "http://registry.m.jd.com/@babel/runtime/download/@babel/runtime-7.26.10.tgz#a07b4d8fa27af131a633d7b3524db803eb4764c2"
   integrity sha1-oHtNj6J68TGmM9ezUk24A+tHZMI=
@@ -1290,170 +1290,90 @@
   resolved "http://registry.m.jd.com/@bcoe/v8-coverage/download/@bcoe/v8-coverage-1.0.2.tgz#bbe12dca5b4ef983a0d0af4b07b9bc90ea0ababa"
   integrity sha1-u+EtyltO+YOg0K9LB7m8kOoKuro=
 
-"@esbuild/aix-ppc64@0.19.12":
-  version "0.19.12"
-  resolved "http://registry.m.jd.com/@esbuild/aix-ppc64/download/@esbuild/aix-ppc64-0.19.12.tgz#d1bc06aedb6936b3b6d313bf809a5a40387d2b7f"
-  integrity sha1-0bwGrttpNrO20xO/gJpaQDh9K38=
-
 "@esbuild/aix-ppc64@0.25.1":
   version "0.25.1"
   resolved "http://registry.m.jd.com/@esbuild/aix-ppc64/download/@esbuild/aix-ppc64-0.25.1.tgz#c33cf6bbee34975626b01b80451cbb72b4c6c91d"
   integrity sha1-wzz2u+40l1YmsBuARRy7crTGyR0=
-
-"@esbuild/android-arm64@0.19.12":
-  version "0.19.12"
-  resolved "http://registry.m.jd.com/@esbuild/android-arm64/download/@esbuild/android-arm64-0.19.12.tgz#7ad65a36cfdb7e0d429c353e00f680d737c2aed4"
-  integrity sha1-etZaNs/bfg1CnDU+APaA1zfCrtQ=
 
 "@esbuild/android-arm64@0.25.1":
   version "0.25.1"
   resolved "http://registry.m.jd.com/@esbuild/android-arm64/download/@esbuild/android-arm64-0.25.1.tgz#ea766015c7d2655164f22100d33d7f0308a28d6d"
   integrity sha1-6nZgFcfSZVFk8iEA0z1/AwiijW0=
 
-"@esbuild/android-arm@0.19.12":
-  version "0.19.12"
-  resolved "http://registry.m.jd.com/@esbuild/android-arm/download/@esbuild/android-arm-0.19.12.tgz#b0c26536f37776162ca8bde25e42040c203f2824"
-  integrity sha1-sMJlNvN3dhYsqL3iXkIEDCA/KCQ=
-
 "@esbuild/android-arm@0.25.1":
   version "0.25.1"
   resolved "http://registry.m.jd.com/@esbuild/android-arm/download/@esbuild/android-arm-0.25.1.tgz#e84d2bf2fe2e6177a0facda3a575b2139fd3cb9c"
   integrity sha1-6E0r8v4uYXeg+s2jpXWyE5/Ty5w=
-
-"@esbuild/android-x64@0.19.12":
-  version "0.19.12"
-  resolved "http://registry.m.jd.com/@esbuild/android-x64/download/@esbuild/android-x64-0.19.12.tgz#cb13e2211282012194d89bf3bfe7721273473b3d"
-  integrity sha1-yxPiIRKCASGU2Jvzv+dyEnNHOz0=
 
 "@esbuild/android-x64@0.25.1":
   version "0.25.1"
   resolved "http://registry.m.jd.com/@esbuild/android-x64/download/@esbuild/android-x64-0.25.1.tgz#58337bee3bc6d78d10425e5500bd11370cfdfbed"
   integrity sha1-WDN77jvG140QQl5VAL0RNwz9++0=
 
-"@esbuild/darwin-arm64@0.19.12":
-  version "0.19.12"
-  resolved "http://registry.m.jd.com/@esbuild/darwin-arm64/download/@esbuild/darwin-arm64-0.19.12.tgz#cbee41e988020d4b516e9d9e44dd29200996275e"
-  integrity sha1-y+5B6YgCDUtRbp2eRN0pIAmWJ14=
-
 "@esbuild/darwin-arm64@0.25.1":
   version "0.25.1"
   resolved "http://registry.m.jd.com/@esbuild/darwin-arm64/download/@esbuild/darwin-arm64-0.25.1.tgz#a46805c1c585d451aa83be72500bd6e8495dd591"
   integrity sha1-pGgFwcWF1FGqg75yUAvW6Eld1ZE=
-
-"@esbuild/darwin-x64@0.19.12":
-  version "0.19.12"
-  resolved "http://registry.m.jd.com/@esbuild/darwin-x64/download/@esbuild/darwin-x64-0.19.12.tgz#e37d9633246d52aecf491ee916ece709f9d5f4cd"
-  integrity sha1-432WMyRtUq7PSR7pFuznCfnV9M0=
 
 "@esbuild/darwin-x64@0.25.1":
   version "0.25.1"
   resolved "http://registry.m.jd.com/@esbuild/darwin-x64/download/@esbuild/darwin-x64-0.25.1.tgz#0643e003bb238c63fc93ddbee7d26a003be3cd98"
   integrity sha1-BkPgA7sjjGP8k92+59JqADvjzZg=
 
-"@esbuild/freebsd-arm64@0.19.12":
-  version "0.19.12"
-  resolved "http://registry.m.jd.com/@esbuild/freebsd-arm64/download/@esbuild/freebsd-arm64-0.19.12.tgz#1ee4d8b682ed363b08af74d1ea2b2b4dbba76487"
-  integrity sha1-HuTYtoLtNjsIr3TR6isrTbunZIc=
-
 "@esbuild/freebsd-arm64@0.25.1":
   version "0.25.1"
   resolved "http://registry.m.jd.com/@esbuild/freebsd-arm64/download/@esbuild/freebsd-arm64-0.25.1.tgz#cff18da5469c09986b93e87979de5d6872fe8f8e"
   integrity sha1-z/GNpUacCZhrk+h5ed5daHL+j44=
-
-"@esbuild/freebsd-x64@0.19.12":
-  version "0.19.12"
-  resolved "http://registry.m.jd.com/@esbuild/freebsd-x64/download/@esbuild/freebsd-x64-0.19.12.tgz#37a693553d42ff77cd7126764b535fb6cc28a11c"
-  integrity sha1-N6aTVT1C/3fNcSZ2S1NftswooRw=
 
 "@esbuild/freebsd-x64@0.25.1":
   version "0.25.1"
   resolved "http://registry.m.jd.com/@esbuild/freebsd-x64/download/@esbuild/freebsd-x64-0.25.1.tgz#362fc09c2de14987621c1878af19203c46365dde"
   integrity sha1-Ni/AnC3hSYdiHBh4rxkgPEY2Xd4=
 
-"@esbuild/linux-arm64@0.19.12":
-  version "0.19.12"
-  resolved "http://registry.m.jd.com/@esbuild/linux-arm64/download/@esbuild/linux-arm64-0.19.12.tgz#be9b145985ec6c57470e0e051d887b09dddb2d4b"
-  integrity sha1-vpsUWYXsbFdHDg4FHYh7Cd3bLUs=
-
 "@esbuild/linux-arm64@0.25.1":
   version "0.25.1"
   resolved "http://registry.m.jd.com/@esbuild/linux-arm64/download/@esbuild/linux-arm64-0.25.1.tgz#aa90d5b02efc97a271e124e6d1cea490634f7498"
   integrity sha1-qpDVsC78l6Jx4STm0c6kkGNPdJg=
-
-"@esbuild/linux-arm@0.19.12":
-  version "0.19.12"
-  resolved "http://registry.m.jd.com/@esbuild/linux-arm/download/@esbuild/linux-arm-0.19.12.tgz#207ecd982a8db95f7b5279207d0ff2331acf5eef"
-  integrity sha1-IH7NmCqNuV97UnkgfQ/yMxrPXu8=
 
 "@esbuild/linux-arm@0.25.1":
   version "0.25.1"
   resolved "http://registry.m.jd.com/@esbuild/linux-arm/download/@esbuild/linux-arm-0.25.1.tgz#dfcefcbac60a20918b19569b4b657844d39db35a"
   integrity sha1-3878usYKIJGLGVabS2V4RNOds1o=
 
-"@esbuild/linux-ia32@0.19.12":
-  version "0.19.12"
-  resolved "http://registry.m.jd.com/@esbuild/linux-ia32/download/@esbuild/linux-ia32-0.19.12.tgz#d0d86b5ca1562523dc284a6723293a52d5860601"
-  integrity sha1-0NhrXKFWJSPcKEpnIyk6UtWGBgE=
-
 "@esbuild/linux-ia32@0.25.1":
   version "0.25.1"
   resolved "http://registry.m.jd.com/@esbuild/linux-ia32/download/@esbuild/linux-ia32-0.25.1.tgz#6f9527077ccb7953ed2af02e013d4bac69f13754"
   integrity sha1-b5UnB3zLeVPtKvAuAT1LrGnxN1Q=
 
-"@esbuild/linux-loong64@0.19.12":
-  version "0.19.12"
-  resolved "http://registry.m.jd.com/@esbuild/linux-loong64/download/@esbuild/linux-loong64-0.19.12.tgz#9a37f87fec4b8408e682b528391fa22afd952299"
-  integrity sha1-mjf4f+xLhAjmgrUoOR+iKv2VIpk=
+"@esbuild/linux-loong64@0.14.54":
+  version "0.14.54"
+  resolved "http://registry.m.jd.com/@esbuild/linux-loong64/download/@esbuild/linux-loong64-0.14.54.tgz#de2a4be678bd4d0d1ffbb86e6de779cde5999028"
+  integrity sha1-3ipL5ni9TQ0f+7hubed5zeWZkCg=
 
 "@esbuild/linux-loong64@0.25.1":
   version "0.25.1"
   resolved "http://registry.m.jd.com/@esbuild/linux-loong64/download/@esbuild/linux-loong64-0.25.1.tgz#287d2412a5456e5860c2839d42a4b51284d1697c"
   integrity sha1-KH0kEqVFblhgwoOdQqS1EoTRaXw=
 
-"@esbuild/linux-mips64el@0.19.12":
-  version "0.19.12"
-  resolved "http://registry.m.jd.com/@esbuild/linux-mips64el/download/@esbuild/linux-mips64el-0.19.12.tgz#4ddebd4e6eeba20b509d8e74c8e30d8ace0b89ec"
-  integrity sha1-Td69Tm7rogtQnY50yOMNis4Liew=
-
 "@esbuild/linux-mips64el@0.25.1":
   version "0.25.1"
   resolved "http://registry.m.jd.com/@esbuild/linux-mips64el/download/@esbuild/linux-mips64el-0.25.1.tgz#530574b9e1bc5d20f7a4f44c5f045e26f3783d57"
   integrity sha1-UwV0ueG8XSD3pPRMXwReJvN4PVc=
-
-"@esbuild/linux-ppc64@0.19.12":
-  version "0.19.12"
-  resolved "http://registry.m.jd.com/@esbuild/linux-ppc64/download/@esbuild/linux-ppc64-0.19.12.tgz#adb67dadb73656849f63cd522f5ecb351dd8dee8"
-  integrity sha1-rbZ9rbc2VoSfY81SL17LNR3Y3ug=
 
 "@esbuild/linux-ppc64@0.25.1":
   version "0.25.1"
   resolved "http://registry.m.jd.com/@esbuild/linux-ppc64/download/@esbuild/linux-ppc64-0.25.1.tgz#5d7e6b283a0b321ea42c6bc0abeb9eb99c1f5589"
   integrity sha1-XX5rKDoLMh6kLGvAq+ueuZwfVYk=
 
-"@esbuild/linux-riscv64@0.19.12":
-  version "0.19.12"
-  resolved "http://registry.m.jd.com/@esbuild/linux-riscv64/download/@esbuild/linux-riscv64-0.19.12.tgz#11bc0698bf0a2abf8727f1c7ace2112612c15adf"
-  integrity sha1-EbwGmL8KKr+HJ/HHrOIRJhLBWt8=
-
 "@esbuild/linux-riscv64@0.25.1":
   version "0.25.1"
   resolved "http://registry.m.jd.com/@esbuild/linux-riscv64/download/@esbuild/linux-riscv64-0.25.1.tgz#14fa0cd073c26b4ee2465d18cd1e18eea7859fa8"
   integrity sha1-FPoM0HPCa07iRl0YzR4Y7qeFn6g=
 
-"@esbuild/linux-s390x@0.19.12":
-  version "0.19.12"
-  resolved "http://registry.m.jd.com/@esbuild/linux-s390x/download/@esbuild/linux-s390x-0.19.12.tgz#e86fb8ffba7c5c92ba91fc3b27ed5a70196c3cc8"
-  integrity sha1-6G+4/7p8XJK6kfw7J+1acBlsPMg=
-
 "@esbuild/linux-s390x@0.25.1":
   version "0.25.1"
   resolved "http://registry.m.jd.com/@esbuild/linux-s390x/download/@esbuild/linux-s390x-0.25.1.tgz#e677b4b9d1b384098752266ccaa0d52a420dc1aa"
   integrity sha1-5ne0udGzhAmHUiZsyqDVKkINwao=
-
-"@esbuild/linux-x64@0.19.12":
-  version "0.19.12"
-  resolved "http://registry.m.jd.com/@esbuild/linux-x64/download/@esbuild/linux-x64-0.19.12.tgz#5f37cfdc705aea687dfe5dfbec086a05acfe9c78"
-  integrity sha1-XzfP3HBa6mh9/l377AhqBaz+nHg=
 
 "@esbuild/linux-x64@0.25.1":
   version "0.25.1"
@@ -1465,11 +1385,6 @@
   resolved "http://registry.m.jd.com/@esbuild/netbsd-arm64/download/@esbuild/netbsd-arm64-0.25.1.tgz#0d280b7dfe3973f111b02d5fe9f3063b92796d29"
   integrity sha1-DSgLff45c/ERsC1f6fMGO5J5bSk=
 
-"@esbuild/netbsd-x64@0.19.12":
-  version "0.19.12"
-  resolved "http://registry.m.jd.com/@esbuild/netbsd-x64/download/@esbuild/netbsd-x64-0.19.12.tgz#29da566a75324e0d0dd7e47519ba2f7ef168657b"
-  integrity sha1-KdpWanUyTg0N1+R1GbovfvFoZXs=
-
 "@esbuild/netbsd-x64@0.25.1":
   version "0.25.1"
   resolved "http://registry.m.jd.com/@esbuild/netbsd-x64/download/@esbuild/netbsd-x64-0.25.1.tgz#be663893931a4bb3f3a009c5cc24fa9681cc71c0"
@@ -1480,50 +1395,25 @@
   resolved "http://registry.m.jd.com/@esbuild/openbsd-arm64/download/@esbuild/openbsd-arm64-0.25.1.tgz#d9021b884233673a05dc1cc26de0bf325d824217"
   integrity sha1-2QIbiEIzZzoF3BzCbeC/Ml2CQhc=
 
-"@esbuild/openbsd-x64@0.19.12":
-  version "0.19.12"
-  resolved "http://registry.m.jd.com/@esbuild/openbsd-x64/download/@esbuild/openbsd-x64-0.19.12.tgz#306c0acbdb5a99c95be98bdd1d47c916e7dc3ff0"
-  integrity sha1-MGwKy9tamclb6YvdHUfJFufcP/A=
-
 "@esbuild/openbsd-x64@0.25.1":
   version "0.25.1"
   resolved "http://registry.m.jd.com/@esbuild/openbsd-x64/download/@esbuild/openbsd-x64-0.25.1.tgz#9f1dc1786ed2e2938c404b06bcc48be9a13250de"
   integrity sha1-nx3BeG7S4pOMQEsGvMSL6aEyUN4=
-
-"@esbuild/sunos-x64@0.19.12":
-  version "0.19.12"
-  resolved "http://registry.m.jd.com/@esbuild/sunos-x64/download/@esbuild/sunos-x64-0.19.12.tgz#0933eaab9af8b9b2c930236f62aae3fc593faf30"
-  integrity sha1-CTPqq5r4ubLJMCNvYqrj/Fk/rzA=
 
 "@esbuild/sunos-x64@0.25.1":
   version "0.25.1"
   resolved "http://registry.m.jd.com/@esbuild/sunos-x64/download/@esbuild/sunos-x64-0.25.1.tgz#89aac24a4b4115959b3f790192cf130396696c27"
   integrity sha1-iarCSktBFZWbP3kBks8TA5ZpbCc=
 
-"@esbuild/win32-arm64@0.19.12":
-  version "0.19.12"
-  resolved "http://registry.m.jd.com/@esbuild/win32-arm64/download/@esbuild/win32-arm64-0.19.12.tgz#773bdbaa1971b36db2f6560088639ccd1e6773ae"
-  integrity sha1-dzvbqhlxs22y9lYAiGOczR5nc64=
-
 "@esbuild/win32-arm64@0.25.1":
   version "0.25.1"
   resolved "http://registry.m.jd.com/@esbuild/win32-arm64/download/@esbuild/win32-arm64-0.25.1.tgz#354358647a6ea98ea6d243bf48bdd7a434999582"
   integrity sha1-NUNYZHpuqY6m0kO/SL3XpDSZlYI=
 
-"@esbuild/win32-ia32@0.19.12":
-  version "0.19.12"
-  resolved "http://registry.m.jd.com/@esbuild/win32-ia32/download/@esbuild/win32-ia32-0.19.12.tgz#000516cad06354cc84a73f0943a4aa690ef6fd67"
-  integrity sha1-AAUWytBjVMyEpz8JQ6SqaQ72/Wc=
-
 "@esbuild/win32-ia32@0.25.1":
   version "0.25.1"
   resolved "http://registry.m.jd.com/@esbuild/win32-ia32/download/@esbuild/win32-ia32-0.25.1.tgz#8cea7340f2647eba951a041dc95651e3908cd4cb"
   integrity sha1-jOpzQPJkfrqVGgQdyVZR45CM1Ms=
-
-"@esbuild/win32-x64@0.19.12":
-  version "0.19.12"
-  resolved "http://registry.m.jd.com/@esbuild/win32-x64/download/@esbuild/win32-x64-0.19.12.tgz#c57c8afbb4054a3ab8317591a0b7320360b444ae"
-  integrity sha1-xXyK+7QFSjq4MXWRoLcyA2C0RK4=
 
 "@esbuild/win32-x64@0.25.1":
   version "0.25.1"
@@ -1652,6 +1542,14 @@
   version "0.1.3"
   resolved "http://registry.m.jd.com/@istanbuljs/schema/download/@istanbuljs/schema-0.1.3.tgz#e45e384e4b8ec16bce2fd903af78450f6bf7ec98"
   integrity sha1-5F44TkuOwWvOL9kDr3hFD2v37Jg=
+
+"@jd/lbs-sdk@3":
+  version "3.0.2"
+  resolved "http://registry.m.jd.com/@jd/lbs-sdk/download/@jd/lbs-sdk-3.0.2.tgz#d28b257d14b00939a88e587e6f437920341f305a"
+  integrity sha1-0oslfRSwCTmojlh+b0N5IDQfMFo=
+  dependencies:
+    "@jmfe/jdhybrid_xbridge" "^1.0.4"
+    wxmp-rsa "1.1.1"
 
 "@jdreact/jdreact-core-debug@^1.0.3":
   version "1.0.3"
@@ -1821,6 +1719,13 @@
     "@types/node" "*"
     "@types/yargs" "^17.0.8"
     chalk "^4.0.0"
+
+"@jmfe/jdhybrid_xbridge@^1.0.4":
+  version "1.0.5"
+  resolved "http://registry.m.jd.com/@jmfe/jdhybrid_xbridge/download/@jmfe/jdhybrid_xbridge-1.0.5.tgz#cd164df6cde06b27920a3ba8012b046d3f1d3ae1"
+  integrity sha1-zRZN9s3gayeSCjuoASsEbT8dOuE=
+  dependencies:
+    "@babel/plugin-proposal-optional-chaining" "^7.21.0"
 
 "@jridgewell/gen-mapping@^0.3.5":
   version "0.3.8"
@@ -2322,81 +2227,78 @@
   dependencies:
     "@sinonjs/commons" "^3.0.0"
 
-"@swc/core-darwin-arm64@1.3.96":
-  version "1.3.96"
-  resolved "http://registry.m.jd.com/@swc/core-darwin-arm64/download/@swc/core-darwin-arm64-1.3.96.tgz#7c1c4245ce3f160a5b36a48ed071e3061a839e1d"
-  integrity sha1-fBxCRc4/FgpbNqSO0HHjBhqDnh0=
+"@stencil/core@^2.22.2":
+  version "2.22.3"
+  resolved "http://registry.m.jd.com/@stencil/core/download/@stencil/core-2.22.3.tgz#83987e20bba855c450f6d6780e3a20192603f13f"
+  integrity sha1-g5h+ILuoVcRQ9tZ4DjogGSYD8T8=
 
-"@swc/core-darwin-x64@1.3.96":
-  version "1.3.96"
-  resolved "http://registry.m.jd.com/@swc/core-darwin-x64/download/@swc/core-darwin-x64-1.3.96.tgz#4720ff897ca3f22fe77d0be688968161480c80f0"
-  integrity sha1-RyD/iXyj8i/nfQvmiJaBYUgMgPA=
+"@swc/core-darwin-arm64@1.3.23":
+  version "1.3.23"
+  resolved "http://registry.m.jd.com/@swc/core-darwin-arm64/download/@swc/core-darwin-arm64-1.3.23.tgz#5e52f19bf96eef92d2ae0533e1598a717b2ca765"
+  integrity sha1-XlLxm/lu75LSrgUz4VmKcXssp2U=
 
-"@swc/core-linux-arm-gnueabihf@1.3.96":
-  version "1.3.96"
-  resolved "http://registry.m.jd.com/@swc/core-linux-arm-gnueabihf/download/@swc/core-linux-arm-gnueabihf-1.3.96.tgz#2c238ae00b13918ac058b132a31dc57dbcf94e39"
-  integrity sha1-LCOK4AsTkYrAWLEyox3Ffbz5Tjk=
+"@swc/core-darwin-x64@1.3.23":
+  version "1.3.23"
+  resolved "http://registry.m.jd.com/@swc/core-darwin-x64/download/@swc/core-darwin-x64-1.3.23.tgz#3a466b47821284e7fcab6ee7c5b8251dfec0697a"
+  integrity sha1-OkZrR4IShOf8q27nxbglHf7AaXo=
 
-"@swc/core-linux-arm64-gnu@1.3.96":
-  version "1.3.96"
-  resolved "http://registry.m.jd.com/@swc/core-linux-arm64-gnu/download/@swc/core-linux-arm64-gnu-1.3.96.tgz#be2e84506b9761b561fb9a341e587f8594a8e55d"
-  integrity sha1-vi6EUGuXYbVh+5o0Hlh/hZSo5V0=
+"@swc/core-linux-arm-gnueabihf@1.3.23":
+  version "1.3.23"
+  resolved "http://registry.m.jd.com/@swc/core-linux-arm-gnueabihf/download/@swc/core-linux-arm-gnueabihf-1.3.23.tgz#42984694b7ffc508188e64bdba6379c37fbf4abf"
+  integrity sha1-QphGlLf/xQgYjmS9umN5w3+/Sr8=
 
-"@swc/core-linux-arm64-musl@1.3.96":
-  version "1.3.96"
-  resolved "http://registry.m.jd.com/@swc/core-linux-arm64-musl/download/@swc/core-linux-arm64-musl-1.3.96.tgz#22c9ce17bd923ae358760e668ca33c90210c2ae5"
-  integrity sha1-IsnOF72SOuNYdg5mjKM8kCEMKuU=
+"@swc/core-linux-arm64-gnu@1.3.23":
+  version "1.3.23"
+  resolved "http://registry.m.jd.com/@swc/core-linux-arm64-gnu/download/@swc/core-linux-arm64-gnu-1.3.23.tgz#6579f0f715a9646ab0ddcbaec2cd94815788c4af"
+  integrity sha1-ZXnw9xWpZGqw3cuuws2UgVeIxK8=
 
-"@swc/core-linux-x64-gnu@1.3.96":
-  version "1.3.96"
-  resolved "http://registry.m.jd.com/@swc/core-linux-x64-gnu/download/@swc/core-linux-x64-gnu-1.3.96.tgz#c17c072e338341c0ac3507a31ab2a36d16d79c98"
-  integrity sha1-wXwHLjODQcCsNQejGrKjbRbXnJg=
+"@swc/core-linux-arm64-musl@1.3.23":
+  version "1.3.23"
+  resolved "http://registry.m.jd.com/@swc/core-linux-arm64-musl/download/@swc/core-linux-arm64-musl-1.3.23.tgz#5c377db95ca3ceca3222945ce170398691e57863"
+  integrity sha1-XDd9uVyjzsoyIpRc4XA5hpHleGM=
 
-"@swc/core-linux-x64-musl@1.3.96":
-  version "1.3.96"
-  resolved "http://registry.m.jd.com/@swc/core-linux-x64-musl/download/@swc/core-linux-x64-musl-1.3.96.tgz#eb74594a48b4e9cabdce7f5525b3b946f8d6dd16"
-  integrity sha1-63RZSki06cq9zn9VJbO5RvjW3RY=
+"@swc/core-linux-x64-gnu@1.3.23":
+  version "1.3.23"
+  resolved "http://registry.m.jd.com/@swc/core-linux-x64-gnu/download/@swc/core-linux-x64-gnu-1.3.23.tgz#e77b3a63c800418ea234d70c1a0ad5762367b6d5"
+  integrity sha1-53s6Y8gAQY6iNNcMGgrVdiNnttU=
 
-"@swc/core-win32-arm64-msvc@1.3.96":
-  version "1.3.96"
-  resolved "http://registry.m.jd.com/@swc/core-win32-arm64-msvc/download/@swc/core-win32-arm64-msvc-1.3.96.tgz#6f7c0d20d80534b0676dc6761904288c16e93857"
-  integrity sha1-b3wNINgFNLBnbcZ2GQQojBbpOFc=
+"@swc/core-linux-x64-musl@1.3.23":
+  version "1.3.23"
+  resolved "http://registry.m.jd.com/@swc/core-linux-x64-musl/download/@swc/core-linux-x64-musl-1.3.23.tgz#f8cac09286f9ffaffe990ef61e759ce3785fd02e"
+  integrity sha1-+MrAkob5/6/+mQ72HnWc43hf0C4=
 
-"@swc/core-win32-ia32-msvc@1.3.96":
-  version "1.3.96"
-  resolved "http://registry.m.jd.com/@swc/core-win32-ia32-msvc/download/@swc/core-win32-ia32-msvc-1.3.96.tgz#47bb24ef2e4c81407a6786649246983cc69e7854"
-  integrity sha1-R7sk7y5MgUB6Z4ZkkkaYPMaeeFQ=
+"@swc/core-win32-arm64-msvc@1.3.23":
+  version "1.3.23"
+  resolved "http://registry.m.jd.com/@swc/core-win32-arm64-msvc/download/@swc/core-win32-arm64-msvc-1.3.23.tgz#7a723c3e5360573b5c1d21e504e3c11cc3cc024c"
+  integrity sha1-enI8PlNgVztcHSHlBOPBHMPMAkw=
 
-"@swc/core-win32-x64-msvc@1.3.96":
-  version "1.3.96"
-  resolved "http://registry.m.jd.com/@swc/core-win32-x64-msvc/download/@swc/core-win32-x64-msvc-1.3.96.tgz#c796e3df7afe2875d227c74add16a7d09c77d8bd"
-  integrity sha1-x5bj33r+KHXSJ8dK3Ran0Jx32L0=
+"@swc/core-win32-ia32-msvc@1.3.23":
+  version "1.3.23"
+  resolved "http://registry.m.jd.com/@swc/core-win32-ia32-msvc/download/@swc/core-win32-ia32-msvc-1.3.23.tgz#43a439fc21144682e624d46ba4da5e7bb33b2629"
+  integrity sha1-Q6Q5/CEURoLmJNRrpNpee7M7Jik=
 
-"@swc/core@1.3.96":
-  version "1.3.96"
-  resolved "http://registry.m.jd.com/@swc/core/download/@swc/core-1.3.96.tgz#f04d58b227ceed2fee6617ce2cdddf21d0803f96"
-  integrity sha1-8E1YsifO7S/uZhfOLN3fIdCAP5Y=
-  dependencies:
-    "@swc/counter" "^0.1.1"
-    "@swc/types" "^0.1.5"
+"@swc/core-win32-x64-msvc@1.3.23":
+  version "1.3.23"
+  resolved "http://registry.m.jd.com/@swc/core-win32-x64-msvc/download/@swc/core-win32-x64-msvc-1.3.23.tgz#00ad332d847f2e3961d7bba4d1886dd767e1f92e"
+  integrity sha1-AK0zLYR/Ljlh17uk0Yht12fh+S4=
+
+"@swc/core@1.3.23":
+  version "1.3.23"
+  resolved "http://registry.m.jd.com/@swc/core/download/@swc/core-1.3.23.tgz#62078fb161fad7edf7c8a8267cceccdeb2ab4a0d"
+  integrity sha1-YgePsWH61+33yKgmfM7M3rKrSg0=
   optionalDependencies:
-    "@swc/core-darwin-arm64" "1.3.96"
-    "@swc/core-darwin-x64" "1.3.96"
-    "@swc/core-linux-arm-gnueabihf" "1.3.96"
-    "@swc/core-linux-arm64-gnu" "1.3.96"
-    "@swc/core-linux-arm64-musl" "1.3.96"
-    "@swc/core-linux-x64-gnu" "1.3.96"
-    "@swc/core-linux-x64-musl" "1.3.96"
-    "@swc/core-win32-arm64-msvc" "1.3.96"
-    "@swc/core-win32-ia32-msvc" "1.3.96"
-    "@swc/core-win32-x64-msvc" "1.3.96"
+    "@swc/core-darwin-arm64" "1.3.23"
+    "@swc/core-darwin-x64" "1.3.23"
+    "@swc/core-linux-arm-gnueabihf" "1.3.23"
+    "@swc/core-linux-arm64-gnu" "1.3.23"
+    "@swc/core-linux-arm64-musl" "1.3.23"
+    "@swc/core-linux-x64-gnu" "1.3.23"
+    "@swc/core-linux-x64-musl" "1.3.23"
+    "@swc/core-win32-arm64-msvc" "1.3.23"
+    "@swc/core-win32-ia32-msvc" "1.3.23"
+    "@swc/core-win32-x64-msvc" "1.3.23"
 
-"@swc/counter@^0.1.1", "@swc/counter@^0.1.3":
-  version "0.1.3"
-  resolved "http://registry.m.jd.com/@swc/counter/download/@swc/counter-0.1.3.tgz#cc7463bd02949611c6329596fccd2b0ec782b0e9"
-  integrity sha1-zHRjvQKUlhHGMpWW/M0rDseCsOk=
-
-"@swc/register@0.1.10":
+"@swc/register@^0.1.10":
   version "0.1.10"
   resolved "http://registry.m.jd.com/@swc/register/download/@swc/register-0.1.10.tgz#74a20b7559669e03479b05e9e5c6d1524d4d92a2"
   integrity sha1-dKILdVlmngNHmwXp5cbRUk1NkqI=
@@ -2405,26 +2307,61 @@
     pirates "^4.0.1"
     source-map-support "^0.5.13"
 
-"@swc/types@^0.1.5":
-  version "0.1.19"
-  resolved "http://registry.m.jd.com/@swc/types/download/@swc/types-0.1.19.tgz#65d9fe81e0a1dc7e861ad698dd581abe3703a2d2"
-  integrity sha1-Zdn+geCh3H6GGtaY3VgavjcDotI=
-  dependencies:
-    "@swc/counter" "^0.1.3"
-
-"@tarojs/api@3.6.35":
-  version "3.6.35"
-  resolved "http://registry.m.jd.com/@tarojs/api/download/@tarojs/api-3.6.35.tgz#45bfa3046af747255aa57d21e56f2b5532fff096"
-  integrity sha1-Rb+jBGr3RyVapX0h5W8rVTL/8JY=
+"@tarojs/api@3.6.6":
+  version "3.6.6"
+  resolved "http://registry.m.jd.com/@tarojs/api/download/@tarojs/api-3.6.6.tgz#ef70b9d71af623cb5fe14ab5c61aebb49c53352e"
+  integrity sha1-73C51xr2I8tf4Uq1xhrrtJxTNS4=
   dependencies:
     "@babel/runtime" "^7.14.5"
-    "@tarojs/runtime" "3.6.35"
-    "@tarojs/shared" "3.6.35"
+    "@tarojs/runtime" "3.6.6"
+    "@tarojs/shared" "3.6.6"
 
-"@tarojs/helper@3.6.35":
-  version "3.6.35"
-  resolved "http://registry.m.jd.com/@tarojs/helper/download/@tarojs/helper-3.6.35.tgz#3b443262fd262acbe31a58c7a09b869aeb7de771"
-  integrity sha1-O0QyYv0mKsvjGljHoJuGmut953E=
+"@tarojs/components-advanced@3.6.6":
+  version "3.6.6"
+  resolved "http://registry.m.jd.com/@tarojs/components-advanced/download/@tarojs/components-advanced-3.6.6.tgz#b08b50b075d44ff7cb5cb5470b7b91d8d9ef4ac1"
+  integrity sha1-sItQsHXUT/fLXLVHC3uR2NnvSsE=
+  dependencies:
+    "@tarojs/components" "3.6.6"
+    "@tarojs/runtime" "3.6.6"
+    "@tarojs/shared" "3.6.6"
+    "@tarojs/taro" "3.6.6"
+    memoize-one "^6.0.0"
+    postcss "^8.4.18"
+
+"@tarojs/components-react@3.6.6":
+  version "3.6.6"
+  resolved "http://registry.m.jd.com/@tarojs/components-react/download/@tarojs/components-react-3.6.6.tgz#74a51e6ccc9ba37c9a476118919969ce6f9c9848"
+  integrity sha1-dKUebMybo3yaR2EYkZlpzm+cmEg=
+  dependencies:
+    "@babel/runtime" "^7.14.5"
+    "@tarojs/components" "3.6.6"
+    "@tarojs/taro" "3.6.6"
+    classnames "^2.2.5"
+    intersection-observer "^0.7.0"
+    resolve-pathname "^3.0.0"
+    swiper "6.8.0"
+    weui "^1.1.2"
+
+"@tarojs/components@3.6.6":
+  version "3.6.6"
+  resolved "http://registry.m.jd.com/@tarojs/components/download/@tarojs/components-3.6.6.tgz#aa7070d99f8eac9f960eacb163c02fdf5a9a7fdc"
+  integrity sha1-qnBw2Z+OrJ+WDqyxY8Av31qaf9w=
+  dependencies:
+    "@stencil/core" "^2.22.2"
+    "@tarojs/components-advanced" "3.6.6"
+    "@tarojs/router" "3.6.6"
+    "@tarojs/taro" "3.6.6"
+    classnames "^2.2.5"
+    hls.js "^1.1.5"
+    intersection-observer "^0.7.0"
+    resolve-pathname "^3.0.0"
+    swiper "6.8.0"
+    weui "^1.1.2"
+
+"@tarojs/helper@3.6.6":
+  version "3.6.6"
+  resolved "http://registry.m.jd.com/@tarojs/helper/download/@tarojs/helper-3.6.6.tgz#17aa3c98535f2789988cc2b4847518e7724d81a8"
+  integrity sha1-F6o8mFNfJ4mYjMK0hHUY53JNgag=
   dependencies:
     "@babel/core" "^7.14.5"
     "@babel/parser" "^7.14.5"
@@ -2436,16 +2373,14 @@
     "@babel/register" "^7.14.5"
     "@babel/runtime" "^7.14.5"
     "@babel/traverse" "^7.14.5"
-    "@swc/core" "1.3.96"
-    "@swc/register" "0.1.10"
+    "@swc/core" "1.3.23"
+    "@swc/register" "^0.1.10"
     ansi-escapes "^4.3.2"
     chalk "3.0.0"
     chokidar "^3.3.1"
     cross-spawn "^7.0.3"
     debug "4.3.4"
-    dotenv "^16.0.3"
-    dotenv-expand "^9.0.0"
-    esbuild "~0.19.5"
+    esbuild "^0.14.27"
     find-yarn-workspace-root "2.0.0"
     fs-extra "^8.0.1"
     lodash "^4.17.21"
@@ -2454,25 +2389,85 @@
     supports-hyperlinks "^2.2.0"
     yauzl "2.10.0"
 
-"@tarojs/runtime@3.6.35":
-  version "3.6.35"
-  resolved "http://registry.m.jd.com/@tarojs/runtime/download/@tarojs/runtime-3.6.35.tgz#f807b3278dc412681c1081793da5d1edaf881482"
-  integrity sha1-+AezJ43EEmgcEIF5PaXR7a+IFII=
+"@tarojs/plugin-platform-h5@3.6.6":
+  version "3.6.6"
+  resolved "http://registry.m.jd.com/@tarojs/plugin-platform-h5/download/@tarojs/plugin-platform-h5-3.6.6.tgz#08aad10cd54ea2926c6f060b57c88fe7f39cdd7d"
+  integrity sha1-CKrRDNVOopJsbwYLV8iP5/Oc3X0=
   dependencies:
+    "@tarojs/components" "3.6.6"
+    "@tarojs/components-react" "3.6.6"
+    "@tarojs/router" "3.6.6"
+    "@tarojs/service" "3.6.6"
+    "@tarojs/shared" "3.6.6"
+    "@tarojs/taro-h5" "3.6.6"
+    babel-plugin-transform-taroapi "3.6.6"
+    resolve "^1.22.0"
+
+"@tarojs/router@3.6.6":
+  version "3.6.6"
+  resolved "http://registry.m.jd.com/@tarojs/router/download/@tarojs/router-3.6.6.tgz#069c920fc0d4d569eac51cfa58980aafc540145b"
+  integrity sha1-BpySD8DU1WnqxRz6WJgKr8VAFFs=
+  dependencies:
+    "@tarojs/runtime" "3.6.6"
+    "@tarojs/taro" "3.6.6"
+    dingtalk-jsapi "~2.15.2"
+    history "^5.1.0"
+    mobile-detect "^1.4.2"
+    query-string "^7.1.1"
+    universal-router "^8.3.0"
+
+"@tarojs/runtime@3.6.6":
+  version "3.6.6"
+  resolved "http://registry.m.jd.com/@tarojs/runtime/download/@tarojs/runtime-3.6.6.tgz#27613d5d067cfc2d7075d0408cfa8766d4e606f4"
+  integrity sha1-J2E9XQZ8/C1wddBAjPqHZtTmBvQ=
+  dependencies:
+    "@tarojs/shared" "3.6.6"
     lodash-es "4.17.21"
-    tslib "^2.6.2"
 
-"@tarojs/shared@3.6.35":
-  version "3.6.35"
-  resolved "http://registry.m.jd.com/@tarojs/shared/download/@tarojs/shared-3.6.35.tgz#dd673674f7ab0c8229251cd797036557fcf9ccac"
-  integrity sha1-3Wc2dPerDIIpJRzXlwNlV/z5zKw=
-
-"@tarojs/taro@3.6.35":
-  version "3.6.35"
-  resolved "http://registry.m.jd.com/@tarojs/taro/download/@tarojs/taro-3.6.35.tgz#bbc055c81f4e10f99da213d662c00ec4908bbf62"
-  integrity sha1-u8BVyB9OEPmdohPWYsAOxJCLv2I=
+"@tarojs/service@3.6.6":
+  version "3.6.6"
+  resolved "http://registry.m.jd.com/@tarojs/service/download/@tarojs/service-3.6.6.tgz#380e0ec68b2e6d9c84aa241abfd241f12ef9a20d"
+  integrity sha1-OA4OxosubZyEqiQav9JB8S75og0=
   dependencies:
-    "@tarojs/api" "3.6.35"
+    "@tarojs/helper" "3.6.6"
+    "@tarojs/shared" "3.6.6"
+    "@tarojs/taro" "3.6.6"
+    joi "^17.6.0"
+    lodash "^4.17.21"
+    ora "^5.0.0"
+    resolve "^1.22.0"
+    tapable "^1.1.3"
+    webpack-merge "^4.2.2"
+
+"@tarojs/shared@3.6.6":
+  version "3.6.6"
+  resolved "http://registry.m.jd.com/@tarojs/shared/download/@tarojs/shared-3.6.6.tgz#ac79a23076ba0c11c1b18934eb71ec1a31cd079e"
+  integrity sha1-rHmiMHa6DBHBsYk063HsGjHNB54=
+
+"@tarojs/taro-h5@3.6.6":
+  version "3.6.6"
+  resolved "http://registry.m.jd.com/@tarojs/taro-h5/download/@tarojs/taro-h5-3.6.6.tgz#d60d47805f1683d69d215aedd631bbbfc548e875"
+  integrity sha1-1g1HgF8Wg9adIVrt1jG7v8VI6HU=
+  dependencies:
+    "@tarojs/api" "3.6.6"
+    "@tarojs/components" "3.6.6"
+    "@tarojs/router" "3.6.6"
+    "@tarojs/runtime" "3.6.6"
+    "@tarojs/shared" "3.6.6"
+    abortcontroller-polyfill "^1.7.5"
+    base64-js "^1.3.0"
+    intersection-observer "^0.7.0"
+    jsonp-retry "^1.0.3"
+    query-string "^7.1.1"
+    whatwg-fetch "^3.4.0"
+
+"@tarojs/taro@3.6.6":
+  version "3.6.6"
+  resolved "http://registry.m.jd.com/@tarojs/taro/download/@tarojs/taro-3.6.6.tgz#25cd95a198dd19aaa1051e9dd4ba44cb9531d53d"
+  integrity sha1-Jc2VoZjdGaqhBR6d1LpEy5Ux1T0=
+  dependencies:
+    "@tarojs/api" "3.6.6"
+    "@tarojs/runtime" "3.6.6"
 
 "@test/cross-atom-env@1.0.1":
   version "1.0.1"
@@ -2531,6 +2526,11 @@
   version "2.4.4"
   resolved "http://registry.m.jd.com/@types/normalize-package-data/download/@types/normalize-package-data-2.4.4.tgz#56e2cc26c397c038fab0e3a917a12d5c5909e901"
   integrity sha1-VuLMJsOXwDj6sOOpF6EtXFkJ6QE=
+
+"@types/pubsub-js@1.8.3":
+  version "1.8.3"
+  resolved "http://registry.m.jd.com/@types/pubsub-js/download/@types/pubsub-js-1.8.3.tgz#f480a9e4f72f50e1e3cc598ef1b32f3bfbbcd6b6"
+  integrity sha1-9ICp5PcvUOHjzFmO8bMvO/u81rY=
 
 "@types/react-native@0.61.16":
   version "0.61.16"
@@ -2751,6 +2751,11 @@ abort-controller@^3.0.0:
   integrity sha1-6vVNU7YrrkE46AnKIlyEOabvs5I=
   dependencies:
     event-target-shim "^5.0.0"
+
+abortcontroller-polyfill@^1.7.5:
+  version "1.7.8"
+  resolved "http://registry.m.jd.com/abortcontroller-polyfill/download/abortcontroller-polyfill-1.7.8.tgz#fe8d4370403f02e2aa37e3d2b0b178bae9d83f49"
+  integrity sha1-/o1DcEA/AuKqN+PSsLF4uunYP0k=
 
 accepts@^1.3.7, accepts@~1.3.7:
   version "1.3.8"
@@ -2976,6 +2981,11 @@ babel-plugin-transform-flow-enums@^0.0.2:
   dependencies:
     "@babel/plugin-syntax-flow" "^7.12.1"
 
+babel-plugin-transform-taroapi@3.6.6:
+  version "3.6.6"
+  resolved "http://registry.m.jd.com/babel-plugin-transform-taroapi/download/babel-plugin-transform-taroapi-3.6.6.tgz#822c2b747a5d2590cf90fc7ff4a5a3836b2636a5"
+  integrity sha1-giwrdHpdJZDPkPx/9KWjg2smNqU=
+
 babel-preset-fbjs@^3.4.0:
   version "3.4.0"
   resolved "http://registry.m.jd.com/babel-preset-fbjs/download/babel-preset-fbjs-3.4.0.tgz#38a14e5a7a3b285a3f3a86552d650dca5cf6111c"
@@ -3022,7 +3032,7 @@ balanced-match@^1.0.0:
   resolved "http://registry.m.jd.com/balanced-match/download/balanced-match-1.0.2.tgz#e83e3a7e3f300b34cb9d87f615fa0cbf357690ee"
   integrity sha1-6D46fj8wCzTLnYf2FfoMvzV2kO4=
 
-base64-js@^1.1.2, base64-js@^1.3.1:
+base64-js@^1.1.2, base64-js@^1.3.0, base64-js@^1.3.1:
   version "1.5.1"
   resolved "http://registry.m.jd.com/base64-js/download/base64-js-1.5.1.tgz#1b1b440160a5bf7ad40b650f095963481903930a"
   integrity sha1-GxtEAWClv3rUC2UPCVljSBkDkwo=
@@ -3298,6 +3308,11 @@ clamp@^1.0.1:
   version "1.0.1"
   resolved "http://registry.m.jd.com/clamp/download/clamp-1.0.1.tgz#66a0e64011816e37196828fdc8c8c147312c8634"
   integrity sha1-ZqDmQBGBbjcZaCj9yMjBRzEshjQ=
+
+classnames@^2.2.5:
+  version "2.5.1"
+  resolved "http://registry.m.jd.com/classnames/download/classnames-2.5.1.tgz#ba774c614be0f016da105c858e7159eae8e7687b"
+  integrity sha1-undMYUvg8BbaEFyFjnFZ6ujnaHs=
 
 clean-regexp@^1.0.0:
   version "1.0.0"
@@ -3589,6 +3604,11 @@ decamelize@^1.2.0:
   resolved "http://registry.m.jd.com/decamelize/download/decamelize-1.2.0.tgz#f6534d15148269b20352e7bee26f501f9a191290"
   integrity sha1-9lNNFRSCabIDUue+4m9QH5oZEpA=
 
+decode-uri-component@^0.2.2:
+  version "0.2.2"
+  resolved "http://registry.m.jd.com/decode-uri-component/download/decode-uri-component-0.2.2.tgz#e69dbe25d37941171dd540e024c444cd5188e1e9"
+  integrity sha1-5p2+JdN5QRcd1UDgJMREzVGI4ek=
+
 deep-eql@^5.0.1:
   version "5.0.2"
   resolved "http://registry.m.jd.com/deep-eql/download/deep-eql-5.0.2.tgz#4b756d8d770a9257300825d52a2c2cff99c3a341"
@@ -3678,12 +3698,21 @@ destroy@1.2.0:
   resolved "http://registry.m.jd.com/destroy/download/destroy-1.2.0.tgz#4803735509ad8be552934c67df614f94e66fa015"
   integrity sha1-SANzVQmti+VSk0xn32FPlOZvoBU=
 
-dotenv-expand@^9.0.0:
-  version "9.0.0"
-  resolved "http://registry.m.jd.com/dotenv-expand/download/dotenv-expand-9.0.0.tgz#1fd37e2cd63ea0b5f7389fb87256efc38b035b26"
-  integrity sha1-H9N+LNY+oLX3OJ+4clbvw4sDWyY=
+dingtalk-jsapi@~2.15.2:
+  version "2.15.6"
+  resolved "http://registry.m.jd.com/dingtalk-jsapi/download/dingtalk-jsapi-2.15.6.tgz#e6d7ed85217f86d8d94dee61203b22b103debd53"
+  integrity sha1-5tfthSF/htjZTe5hIDsisQPevVM=
+  dependencies:
+    promise-polyfill "^7.1.0"
 
-dotenv@^16.0.3, dotenv@^16.4.5:
+dom7@^3.0.0:
+  version "3.0.0"
+  resolved "http://registry.m.jd.com/dom7/download/dom7-3.0.0.tgz#b861ce5d67a6becd7aaa3ad02942ff14b1240331"
+  integrity sha1-uGHOXWemvs16qjrQKUL/FLEkAzE=
+  dependencies:
+    ssr-window "^3.0.0-alpha.1"
+
+dotenv@^16.4.5:
   version "16.4.7"
   resolved "http://registry.m.jd.com/dotenv/download/dotenv-16.4.7.tgz#0e20c5b82950140aa99be360a8a5f52335f53c26"
   integrity sha1-DiDFuClQFAqpm+NgqKX1IzX1PCY=
@@ -3798,6 +3827,133 @@ es-set-tostringtag@^2.1.0:
     has-tostringtag "^1.0.2"
     hasown "^2.0.2"
 
+esbuild-android-64@0.14.54:
+  version "0.14.54"
+  resolved "http://registry.m.jd.com/esbuild-android-64/download/esbuild-android-64-0.14.54.tgz#505f41832884313bbaffb27704b8bcaa2d8616be"
+  integrity sha1-UF9BgyiEMTu6/7J3BLi8qi2GFr4=
+
+esbuild-android-arm64@0.14.54:
+  version "0.14.54"
+  resolved "http://registry.m.jd.com/esbuild-android-arm64/download/esbuild-android-arm64-0.14.54.tgz#8ce69d7caba49646e009968fe5754a21a9871771"
+  integrity sha1-jOadfKuklkbgCZaP5XVKIamHF3E=
+
+esbuild-darwin-64@0.14.54:
+  version "0.14.54"
+  resolved "http://registry.m.jd.com/esbuild-darwin-64/download/esbuild-darwin-64-0.14.54.tgz#24ba67b9a8cb890a3c08d9018f887cc221cdda25"
+  integrity sha1-JLpnuajLiQo8CNkBj4h8wiHN2iU=
+
+esbuild-darwin-arm64@0.14.54:
+  version "0.14.54"
+  resolved "http://registry.m.jd.com/esbuild-darwin-arm64/download/esbuild-darwin-arm64-0.14.54.tgz#3f7cdb78888ee05e488d250a2bdaab1fa671bf73"
+  integrity sha1-P3zbeIiO4F5IjSUKK9qrH6Zxv3M=
+
+esbuild-freebsd-64@0.14.54:
+  version "0.14.54"
+  resolved "http://registry.m.jd.com/esbuild-freebsd-64/download/esbuild-freebsd-64-0.14.54.tgz#09250f997a56ed4650f3e1979c905ffc40bbe94d"
+  integrity sha1-CSUPmXpW7UZQ8+GXnJBf/EC76U0=
+
+esbuild-freebsd-arm64@0.14.54:
+  version "0.14.54"
+  resolved "http://registry.m.jd.com/esbuild-freebsd-arm64/download/esbuild-freebsd-arm64-0.14.54.tgz#bafb46ed04fc5f97cbdb016d86947a79579f8e48"
+  integrity sha1-uvtG7QT8X5fL2wFthpR6eVefjkg=
+
+esbuild-linux-32@0.14.54:
+  version "0.14.54"
+  resolved "http://registry.m.jd.com/esbuild-linux-32/download/esbuild-linux-32-0.14.54.tgz#e2a8c4a8efdc355405325033fcebeb941f781fe5"
+  integrity sha1-4qjEqO/cNVQFMlAz/OvrlB94H+U=
+
+esbuild-linux-64@0.14.54:
+  version "0.14.54"
+  resolved "http://registry.m.jd.com/esbuild-linux-64/download/esbuild-linux-64-0.14.54.tgz#de5fdba1c95666cf72369f52b40b03be71226652"
+  integrity sha1-3l/boclWZs9yNp9StAsDvnEiZlI=
+
+esbuild-linux-arm64@0.14.54:
+  version "0.14.54"
+  resolved "http://registry.m.jd.com/esbuild-linux-arm64/download/esbuild-linux-arm64-0.14.54.tgz#dae4cd42ae9787468b6a5c158da4c84e83b0ce8b"
+  integrity sha1-2uTNQq6Xh0aLalwVjaTIToOwzos=
+
+esbuild-linux-arm@0.14.54:
+  version "0.14.54"
+  resolved "http://registry.m.jd.com/esbuild-linux-arm/download/esbuild-linux-arm-0.14.54.tgz#a2c1dff6d0f21dbe8fc6998a122675533ddfcd59"
+  integrity sha1-osHf9tDyHb6PxpmKEiZ1Uz3fzVk=
+
+esbuild-linux-mips64le@0.14.54:
+  version "0.14.54"
+  resolved "http://registry.m.jd.com/esbuild-linux-mips64le/download/esbuild-linux-mips64le-0.14.54.tgz#d9918e9e4cb972f8d6dae8e8655bf9ee131eda34"
+  integrity sha1-2ZGOnky5cvjW2ujoZVv57hMe2jQ=
+
+esbuild-linux-ppc64le@0.14.54:
+  version "0.14.54"
+  resolved "http://registry.m.jd.com/esbuild-linux-ppc64le/download/esbuild-linux-ppc64le-0.14.54.tgz#3f9a0f6d41073fb1a640680845c7de52995f137e"
+  integrity sha1-P5oPbUEHP7GmQGgIRcfeUplfE34=
+
+esbuild-linux-riscv64@0.14.54:
+  version "0.14.54"
+  resolved "http://registry.m.jd.com/esbuild-linux-riscv64/download/esbuild-linux-riscv64-0.14.54.tgz#618853c028178a61837bc799d2013d4695e451c8"
+  integrity sha1-YYhTwCgXimGDe8eZ0gE9RpXkUcg=
+
+esbuild-linux-s390x@0.14.54:
+  version "0.14.54"
+  resolved "http://registry.m.jd.com/esbuild-linux-s390x/download/esbuild-linux-s390x-0.14.54.tgz#d1885c4c5a76bbb5a0fe182e2c8c60eb9e29f2a6"
+  integrity sha1-0YhcTFp2u7Wg/hguLIxg654p8qY=
+
+esbuild-netbsd-64@0.14.54:
+  version "0.14.54"
+  resolved "http://registry.m.jd.com/esbuild-netbsd-64/download/esbuild-netbsd-64-0.14.54.tgz#69ae917a2ff241b7df1dbf22baf04bd330349e81"
+  integrity sha1-aa6Rei/yQbffHb8iuvBL0zA0noE=
+
+esbuild-openbsd-64@0.14.54:
+  version "0.14.54"
+  resolved "http://registry.m.jd.com/esbuild-openbsd-64/download/esbuild-openbsd-64-0.14.54.tgz#db4c8495287a350a6790de22edea247a57c5d47b"
+  integrity sha1-20yElSh6NQpnkN4i7eokelfF1Hs=
+
+esbuild-sunos-64@0.14.54:
+  version "0.14.54"
+  resolved "http://registry.m.jd.com/esbuild-sunos-64/download/esbuild-sunos-64-0.14.54.tgz#54287ee3da73d3844b721c21bc80c1dc7e1bf7da"
+  integrity sha1-VCh+49pz04RLchwhvIDB3H4b99o=
+
+esbuild-windows-32@0.14.54:
+  version "0.14.54"
+  resolved "http://registry.m.jd.com/esbuild-windows-32/download/esbuild-windows-32-0.14.54.tgz#f8aaf9a5667630b40f0fb3aa37bf01bbd340ce31"
+  integrity sha1-+Kr5pWZ2MLQPD7OqN78Bu9NAzjE=
+
+esbuild-windows-64@0.14.54:
+  version "0.14.54"
+  resolved "http://registry.m.jd.com/esbuild-windows-64/download/esbuild-windows-64-0.14.54.tgz#bf54b51bd3e9b0f1886ffdb224a4176031ea0af4"
+  integrity sha1-v1S1G9PpsPGIb/2yJKQXYDHqCvQ=
+
+esbuild-windows-arm64@0.14.54:
+  version "0.14.54"
+  resolved "http://registry.m.jd.com/esbuild-windows-arm64/download/esbuild-windows-arm64-0.14.54.tgz#937d15675a15e4b0e4fafdbaa3a01a776a2be982"
+  integrity sha1-k30VZ1oV5LDk+v26o6Aad2or6YI=
+
+esbuild@^0.14.27:
+  version "0.14.54"
+  resolved "http://registry.m.jd.com/esbuild/download/esbuild-0.14.54.tgz#8b44dcf2b0f1a66fc22459943dccf477535e9aa2"
+  integrity sha1-i0Tc8rDxpm/CJFmUPcz0d1NemqI=
+  optionalDependencies:
+    "@esbuild/linux-loong64" "0.14.54"
+    esbuild-android-64 "0.14.54"
+    esbuild-android-arm64 "0.14.54"
+    esbuild-darwin-64 "0.14.54"
+    esbuild-darwin-arm64 "0.14.54"
+    esbuild-freebsd-64 "0.14.54"
+    esbuild-freebsd-arm64 "0.14.54"
+    esbuild-linux-32 "0.14.54"
+    esbuild-linux-64 "0.14.54"
+    esbuild-linux-arm "0.14.54"
+    esbuild-linux-arm64 "0.14.54"
+    esbuild-linux-mips64le "0.14.54"
+    esbuild-linux-ppc64le "0.14.54"
+    esbuild-linux-riscv64 "0.14.54"
+    esbuild-linux-s390x "0.14.54"
+    esbuild-netbsd-64 "0.14.54"
+    esbuild-openbsd-64 "0.14.54"
+    esbuild-sunos-64 "0.14.54"
+    esbuild-windows-32 "0.14.54"
+    esbuild-windows-64 "0.14.54"
+    esbuild-windows-arm64 "0.14.54"
+
 esbuild@^0.25.0:
   version "0.25.1"
   resolved "http://registry.m.jd.com/esbuild/download/esbuild-0.25.1.tgz#a16b8d070b6ad4871935277bda6ccfe852e3fa2f"
@@ -3828,35 +3984,6 @@ esbuild@^0.25.0:
     "@esbuild/win32-arm64" "0.25.1"
     "@esbuild/win32-ia32" "0.25.1"
     "@esbuild/win32-x64" "0.25.1"
-
-esbuild@~0.19.5:
-  version "0.19.12"
-  resolved "http://registry.m.jd.com/esbuild/download/esbuild-0.19.12.tgz#dc82ee5dc79e82f5a5c3b4323a2a641827db3e04"
-  integrity sha1-3ILuXceegvWlw7QyOipkGCfbPgQ=
-  optionalDependencies:
-    "@esbuild/aix-ppc64" "0.19.12"
-    "@esbuild/android-arm" "0.19.12"
-    "@esbuild/android-arm64" "0.19.12"
-    "@esbuild/android-x64" "0.19.12"
-    "@esbuild/darwin-arm64" "0.19.12"
-    "@esbuild/darwin-x64" "0.19.12"
-    "@esbuild/freebsd-arm64" "0.19.12"
-    "@esbuild/freebsd-x64" "0.19.12"
-    "@esbuild/linux-arm" "0.19.12"
-    "@esbuild/linux-arm64" "0.19.12"
-    "@esbuild/linux-ia32" "0.19.12"
-    "@esbuild/linux-loong64" "0.19.12"
-    "@esbuild/linux-mips64el" "0.19.12"
-    "@esbuild/linux-ppc64" "0.19.12"
-    "@esbuild/linux-riscv64" "0.19.12"
-    "@esbuild/linux-s390x" "0.19.12"
-    "@esbuild/linux-x64" "0.19.12"
-    "@esbuild/netbsd-x64" "0.19.12"
-    "@esbuild/openbsd-x64" "0.19.12"
-    "@esbuild/sunos-x64" "0.19.12"
-    "@esbuild/win32-arm64" "0.19.12"
-    "@esbuild/win32-ia32" "0.19.12"
-    "@esbuild/win32-x64" "0.19.12"
 
 escalade@^3.1.1, escalade@^3.2.0:
   version "3.2.0"
@@ -4166,6 +4293,11 @@ fill-range@^7.1.1:
   dependencies:
     to-regex-range "^5.0.1"
 
+filter-obj@^1.1.0:
+  version "1.1.0"
+  resolved "http://registry.m.jd.com/filter-obj/download/filter-obj-1.1.0.tgz#9b311112bc6c6127a16e016c6c5d7f19e0805c5b"
+  integrity sha1-mzERErxsYSehbgFsbF1/GeCAXFs=
+
 finalhandler@1.1.2:
   version "1.1.2"
   resolved "http://registry.m.jd.com/finalhandler/download/finalhandler-1.1.2.tgz#b7e7d000ffd11938d0fdb053506f6ebabe9f587d"
@@ -4468,6 +4600,18 @@ hermes-profile-transformer@^0.0.6:
   dependencies:
     source-map "^0.7.3"
 
+history@^5.1.0:
+  version "5.3.0"
+  resolved "http://registry.m.jd.com/history/download/history-5.3.0.tgz#1548abaa245ba47992f063a0783db91ef201c73b"
+  integrity sha1-FUirqiRbpHmS8GOgeD25HvIBxzs=
+  dependencies:
+    "@babel/runtime" "^7.7.6"
+
+hls.js@^1.1.5:
+  version "1.5.20"
+  resolved "http://registry.m.jd.com/hls.js/download/hls.js-1.5.20.tgz#7eb23bb5e2595311d4e2761038ca6882673de7e2"
+  integrity sha1-frI7teJZUxHU4nYQOMpogmc95+I=
+
 hoist-non-react-statics@^3.0.0:
   version "3.3.2"
   resolved "http://registry.m.jd.com/hoist-non-react-statics/download/hoist-non-react-statics-3.3.2.tgz#ece0acaf71d62c2969c2ec59feff42a4b1a85b45"
@@ -4563,6 +4707,11 @@ inherits@2, inherits@2.0.4, inherits@^2.0.3, inherits@^2.0.4, inherits@~2.0.3:
   version "2.0.4"
   resolved "http://registry.m.jd.com/inherits/download/inherits-2.0.4.tgz#0fa2c64f932917c3433a0ded55363aae37416b7c"
   integrity sha1-D6LGT5MpF8NDOg3tVTY6rjdBa3w=
+
+intersection-observer@^0.7.0:
+  version "0.7.0"
+  resolved "http://registry.m.jd.com/intersection-observer/download/intersection-observer-0.7.0.tgz#ee16bee978db53516ead2f0a8154b09b400bbdc9"
+  integrity sha1-7ha+6XjbU1FurS8KgVSwm0ALvck=
 
 invariant@*, invariant@2.2.4, invariant@^2.2.4:
   version "2.2.4"
@@ -4889,7 +5038,7 @@ jiti@^1.21.6:
   resolved "http://registry.m.jd.com/jiti/download/jiti-1.21.7.tgz#9dd81043424a3d28458b193d965f0d18a2300ba9"
   integrity sha1-ndgQQ0JKPShFixk9ll8NGKIwC6k=
 
-joi@^17.2.1:
+joi@^17.2.1, joi@^17.6.0:
   version "17.13.3"
   resolved "http://registry.m.jd.com/joi/download/joi-17.13.3.tgz#0f5cc1169c999b30d344366d384b12d92558bcec"
   integrity sha1-D1zBFpyZmzDTRDZtOEsS2SVYvOw=
@@ -5017,6 +5166,13 @@ jsonfile@^4.0.0:
   optionalDependencies:
     graceful-fs "^4.1.6"
 
+jsonp-retry@^1.0.3:
+  version "1.0.3"
+  resolved "http://registry.m.jd.com/jsonp-retry/download/jsonp-retry-1.0.3.tgz#9e6b18b02ec767a621dd44b4e99439a8a43a6419"
+  integrity sha1-nmsYsC7HZ6Yh3US06ZQ5qKQ6ZBk=
+  dependencies:
+    object-assign "^4.1.1"
+
 keyv@^4.5.4:
   version "4.5.4"
   resolved "http://registry.m.jd.com/keyv/download/keyv-4.5.4.tgz#a879a99e29452f942439f2a405e3af8b31d4de93"
@@ -5099,7 +5255,7 @@ lodash.throttle@^4.1.1:
   resolved "http://registry.m.jd.com/lodash.throttle/download/lodash.throttle-4.1.1.tgz#c23e91b710242ac70c37f1e1cda9274cc39bf2f4"
   integrity sha1-wj6RtxAkKscMN/HhzaknTMOb8vQ=
 
-lodash@^4.17.21, lodash@^4.17.4:
+lodash@^4.17.15, lodash@^4.17.21, lodash@^4.17.4:
   version "4.17.21"
   resolved "http://registry.m.jd.com/lodash/download/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
   integrity sha1-Z5WRxWTDv/quhFTPCz3zcMPWkRw=
@@ -5213,6 +5369,11 @@ memoize-one@^5.0.0:
   version "5.2.1"
   resolved "http://registry.m.jd.com/memoize-one/download/memoize-one-5.2.1.tgz#8337aa3c4335581839ec01c3d594090cebe8f00e"
   integrity sha1-gzeqPEM1WBg57AHD1ZQJDOvo8A4=
+
+memoize-one@^6.0.0:
+  version "6.0.0"
+  resolved "http://registry.m.jd.com/memoize-one/download/memoize-one-6.0.0.tgz#b2591b871ed82948aee4727dc6abceeeac8c1045"
+  integrity sha1-slkbhx7YKUiu5HJ9xqvO7qyMEEU=
 
 merge-options@^3.0.4:
   version "3.0.4"
@@ -5661,6 +5822,11 @@ mlly@^1.7.1, mlly@^1.7.4:
     pkg-types "^1.3.0"
     ufo "^1.5.4"
 
+mobile-detect@^1.4.2:
+  version "1.4.5"
+  resolved "http://registry.m.jd.com/mobile-detect/download/mobile-detect-1.4.5.tgz#da393c3c413ca1a9bcdd9ced653c38281c0fb6ad"
+  integrity sha1-2jk8PEE8oam83ZztZTw4KBwPtq0=
+
 mri@^1.2.0:
   version "1.2.0"
   resolved "http://registry.m.jd.com/mri/download/mri-1.2.0.tgz#6721480fec2a11a4889861115a48b6cbe7cc8f0b"
@@ -5890,7 +6056,7 @@ optionator@^0.9.3:
     type-check "^0.4.0"
     word-wrap "^1.2.5"
 
-ora@^5.4.1:
+ora@^5.0.0, ora@^5.4.1:
   version "5.4.1"
   resolved "http://registry.m.jd.com/ora/download/ora-5.4.1.tgz#1b2678426af4ac4a509008e5e4ac9e9959db9e18"
   integrity sha1-GyZ4Qmr0rEpQkAjl5KyemVnbnhg=
@@ -6032,6 +6198,11 @@ path-to-regexp@^1.7.0:
   dependencies:
     isarray "0.0.1"
 
+path-to-regexp@^3.1.0:
+  version "3.3.0"
+  resolved "http://registry.m.jd.com/path-to-regexp/download/path-to-regexp-3.3.0.tgz#f7f31d32e8518c2660862b644414b6d5c63a611b"
+  integrity sha1-9/MdMuhRjCZghitkRBS21cY6YRs=
+
 path-to-regexp@^6.2.1:
   version "6.3.0"
   resolved "http://registry.m.jd.com/path-to-regexp/download/path-to-regexp-6.3.0.tgz#2b6a26a337737a8e1416f9272ed0766b1c0389f4"
@@ -6108,7 +6279,7 @@ pluralize@^8.0.0:
   resolved "http://registry.m.jd.com/pluralize/download/pluralize-8.0.0.tgz#1a6fa16a38d12a1901e0320fa017051c539ce3b1"
   integrity sha1-Gm+hajjRKhkB4DIPoBcFHFOc47E=
 
-postcss@^8.5.3:
+postcss@^8.4.18, postcss@^8.5.3:
   version "8.5.3"
   resolved "http://registry.m.jd.com/postcss/download/postcss-8.5.3.tgz#1463b6f1c7fb16fe258736cba29a2de35237eafb"
   integrity sha1-FGO28cf7Fv4lhzbLopot41I36vs=
@@ -6151,6 +6322,11 @@ process-nextick-args@~2.0.0:
   resolved "http://registry.m.jd.com/process-nextick-args/download/process-nextick-args-2.0.1.tgz#7820d9b16120cc55ca9ae7792680ae7dba6d7fe2"
   integrity sha1-eCDZsWEgzFXKmud5JoCufbptf+I=
 
+promise-polyfill@^7.1.0:
+  version "7.1.2"
+  resolved "http://registry.m.jd.com/promise-polyfill/download/promise-polyfill-7.1.2.tgz#ab05301d8c28536301622d69227632269a70ca3b"
+  integrity sha1-qwUwHYwoU2MBYi1pInYyJppwyjs=
+
 promise@^7.1.1:
   version "7.3.1"
   resolved "http://registry.m.jd.com/promise/download/promise-7.3.1.tgz#064b72602b18f90f29192b8b1bc418ffd1ebd3bf"
@@ -6187,6 +6363,11 @@ proxy-from-env@^1.1.0:
   resolved "http://registry.m.jd.com/proxy-from-env/download/proxy-from-env-1.1.0.tgz#e102f16ca355424865755d2c9e8ea4f24d58c3e2"
   integrity sha1-4QLxbKNVQkhldV0sno6k8k1Yw+I=
 
+pubsub-js@1.8.0:
+  version "1.8.0"
+  resolved "http://registry.m.jd.com/pubsub-js/download/pubsub-js-1.8.0.tgz#e2b523a030140a3d6e080735a48850a9622ed20a"
+  integrity sha1-4rUjoDAUCj1uCAc1pIhQqWIu0go=
+
 punycode@^2.1.0:
   version "2.3.1"
   resolved "http://registry.m.jd.com/punycode/download/punycode-2.3.1.tgz#027422e2faec0b25e1549c3e1bd8309b9133b6e5"
@@ -6196,6 +6377,16 @@ qr.js@0.0.0:
   version "0.0.0"
   resolved "http://registry.m.jd.com/qr.js/download/qr.js-0.0.0.tgz#cace86386f59a0db8050fa90d9b6b0e88a1e364f"
   integrity sha1-ys6GOG9ZoNuAUPqQ2baw6IoeNk8=
+
+query-string@^7.1.1:
+  version "7.1.3"
+  resolved "http://registry.m.jd.com/query-string/download/query-string-7.1.3.tgz#a1cf90e994abb113a325804a972d98276fe02328"
+  integrity sha1-oc+Q6ZSrsROjJYBKly2YJ2/gIyg=
+  dependencies:
+    decode-uri-component "^0.2.2"
+    filter-obj "^1.1.0"
+    split-on-first "^1.0.0"
+    strict-uri-encode "^2.0.0"
 
 queue-microtask@^1.2.2:
   version "1.2.3"
@@ -6280,6 +6471,11 @@ react-native-pager-view@6.2.0:
   version "6.2.0"
   resolved "http://registry.m.jd.com/react-native-pager-view/download/react-native-pager-view-6.2.0.tgz#51380d93fbe47f6380dc71d613a787bf27a4ca37"
   integrity sha1-UTgNk/vkf2OA3HHWE6eHvyekyjc=
+
+react-native-pager-view@6.7.0:
+  version "6.7.0"
+  resolved "http://registry.m.jd.com/react-native-pager-view/download/react-native-pager-view-6.7.0.tgz#88f2520e85f07ce55f3f56c57d6637249a215160"
+  integrity sha1-iPJSDoXwfOVfP1bFfWY3JJohUWA=
 
 react-native-tab-view@3.5.2:
   version "3.5.2"
@@ -6520,6 +6716,11 @@ resolve-from@^4.0.0:
   version "4.0.0"
   resolved "http://registry.m.jd.com/resolve-from/download/resolve-from-4.0.0.tgz#4abcd852ad32dd7baabfe9b40e00a36db5f392e6"
   integrity sha1-SrzYUq0y3Xuqv+m0DgCjbbXzkuY=
+
+resolve-pathname@^3.0.0:
+  version "3.0.0"
+  resolved "http://registry.m.jd.com/resolve-pathname/download/resolve-pathname-3.0.0.tgz#99d02224d3cf263689becbb393bc560313025dcd"
+  integrity sha1-mdAiJNPPJjaJvsuzk7xWAxMCXc0=
 
 resolve@^1.10.0, resolve@^1.14.2, resolve@^1.22.0, resolve@^1.22.1:
   version "1.22.10"
@@ -6809,10 +7010,20 @@ spdx-license-ids@^3.0.0:
   resolved "http://registry.m.jd.com/spdx-license-ids/download/spdx-license-ids-3.0.21.tgz#6d6e980c9df2b6fc905343a3b2d702a6239536c3"
   integrity sha1-bW6YDJ3ytvyQU0OjstcCpiOVNsM=
 
+split-on-first@^1.0.0:
+  version "1.1.0"
+  resolved "http://registry.m.jd.com/split-on-first/download/split-on-first-1.1.0.tgz#f610afeee3b12bce1d0c30425e76398b78249a5f"
+  integrity sha1-9hCv7uOxK84dDDBCXnY5i3gkml8=
+
 sprintf-js@~1.0.2:
   version "1.0.3"
   resolved "http://registry.m.jd.com/sprintf-js/download/sprintf-js-1.0.3.tgz#04e6926f662895354f3dd015203633b857297e2c"
   integrity sha1-BOaSb2YolTVPPdAVIDYzuFcpfiw=
+
+ssr-window@^3.0.0, ssr-window@^3.0.0-alpha.1:
+  version "3.0.0"
+  resolved "http://registry.m.jd.com/ssr-window/download/ssr-window-3.0.0.tgz#fd5b82801638943e0cc704c4691801435af7ac37"
+  integrity sha1-/VuCgBY4lD4MxwTEaRgBQ1r3rDc=
 
 stack-utils@^2.0.3:
   version "2.0.6"
@@ -6852,6 +7063,11 @@ std-env@^3.7.0, std-env@^3.8.0:
   version "3.8.1"
   resolved "http://registry.m.jd.com/std-env/download/std-env-3.8.1.tgz#2b81c631c62e3d0b964b87f099b8dcab6c9a5346"
   integrity sha1-K4HGMcYuPQuWS4fwmbjcq2yaU0Y=
+
+strict-uri-encode@^2.0.0:
+  version "2.0.0"
+  resolved "http://registry.m.jd.com/strict-uri-encode/download/strict-uri-encode-2.0.0.tgz#b9c7330c7042862f6b142dc274bbcc5866ce3546"
+  integrity sha1-ucczDHBChi9rFC3CdLvMWGbONUY=
 
 "string-width-cjs@npm:string-width@^4.2.0":
   version "4.2.3"
@@ -6976,6 +7192,19 @@ supports-preserve-symlinks-flag@^1.0.0:
   resolved "http://registry.m.jd.com/supports-preserve-symlinks-flag/download/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
   integrity sha1-btpL00SjyUrqN21MwxvHcxEDngk=
 
+swiper@6.8.0:
+  version "6.8.0"
+  resolved "http://registry.m.jd.com/swiper/download/swiper-6.8.0.tgz#61c850f49ba778e403f00a01fe0b768bd85d0d20"
+  integrity sha1-YchQ9JuneOQD8AoB/gt2i9hdDSA=
+  dependencies:
+    dom7 "^3.0.0"
+    ssr-window "^3.0.0"
+
+tapable@^1.1.3:
+  version "1.1.3"
+  resolved "http://registry.m.jd.com/tapable/download/tapable-1.1.3.tgz#a1fccc06b58db61fd7a45da2da44f5f3a3e67ba2"
+  integrity sha1-ofzMBrWNth/XpF2i2kT186Pme6I=
+
 tar@^6.2.1:
   version "6.2.1"
   resolved "http://registry.m.jd.com/tar/download/tar-6.2.1.tgz#717549c541bc3c2af15751bea94b1dd068d4b03a"
@@ -7084,7 +7313,7 @@ tslib@2.6.2:
   resolved "http://registry.m.jd.com/tslib/download/tslib-2.6.2.tgz#703ac29425e7b37cd6fd456e92404d46d1f3e4ae"
   integrity sha1-cDrClCXns3zW/UVukkBNRtHz5K4=
 
-tslib@^2.0.1, tslib@^2.6.2:
+tslib@^2.0.1:
   version "2.8.1"
   resolved "http://registry.m.jd.com/tslib/download/tslib-2.8.1.tgz#612efe4ed235d567e8aba5f2a5fab70280ade83f"
   integrity sha1-YS7+TtI11Wfoq6Xypfq3AoCt6D8=
@@ -7192,6 +7421,13 @@ unist-util-stringify-position@^2.0.0:
   integrity sha1-zOO/oc34W6c3XR1bF73Eytqb2do=
   dependencies:
     "@types/unist" "^2.0.2"
+
+universal-router@^8.3.0:
+  version "8.3.0"
+  resolved "http://registry.m.jd.com/universal-router/download/universal-router-8.3.0.tgz#533bce135d7b1abf591421c5d2028d54407a34a0"
+  integrity sha1-UzvOE117Gr9ZFCHF0gKNVEB6NKA=
+  dependencies:
+    path-to-regexp "^3.1.0"
 
 universalify@^0.1.0:
   version "0.1.2"
@@ -7323,7 +7559,19 @@ webidl-conversions@^3.0.0:
   resolved "http://registry.m.jd.com/webidl-conversions/download/webidl-conversions-3.0.1.tgz#24534275e2a7bc6be7bc86611cc16ae0a5654871"
   integrity sha1-JFNCdeKnvGvnvIZhHMFq4KVlSHE=
 
-whatwg-fetch@>=0.10.0, whatwg-fetch@^3.0.0:
+webpack-merge@^4.2.2:
+  version "4.2.2"
+  resolved "http://registry.m.jd.com/webpack-merge/download/webpack-merge-4.2.2.tgz#a27c52ea783d1398afd2087f547d7b9d2f43634d"
+  integrity sha1-onxS6ng9E5iv0gh/VH17nS9DY00=
+  dependencies:
+    lodash "^4.17.15"
+
+weui@^1.1.2:
+  version "1.1.3"
+  resolved "http://registry.m.jd.com/weui/download/weui-1.1.3.tgz#0f0899bb61bb2ec603b2648367a8139298f81514"
+  integrity sha1-DwiZu2G7LsYDsmSDZ6gTkpj4FRQ=
+
+whatwg-fetch@>=0.10.0, whatwg-fetch@^3.0.0, whatwg-fetch@^3.4.0:
   version "3.6.20"
   resolved "http://registry.m.jd.com/whatwg-fetch/download/whatwg-fetch-3.6.20.tgz#580ce6d791facec91d37c72890995a0b48d31c70"
   integrity sha1-WAzm15H6zskdN8cokJlaC0jTHHA=
@@ -7422,6 +7670,11 @@ ws@^7, ws@^7.5.1:
   version "7.5.10"
   resolved "http://registry.m.jd.com/ws/download/ws-7.5.10.tgz#58b5c20dc281633f6c19113f39b349bd8bd558d9"
   integrity sha1-WLXCDcKBYz9sGRE/ObNJvYvVWNk=
+
+wxmp-rsa@1.1.1:
+  version "1.1.1"
+  resolved "http://registry.m.jd.com/wxmp-rsa/download/wxmp-rsa-1.1.1.tgz#b708fcd7aa171e38655df88be02065bb7fed70dc"
+  integrity sha1-twj816oXHjhlXfiL4CBlu3/tcNw=
 
 xtend@~4.0.1:
   version "4.0.2"

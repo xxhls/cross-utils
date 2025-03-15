@@ -1,10 +1,10 @@
 import Taro from "@tarojs/taro";
-import cookie from "../Cookie/index.h5";
+import cookie from "@basicComps-pkg/Cookie/main/index.h5";
 import {
   hasUrlParameter,
   addUrlParameter,
-} from "../../utils/getQueryParam/index.h5";
-import { isJingGouMiniprogram } from "../Platform";
+} from "@basicComps-pkg/getQueryParam/main/index.h5";
+import { isJingGouMiniprogram } from "@basicComps-pkg/Platform/main";
 // import { goToLogin } from '@dj-lib/dj-base-lib/build/login/index.h5';
 
 //唤起app的登录窗口

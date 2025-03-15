@@ -1,37 +1,39 @@
-/**
- * Date: 2020-09-14 11:01:27
- * LastEditors: zhangwenshun
- * LastEditTime: 2023-02-06 15:27:10
- * title: 平台判断类方法
- * description: 平台判断类方法
- * classify: 公共方法
- * searchKeyword: 公共方法、平台判断
- * created by: zhangwenshun
- */
+import { isWeb, isRN } from "@test/cross-atom-env";
 
-import System from "../system";
+import * as h5Module from "./index.h5";
+import * as rnModule from "./index.rn";
+import * as taroModule from "./index.taro";
 
-export const isH5 = false;
-export const isHourPRO = !System.isDebug;
-export const isDevelopment = System.isDebug;
-export const isIOS = !!System.isIOS;
-export const isAndroid = !!System.isAndroid;
-export const isHarmonyOS = !!System.isHarmonyOS;
-export const isJDReactNativeWebView = false;
-export const isMiniprogram = false;
-export const isWeixin = false;
-export const isJDApp = true;
-//  京小包APP
-export const isJDMiniApp = false;
-// 京东特价版本app
-export const isJDLtApp = false;
-// 京东极速版app？
-export const isjdjrApp = false;
+export const isH5 = isWeb ? h5Module.isH5 : isRN ? rnModule.isH5 : taroModule.isH5 || false;
 
-export const jdAppVersion = System.hostVersionName();
+export const isHourPRO = isWeb ? h5Module.isHourPRO : isRN ? rnModule.isHourPRO : taroModule.isHourPRO || false;
 
-export const isLocalhost = false;
-export const isJinliMiniprogram = false;
+export const isDevelopment = isWeb ? h5Module.isDevelopment : isRN ? rnModule.isDevelopment : taroModule.isDevelopment || false;
 
-//京购小程序
-export const isJingGouMiniprogram = false;
+export const isIOS = isWeb ? h5Module.isIOS : isRN ? rnModule.isIOS : taroModule.isIOS || false;
+
+export const isAndroid = isWeb ? h5Module.isAndroid : isRN ? rnModule.isAndroid : taroModule.isAndroid || false;
+
+export const isHarmonyOS = isRN ? rnModule.isHarmonyOS : taroModule.isHarmonyOS || false;
+
+export const isJDReactNativeWebView = isRN ? rnModule.isJDReactNativeWebView : taroModule.isJDReactNativeWebView || false;
+
+export const isMiniprogram = isWeb ? h5Module.isMiniprogram : isRN ? rnModule.isMiniprogram : taroModule.isMiniprogram || false;
+
+export const isWeixin = isWeb ? h5Module.isWeixin : isRN ? rnModule.isWeixin : taroModule.isWeixin || false;
+
+export const isJDApp = isWeb ? h5Module.isJDApp : isRN ? rnModule.isJDApp : taroModule.isJDApp || false;
+
+export const isJDMiniApp = isWeb ? h5Module.isJDMiniApp : isRN ? rnModule.isJDMiniApp : taroModule.isJDMiniApp || false;
+
+export const isJDLtApp = isWeb ? h5Module.isJDLtApp : isRN ? rnModule.isJDLtApp : taroModule.isJDLtApp || false;
+
+export const isjdjrApp = isWeb ? h5Module.isjdjrApp : isRN ? rnModule.isjdjrApp : taroModule.isjdjrApp || false;
+
+export const jdAppVersion = isWeb ? h5Module.jdAppVersion : isRN ? rnModule.jdAppVersion : taroModule.jdAppVersion || "";
+
+export const isLocalhost = isWeb ? h5Module.isLocalhost : isRN ? rnModule.isLocalhost : taroModule.isLocalhost || false;
+
+export const isJinliMiniprogram = isWeb ? h5Module.isJinliMiniprogram : isRN ? rnModule.isJinliMiniprogram : taroModule.isJinliMiniprogram || false;
+
+export const isJingGouMiniprogram = isWeb ? h5Module.isJingGouMiniprogram : isRN ? rnModule.isJingGouMiniprogram : taroModule.isJingGouMiniprogram || false;

@@ -1,5 +1,5 @@
-import { loadjs } from "../../utils/base/modules/load";
-import { dataConvert, isType } from "../../utils/dataUtils";
+import { loadjs } from "@basicComps-shared/base/modules/load";
+import { dataConvert, isType } from "@basicComps-shared/dataUtils";
 
 import { IMta, TClickParams, TEPParams, TPVParams, STDParams } from "./IMta";
 

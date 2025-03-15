@@ -1,4 +1,4 @@
-import { dataConvert } from "../../utils/dataUtils";
+import { dataConvert } from "@basicComps-pkg/_shared/dataUtils";
 import { ILocalStorage } from "./ILocalStorage";
 import { AsyncStorage } from "react-native";
 

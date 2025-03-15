@@ -6,7 +6,7 @@ const visitkey = process.argv.includes("--blended")
       },
     };
 
-const getEid = (): string => {
+export const getEid = (): string => {
   return visitkey.checkVisitKey();
 };
 export const getUUID = (): any => {};
