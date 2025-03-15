@@ -2,11 +2,10 @@
  * 该文件为env库适配层
  */
 
-
 /**
  * 获取设备UA
  */
-export const ua = '';
+export const ua = "";
 /**
  * 微信浏览器环境
  */
@@ -42,11 +41,11 @@ export const isDadaApp = false;
 /**
  * 京东金融app
  */
-export const isJDdinnovationApp = false
+export const isJDdinnovationApp = false;
 /**
  * 京东健康app
  */
-export const isJDHApp = false
+export const isJDHApp = false;
 /**
  * QQapp
  */
@@ -54,19 +53,19 @@ export const isMobileQQ = false;
 /**
  * Safari
  */
-export const isSafari = false
+export const isSafari = false;
 
 /**
  * 微信小程序内嵌webview
  */
-export const isWeChatMiniWeb = false
+export const isWeChatMiniWeb = false;
 
 /**
  * 京东小程序内嵌webview
  */
-export const isJDMiniWeb = false
+export const isJDMiniWeb = false;
 
 /**
  * 到家小程序内前嵌webview
  */
-export const isDJMiniWeb = false
+export const isDJMiniWeb = false;

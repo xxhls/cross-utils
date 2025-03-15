@@ -1,9 +1,9 @@
-import getStorage from './getStorage';
-import getStorageSync from './getStorageSync';
-import setStorage from './setStorage';
-import setStorageSync from './setStorageSync';
-import removeStorage from './removeStorage';
-import removeStorageSync from './removeStorageSync';
+import getStorage from "./getStorage";
+import getStorageSync from "./getStorageSync";
+import setStorage from "./setStorage";
+import setStorageSync from "./setStorageSync";
+import removeStorage from "./removeStorage";
+import removeStorageSync from "./removeStorageSync";
 
 export {
   getStorage,

@@ -1,7 +1,6 @@
-
-const showModal = (options)=>{
-    throw new Error('RN：showLoading待实现 ')
-}
+const showModal = (options) => {
+  throw new Error("RN：showLoading待实现 ");
+};
 export default {
-    showModal
-}
+  showModal,
+};

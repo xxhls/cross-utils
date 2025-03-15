@@ -1,20 +1,30 @@
-import { normalize } from '../common';
-import { CONTAINER_NAME } from '@atom-shared/constant';
+import { normalize } from "../common";
+import { CONTAINER_NAME } from "@atom-shared/constant";
 
 const setStorage = normalize.setStorage((args) => {
-  const { success = () => {}, fail = () => {}, complete = () => {} } = args || {};
+  const {
+    success = () => {},
+    fail = () => {},
+    complete = () => {},
+  } = args || {};
   try {
-    if (Object.prototype.toString.call(args) !== '[object Object]') {
-      throw new Error('the Function need a param of Object type');
+    if (Object.prototype.toString.call(args) !== "[object Object]") {
+      throw new Error("the Function need a param of Object type");
     }
-    if (!args.hasOwnProperty('key')) {
-      throw new Error('the first param of this Function must contain a property named "key"');
+    if (!args.hasOwnProperty("key")) {
+      throw new Error(
+        'the first param of this Function must contain a property named "key"',
+      );
     }
-    if (typeof args.key !== 'string') {
-      throw new Error('the first param of this Function must contain a property named "key" of string type');
+    if (typeof args.key !== "string") {
+      throw new Error(
+        'the first param of this Function must contain a property named "key" of string type',
+      );
     }
-    if (!args.hasOwnProperty('data')) {
-      throw new Error('the first param of this Function must contain a property named "data"');
+    if (!args.hasOwnProperty("data")) {
+      throw new Error(
+        'the first param of this Function must contain a property named "data"',
+      );
     }
     window.localStorage.setItem(args.key, JSON.stringify(args.data));
     success();

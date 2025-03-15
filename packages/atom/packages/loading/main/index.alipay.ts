@@ -9,13 +9,19 @@
 //     hideLoading
 // }
 
-import { normalizeHide,normalizeShow } from './components/common';
-import { CONTAINER_NAME } from '@atom-shared/constant';
+import { normalizeHide, normalizeShow } from "./components/common";
+import { CONTAINER_NAME } from "@atom-shared/constant";
 
-export const hideLoading = normalizeHide((args) => ( my.hideLoading(args)), CONTAINER_NAME.ALIPAY);
+export const hideLoading = normalizeHide(
+  (args) => my.hideLoading(args),
+  CONTAINER_NAME.ALIPAY,
+);
 
-export const showLoading = normalizeShow((args) => ( my.showLoading(args)), CONTAINER_NAME.ALIPAY);
+export const showLoading = normalizeShow(
+  (args) => my.showLoading(args),
+  CONTAINER_NAME.ALIPAY,
+);
 export default {
-    showLoading,
-    hideLoading
-}
+  showLoading,
+  hideLoading,
+};

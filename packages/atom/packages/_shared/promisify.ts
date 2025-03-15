@@ -14,36 +14,36 @@ export function promisify<Arg = any, SuccessArg = any, FailArg = any>(
       api({
         ...promisifyArg,
         success: (res: SuccessArg) => {
-          if (promisifyArg && typeof promisifyArg.success === 'function') {
+          if (promisifyArg && typeof promisifyArg.success === "function") {
             promisifyArg.success(res);
           }
           resolve(res);
         },
         onSuccess: (res: SuccessArg) => {
-          if (promisifyArg && typeof promisifyArg.onSuccess === 'function') {
+          if (promisifyArg && typeof promisifyArg.onSuccess === "function") {
             promisifyArg.onSuccess(res);
           }
           resolve(res);
         },
         fail: (res: FailArg) => {
-          if (promisifyArg && typeof promisifyArg.fail === 'function') {
+          if (promisifyArg && typeof promisifyArg.fail === "function") {
             promisifyArg.fail(res);
           }
           reject(res);
         },
         onFail: (res: FailArg) => {
-          if (promisifyArg && typeof promisifyArg.onFail === 'function') {
+          if (promisifyArg && typeof promisifyArg.onFail === "function") {
             promisifyArg.onFail(res);
           }
           reject(res);
         },
         complete: (res: SuccessArg | FailArg) => {
-          if (promisifyArg && typeof promisifyArg.complete === 'function') {
+          if (promisifyArg && typeof promisifyArg.complete === "function") {
             promisifyArg.complete(res);
           }
         },
         onComplete: (res: SuccessArg | FailArg) => {
-          if (promisifyArg && typeof promisifyArg.onComplete === 'function') {
+          if (promisifyArg && typeof promisifyArg.onComplete === "function") {
             promisifyArg.onComplete(res);
           }
         },

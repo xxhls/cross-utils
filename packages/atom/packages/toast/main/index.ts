@@ -1,9 +1,15 @@
-import { isWeb, isRN, isAliMiniProgram, isWeChatMiniProgram, isJdMiniProgram } from '@test/cross-atom-env'
+import {
+  isWeb,
+  isRN,
+  isAliMiniProgram,
+  isWeChatMiniProgram,
+  isJdMiniProgram,
+} from "@test/cross-atom-env";
 import h5Module from "./index.h5";
 import jdModule from "./index.jd";
 import weappModule from "./index.weapp";
 import alipayModule from "./index.alipay";
-import rnModule from './index.rn'
+import rnModule from "./index.rn";
 export const hideToast = (option) => {
   if (isWeb) {
     return h5Module.hideToast(option);
@@ -22,7 +28,7 @@ export const hideToast = (option) => {
 
 export const showToast = (option) => {
   if (isWeb) {
-    return h5Module.showToast( option);
+    return h5Module.showToast(option);
   } else if (isRN) {
     return rnModule.showToast(option);
   } else if (isAliMiniProgram) {
@@ -38,5 +44,5 @@ export const showToast = (option) => {
 
 export default {
   showToast,
-  hideToast
+  hideToast,
 };

@@ -43,5 +43,10 @@
     "typeRoots": ["./node_modules/@types", "./packages/_types"],
     "types": ["node"]
   },
-  "include": ["packages/**/*.ts", "packages/**/*.tsx", "packages/**/*.scss", "types/**/*.d.ts"]
+  "include": [
+    "packages/**/*.ts",
+    "packages/**/*.tsx",
+    "packages/**/*.scss",
+    "types/**/*.d.ts"
+  ]
 }

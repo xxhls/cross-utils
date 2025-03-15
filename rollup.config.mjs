@@ -20,7 +20,7 @@ const packageJson = JSON.parse(
   readFileSync(resolve(__dirname, "./package.json"), "utf-8"),
 );
 const external = Object.keys(packageJson.dependencies || {}).filter(
-  (dep) => !dep.startsWith("@test/cross")
+  (dep) => !dep.startsWith("@test/cross"),
 );
 
 const packageName = process.env.PACKAGE_NAME || "@test/cross-utils";
@@ -58,11 +58,29 @@ export default defineConfig([
         entries: [
           { find: "@types-def", replacement: resolve(__dirname, "./types") },
           { find: "@atom", replacement: resolve(__dirname, "./packages/atom") },
-          { find: "@basicComps", replacement: resolve(__dirname, "./packages/basicComps") },
-          { find: "@atom-shared", replacement: resolve(__dirname, "./packages/atom/packages/_shared") },
-          { find: "@basicComps-shared", replacement: resolve(__dirname, "./packages/basicComps/packages/_shared") },
-          { find: "@atom-pkg", replacement: resolve(__dirname, "./packages/atom/packages") },
-          { find: "@basicComps-pkg", replacement: resolve(__dirname, "./packages/basicComps/packages") },
+          {
+            find: "@basicComps",
+            replacement: resolve(__dirname, "./packages/basicComps"),
+          },
+          {
+            find: "@atom-shared",
+            replacement: resolve(__dirname, "./packages/atom/packages/_shared"),
+          },
+          {
+            find: "@basicComps-shared",
+            replacement: resolve(
+              __dirname,
+              "./packages/basicComps/packages/_shared",
+            ),
+          },
+          {
+            find: "@atom-pkg",
+            replacement: resolve(__dirname, "./packages/atom/packages"),
+          },
+          {
+            find: "@basicComps-pkg",
+            replacement: resolve(__dirname, "./packages/basicComps/packages"),
+          },
         ],
       }),
       commonjs({

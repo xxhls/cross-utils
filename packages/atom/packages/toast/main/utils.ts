@@ -1,14 +1,14 @@
-import { promisify } from '@atom-shared/promisify';
+import { promisify } from "@atom-shared/promisify";
 
 export const LONG_DELAY = 3500; // 3.5 seconds
 export const SHORT_DELAY = 2000; // 2 seconds
 export function styleOptions(options) {
   const DEFAULT_REQUEST_OPTIONS = {
-    title: '',
-    icon: 'none',
+    title: "",
+    icon: "none",
     duration: SHORT_DELAY,
   };
-  if (typeof options === 'string') {
+  if (typeof options === "string") {
     return {
       ...DEFAULT_REQUEST_OPTIONS,
       content: options,

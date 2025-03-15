@@ -9,12 +9,18 @@
 //     hideLoading
 // }
 
-import { normalizeHide,normalizeShow } from './components/common';
-import { CONTAINER_NAME } from '@atom-shared/constant';
+import { normalizeHide, normalizeShow } from "./components/common";
+import { CONTAINER_NAME } from "@atom-shared/constant";
 
-export const hideLoading = normalizeHide((args) => jd.hideLoading(args), CONTAINER_NAME.JD);
-export const showLoading = normalizeShow((args) => jd.showLoading(args), CONTAINER_NAME.JD);
+export const hideLoading = normalizeHide(
+  (args) => jd.hideLoading(args),
+  CONTAINER_NAME.JD,
+);
+export const showLoading = normalizeShow(
+  (args) => jd.showLoading(args),
+  CONTAINER_NAME.JD,
+);
 export default {
-    showLoading,
-    hideLoading
-}
+  showLoading,
+  hideLoading,
+};

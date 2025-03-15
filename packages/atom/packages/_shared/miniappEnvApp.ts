@@ -1,5 +1,5 @@
-
 function isUndef(type: string): boolean {
-  return type === 'undefined';
+  return type === "undefined";
 }
-export const isDingdingMiniapp = !isUndef(typeof dd) && dd !== null && !isUndef(typeof dd.alert);
+export const isDingdingMiniapp =
+  !isUndef(typeof dd) && dd !== null && !isUndef(typeof dd.alert);

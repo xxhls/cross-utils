@@ -1,10 +1,10 @@
-import { normalizeShow } from './common';
-import { CONTAINER_NAME } from '@atom-shared/constant';
+import { normalizeShow } from "./common";
+import { CONTAINER_NAME } from "@atom-shared/constant";
 
 declare let window: any;
 // window.__uni_loadingWin = null;
 
-const clsPrefix = '__universal_loading';
+const clsPrefix = "__universal_loading";
 
 const styles = `.${clsPrefix} {
   background-color: rgba(0, 0, 0, 0.6);
@@ -60,56 +60,66 @@ const styles = `.${clsPrefix} {
   100% {
     transform: rotateZ(360deg);
   }
-}`.replace(/\n/g, '');
+}`.replace(/\n/g, "");
 
 /*
  * @param message {String}
  */
 let styleElement: HTMLElement | null = null;
 
-export const showLoading = normalizeShow(({ title = '', success = () => {}, fail = () => {}, complete = () => {} }) => {
-  try {
-    if (!styleElement) {
-      // create a style tag for keyframes
-      styleElement = document.createElement('style');
-      styleElement.innerHTML = styles;
-      document.body.appendChild(styleElement);
-    }
-    if (!window.__uni_loadingWin) {
-      // create loading win
-      window.__uni_loadingWin = document.createElement('div');
-      window.__uni_loadingWin.className = clsPrefix;
-      window.__uni_loadingWin.setAttribute('role', 'alert');
-      // support for ARIA, add tabindex for focus
-      // https://developer.mozilla.org/zh-CN/docs/Web/HTML/Global_attributes/tabindex
-      window.__uni_loadingWin.setAttribute('tabindex', '-1');
-      // add a circle element
-      const circle = document.createElement('div');
-      circle.className = `${clsPrefix}_circle`;
-      window.__uni_loadingWin.appendChild(circle);
-      // add text element
-      const text = document.createElement('div');
-      text.className = `${clsPrefix}_text`;
-      window.__uni_loadingWin.appendChild(text);
+export const showLoading = normalizeShow(
+  ({
+    title = "",
+    success = () => {},
+    fail = () => {},
+    complete = () => {},
+  }) => {
+    try {
+      if (!styleElement) {
+        // create a style tag for keyframes
+        styleElement = document.createElement("style");
+        styleElement.innerHTML = styles;
+        document.body.appendChild(styleElement);
+      }
+      if (!window.__uni_loadingWin) {
+        // create loading win
+        window.__uni_loadingWin = document.createElement("div");
+        window.__uni_loadingWin.className = clsPrefix;
+        window.__uni_loadingWin.setAttribute("role", "alert");
+        // support for ARIA, add tabindex for focus
+        // https://developer.mozilla.org/zh-CN/docs/Web/HTML/Global_attributes/tabindex
+        window.__uni_loadingWin.setAttribute("tabindex", "-1");
+        // add a circle element
+        const circle = document.createElement("div");
+        circle.className = `${clsPrefix}_circle`;
+        window.__uni_loadingWin.appendChild(circle);
+        // add text element
+        const text = document.createElement("div");
+        text.className = `${clsPrefix}_text`;
+        window.__uni_loadingWin.appendChild(text);
 
-      document.body.appendChild(window.__uni_loadingWin);
-    }
+        document.body.appendChild(window.__uni_loadingWin);
+      }
 
-    const text = window.__uni_loadingWin.querySelector(`.${clsPrefix}_text`) as HTMLDivElement;
-    if (title) {
-      text.style.display = 'block';
-      text.innerText = title;
-    } else {
-      text.style.display = 'none';
-      text.innerText = '';
-    }
+      const text = window.__uni_loadingWin.querySelector(
+        `.${clsPrefix}_text`,
+      ) as HTMLDivElement;
+      if (title) {
+        text.style.display = "block";
+        text.innerText = title;
+      } else {
+        text.style.display = "none";
+        text.innerText = "";
+      }
 
-    success();
-    complete();
-  } catch (error) {
-    fail();
-    complete();
-  }
-}, CONTAINER_NAME.WEB);
+      success();
+      complete();
+    } catch (error) {
+      fail();
+      complete();
+    }
+  },
+  CONTAINER_NAME.WEB,
+);
 
 export default showLoading;

@@ -1,5 +1,5 @@
-import { normalize } from '../utils';
-import { HideToastOption } from '../types';
+import { normalize } from "../utils";
+import { HideToastOption } from "../types";
 
 declare let window: any;
 export const hide = normalize((options?: HideToastOption): void => {

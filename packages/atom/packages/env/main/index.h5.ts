@@ -1,11 +1,4 @@
-import {
-    isWeb,
-    isNode,
-    isRN,
-    getSystemName,
-    qin
-} from './common/common'
-
+import { isWeb, isNode, isRN, getSystemName, qin } from "./common/common";
 
 /**
  * 获取设备UA
@@ -15,13 +8,13 @@ const ua: string = window.navigator.userAgent;
 /**
  * 安卓设备
  */
- const isAndroid: boolean = /android/gi.test(ua);
+const isAndroid: boolean = /android/gi.test(ua);
 
- const isHarmony: boolean = /harmony/gi.test(ua);
+const isHarmony: boolean = /harmony/gi.test(ua);
 /**
  * IOS设备
  */
- const isIOS: boolean = /iPhone|iPad|iOS/gi.test(ua) && !isAndroid;
+const isIOS: boolean = /iPhone|iPad|iOS/gi.test(ua) && !isAndroid;
 
 /**
  * 微信环境
@@ -79,75 +72,32 @@ export const isSafari: boolean = /Safari/gi.test(ua);
 /**
  * 微信小程序内嵌webview
  */
-const isWeChatMiniProgram: boolean = (/miniProgram/gi.test(ua) && (/wechat/gi.test(ua) || /MicroMessenger/gi.test(ua)));
+const isWeChatMiniProgram: boolean =
+  /miniProgram/gi.test(ua) &&
+  (/wechat/gi.test(ua) || /MicroMessenger/gi.test(ua));
 
 /**
  * 京东小程序内嵌webview
  */
 const isJdMiniProgram: boolean = /(?:jdmp)/.test(ua.toLocaleLowerCase());
 
-
 /**
  * 支付宝小程序内嵌webview
  */
 const isAliMiniProgram: boolean = /AliApp/gi.test(ua);
 
-const version = "1.0.0"
+const version = "1.0.0";
 
 /**
  * 获取端
  */
 export const getEnv = () => {
-    const os = {
-        isAndroid,
-        isIOS
-    }
-
-    const host = {
-        isWeixinApp,
-        isAlipayApp,
-        isJDApp,
-        isDaojiaApp,
-        isJDMiniApp,
-        isJDLtApp,
-        isJDPinGou,
-        isDadaApp,
-        isMobileQQ,
-        isSafari,
-        isJDdinnovationApp,
-        isJDHApp,
-    }
-
-    const miniProgram = {
-        isAliMiniProgram,
-        isWeChatMiniProgram,
-        isJdMiniProgram
-    }
-    return {
-        os: getSystemName(os),
-        host: getSystemName(host),
-        miniProgram: getSystemName(miniProgram)
-    }
-}
-export {
-    ua,
-    isIOS,
+  const os = {
     isAndroid,
-    isHarmony,
-    isWeb,
-    isNode,
-    isAliMiniProgram,
-    isWeChatMiniProgram,
-    isJdMiniProgram,
-    isRN,
-    qin
-}
-
-export default {
-    ua,
     isIOS,
-    isAndroid,
-    isHarmony,
+  };
+
+  const host = {
     isWeixinApp,
     isAlipayApp,
     isJDApp,
@@ -160,14 +110,58 @@ export default {
     isSafari,
     isJDdinnovationApp,
     isJDHApp,
+  };
 
-    isWeb,
-    isNode,
+  const miniProgram = {
     isAliMiniProgram,
     isWeChatMiniProgram,
     isJdMiniProgram,
-    isRN,
-    qin,
+  };
+  return {
+    os: getSystemName(os),
+    host: getSystemName(host),
+    miniProgram: getSystemName(miniProgram),
+  };
+};
+export {
+  ua,
+  isIOS,
+  isAndroid,
+  isHarmony,
+  isWeb,
+  isNode,
+  isAliMiniProgram,
+  isWeChatMiniProgram,
+  isJdMiniProgram,
+  isRN,
+  qin,
+};
 
-    getEnv
-}
+export default {
+  ua,
+  isIOS,
+  isAndroid,
+  isHarmony,
+  isWeixinApp,
+  isAlipayApp,
+  isJDApp,
+  isDaojiaApp,
+  isJDMiniApp,
+  isJDLtApp,
+  isJDPinGou,
+  isDadaApp,
+  isMobileQQ,
+  isSafari,
+  isJDdinnovationApp,
+  isJDHApp,
+
+  isWeb,
+  isNode,
+  isAliMiniProgram,
+  isWeChatMiniProgram,
+  isJdMiniProgram,
+  isRN,
+  qin,
+
+  getEnv,
+};

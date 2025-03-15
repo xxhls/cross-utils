@@ -1,4 +1,4 @@
-import { Uni } from '@atom-shared/interface';
+import { Uni } from "@atom-shared/interface";
 
 export interface Callback {
   (res?): void;
@@ -17,12 +17,12 @@ export interface ConfirmOptions extends Uni.COptions {
    */
   success?: (res?: ConfirmRes) => void;
   /**
-    * Interface to call a failed callback function.
-    */
+   * Interface to call a failed callback function.
+   */
   fail?: (e?: Error) => void;
   /**
-    * Interface callback function at the end of the call (executed on success and failure).
-    */
+   * Interface callback function at the end of the call (executed on success and failure).
+   */
   complete?: (res?: ConfirmRes | Error) => void;
   [propName: string]: any;
 }

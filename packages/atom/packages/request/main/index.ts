@@ -1,12 +1,16 @@
-import { isWeb, isRN, isAliMiniProgram, isWeChatMiniProgram, isJdMiniProgram } from '@test/cross-atom-env'
 import {
-  RequestOptions,
-} from './types';
+  isWeb,
+  isRN,
+  isAliMiniProgram,
+  isWeChatMiniProgram,
+  isJdMiniProgram,
+} from "@test/cross-atom-env";
+import { RequestOptions } from "./types";
 import h5Module from "./index.h5";
 import jdModule from "./index.jd";
 import weappModule from "./index.weapp";
 import alipayModule from "./index.alipay";
-import rnModule from './index.rn'
+import rnModule from "./index.rn";
 export default (options: RequestOptions) => {
   if (isWeb) {
     return h5Module(options);
@@ -19,6 +23,6 @@ export default (options: RequestOptions) => {
   } else if (isJdMiniProgram) {
     return jdModule(options);
   } else {
-    throw new Error('Uni API：request暂不支持');
+    throw new Error("Uni API：request暂不支持");
   }
 };

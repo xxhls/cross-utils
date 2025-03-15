@@ -7,7 +7,7 @@ import { isWeb, isRN } from "@test/cross-atom-env";
 export const setCookie = (
   key: string,
   val: string | object,
-  option: CookieAttributes
+  option: CookieAttributes,
 ) => {
   if (isWeb) {
     return h5Module.setCookie(key, val, option);

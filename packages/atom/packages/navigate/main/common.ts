@@ -1,36 +1,43 @@
-import { promisify } from '@atom-shared/promisify';
-import { IPushOptions, IPopOptions, IGoOptions, IReplaceOptions, IReLaunchOptions, ISwitchTabOptions } from './types';
-import { styleIn } from '@atom-shared/styleOptions';
+import { promisify } from "@atom-shared/promisify";
+import {
+  IPushOptions,
+  IPopOptions,
+  IGoOptions,
+  IReplaceOptions,
+  IReLaunchOptions,
+  ISwitchTabOptions,
+} from "./types";
+import { styleIn } from "@atom-shared/styleOptions";
 
 export const normalize = {
-    push: (api, containerName) => {
-        return (options: IPushOptions) => {
-            return promisify(api)(styleIn(options, containerName));
-        };
-    },
-    back: (api, containerName) => {
-        return (options?: IPopOptions) => {
-            return promisify(api)(styleIn(options, containerName));
-        };
-    },
-    go: (api, containerName) => {
-        return (options: IGoOptions) => {
-            return promisify(api)(styleIn(options, containerName));
-        };
-    },
-    replace: (api, containerName) => {
-        return (options: IReplaceOptions) => {
-            return promisify(api)(styleIn(options, containerName));
-        };
-    },
-    reLaunch: (api, containerName) => {
-        return (options: IReLaunchOptions) => {
-            return promisify(api)(styleIn(options, containerName));
-        };
-    },
-    switchTab: (api, containerName) => {
-        return (options: ISwitchTabOptions) => {
-            return promisify(api)(styleIn(options, containerName));
-        };
-    },
+  push: (api, containerName) => {
+    return (options: IPushOptions) => {
+      return promisify(api)(styleIn(options, containerName));
+    };
+  },
+  back: (api, containerName) => {
+    return (options?: IPopOptions) => {
+      return promisify(api)(styleIn(options, containerName));
+    };
+  },
+  go: (api, containerName) => {
+    return (options: IGoOptions) => {
+      return promisify(api)(styleIn(options, containerName));
+    };
+  },
+  replace: (api, containerName) => {
+    return (options: IReplaceOptions) => {
+      return promisify(api)(styleIn(options, containerName));
+    };
+  },
+  reLaunch: (api, containerName) => {
+    return (options: IReLaunchOptions) => {
+      return promisify(api)(styleIn(options, containerName));
+    };
+  },
+  switchTab: (api, containerName) => {
+    return (options: ISwitchTabOptions) => {
+      return promisify(api)(styleIn(options, containerName));
+    };
+  },
 };

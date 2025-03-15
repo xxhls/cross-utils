@@ -2,21 +2,21 @@
 /* eslint-disable @typescript-eslint/no-invalid-void-type */
 /* eslint-disable no-empty */
 
-import { DATA_TYPE, AsObject, RequestOptions } from '../types';
-import { styleIn } from '@atom-shared/styleOptions';
-import { CONTAINER_NAME, JSONP_SIGN } from '@atom-shared/constant';
+import { DATA_TYPE, AsObject, RequestOptions } from "../types";
+import { styleIn } from "@atom-shared/styleOptions";
+import { CONTAINER_NAME, JSONP_SIGN } from "@atom-shared/constant";
 
 export function getDataWithType(data: any, type: DATA_TYPE) {
-  if (type === 'json') {
+  if (type === "json") {
     try {
       return JSON.parse(data);
-    } catch (e) { }
+    } catch (e) {}
   }
 
-  if (type === 'text') {
+  if (type === "text") {
     try {
       return JSON.stringify(data);
-    } catch (e) { }
+    } catch (e) {}
   }
 
   return data;
@@ -24,7 +24,7 @@ export function getDataWithType(data: any, type: DATA_TYPE) {
 
 export function stringifyQS(qs: AsObject): string {
   if (!qs) {
-    return '';
+    return "";
   }
   const str: string[] = [];
   for (const key in qs) {
@@ -32,39 +32,40 @@ export function stringifyQS(qs: AsObject): string {
       str.push(`${key}=${encodeURIComponent(String(qs[key]))}`);
     }
   }
-  return str.join('&');
+  return str.join("&");
 }
 
 export function applyParamToURL(param: AsObject | void, url: string): string {
   if (!param) {
     return url;
   }
-  return `${url}${url.indexOf('?') === -1 ? '?' : '&'}${stringifyQS(param)}`;
+  return `${url}${url.indexOf("?") === -1 ? "?" : "&"}${stringifyQS(param)}`;
 }
 
 export function object2json(obj: any) {
   try {
     return JSON.stringify(obj);
   } catch (e) {
-    return obj || '';
+    return obj || "";
   }
 }
 
 export function isObject(obj: any) {
-  return typeof obj === 'object' && obj !== null;
+  return typeof obj === "object" && obj !== null;
 }
 
 export function normalizeHeaders(obj: AsObject) {
   if (!isObject(obj)) {
     return obj;
   }
-  const keyList = ['Accept', 'Content-Type'];
+  const keyList = ["Accept", "Content-Type"];
 
   keyList.forEach((key) => {
     for (const headerKey in obj) {
       if (Object.prototype.hasOwnProperty.call(obj, headerKey)) {
-        if (headerKey.toUpperCase() === key.toUpperCase()
-        && headerKey !== key
+        if (
+          headerKey.toUpperCase() === key.toUpperCase() &&
+          headerKey !== key
         ) {
           obj[key] = obj[headerKey];
           delete obj[headerKey];
@@ -74,61 +75,70 @@ export function normalizeHeaders(obj: AsObject) {
   });
   return obj;
 }
-export const validateStatus = (status: number ) => {
+export const validateStatus = (status: number) => {
   return (status >= 200 && status < 300) || status === 304;
 };
 export function checkIsApplyDataToURL(headers: AsObject | undefined) {
-  if (!headers || !headers['Content-Type']) {
+  if (!headers || !headers["Content-Type"]) {
     return false;
   }
-  return String(headers['Content-Type']).toLowerCase().indexOf('application/x-www-form-urlencoded') > -1;
+  return (
+    String(headers["Content-Type"])
+      .toLowerCase()
+      .indexOf("application/x-www-form-urlencoded") > -1
+  );
 }
 
 const EMPTY_OBJECT = {};
 
 export function isPlainObject(obj) {
-  return EMPTY_OBJECT.toString.call(obj) === '[object Object]';
+  return EMPTY_OBJECT.toString.call(obj) === "[object Object]";
 }
 export function styleOptions(options, containerName) {
   const DEFAULT_TIMEOUT = 20000;
 
   const DEFAULT_REQUEST_OPTIONS: RequestOptions = {
-    url: '',
-    headers: { 'Content-Type': 'application/json' },
-    method: 'GET',
-    jsonpCallbackProp: 'callback',
+    url: "",
+    headers: { "Content-Type": "application/json" },
+    method: "GET",
+    jsonpCallbackProp: "callback",
     jsonpCallback: `__uni_jsonp_handler_${new Date().getTime()}`,
     timeout: DEFAULT_TIMEOUT,
-    dataType: 'json',
+    dataType: "json",
   };
-  const isJsonp = options?.method?.toUpperCase() === 'JSONP';
+  const isJsonp = options?.method?.toUpperCase() === "JSONP";
   if (isJsonp && containerName === CONTAINER_NAME.WEB) {
-    window[JSONP_SIGN] = typeof (window[JSONP_SIGN]) !== 'undefined' ? (window[JSONP_SIGN] + 1) : 0;
+    window[JSONP_SIGN] =
+      typeof window[JSONP_SIGN] !== "undefined" ? window[JSONP_SIGN] + 1 : 0;
     DEFAULT_REQUEST_OPTIONS.jsonpCallback = `${DEFAULT_REQUEST_OPTIONS.jsonpCallback}_${window[JSONP_SIGN]}`;
   }
 
-  const jsonpCallback = options.jsonpCallback || DEFAULT_REQUEST_OPTIONS.jsonpCallback;
+  const jsonpCallback =
+    options.jsonpCallback || DEFAULT_REQUEST_OPTIONS.jsonpCallback;
   const adapterResponse = (res) => {
-    if ((res.errMsg && res?.errMsg?.indexOf('request:fail') !== -1) || res.error) {
+    if (
+      (res.errMsg && res?.errMsg?.indexOf("request:fail") !== -1) ||
+      res.error
+    ) {
       return {
         ...res,
         error: res.error || res.status || res.statusCode,
-        errorMessage: res.errorMessage || res.errMsg || '',
+        errorMessage: res.errorMessage || res.errMsg || "",
         status: res.statusCode || res.status,
         headers: res.header || res.headers || {},
       };
     }
     const afterRes = {
       ...res,
-      errorMessage: res.errorMessage || res.errMsg || '',
+      errorMessage: res.errorMessage || res.errMsg || "",
       status: res.statusCode || res.status,
       headers: res.header || res.headers || {},
     };
     if (isJsonp && containerName !== CONTAINER_NAME.WEB) {
       try {
-        const reg = new RegExp(`${jsonpCallback}\\(([\\s\\S]*)\\);?$`, 'gm');
+        const reg = new RegExp(`${jsonpCallback}\\(([\\s\\S]*)\\);?$`, "gm");
         const content = reg.exec(res?.data)?.[1];
-        const data = content ? JSON.parse(content) : '';
+        const data = content ? JSON.parse(content) : "";
         return {
           ...afterRes,
           data,
@@ -137,16 +147,20 @@ export function styleOptions(options, containerName) {
         return {
           error: 14,
           data: res,
-          errorMessage: 'JSONP 解码失败',
+          errorMessage: "JSONP 解码失败",
         };
       }
     }
     return afterRes;
   };
-  let afterOptions = { ...DEFAULT_REQUEST_OPTIONS,
+  let afterOptions = {
+    ...DEFAULT_REQUEST_OPTIONS,
     ...options,
-    method: (options.method || 'GET').toUpperCase(),
-    headers: { ...DEFAULT_REQUEST_OPTIONS.headers, ...normalizeHeaders(options.headers || {}) },
+    method: (options.method || "GET").toUpperCase(),
+    headers: {
+      ...DEFAULT_REQUEST_OPTIONS.headers,
+      ...normalizeHeaders(options.headers || {}),
+    },
     success: (res) => {
       const _validateStatus = options.validateStatus || validateStatus;
       const _res = adapterResponse(res);
@@ -167,13 +181,14 @@ export function styleOptions(options, containerName) {
   if (isJsonp) {
     afterOptions = {
       ...afterOptions,
-      method: 'GET',
+      method: "GET",
       isJsonp,
-      dataType: 'text',
-      data:
-        { ...options.data,
-          [options.jsonpCallbackProp || DEFAULT_REQUEST_OPTIONS.jsonpCallbackProp]:
-          jsonpCallback },
+      dataType: "text",
+      data: {
+        ...options.data,
+        [options.jsonpCallbackProp ||
+        DEFAULT_REQUEST_OPTIONS.jsonpCallbackProp]: jsonpCallback,
+      },
     };
   }
 
@@ -181,7 +196,10 @@ export function styleOptions(options, containerName) {
 }
 export function normalize(api, containerName) {
   return (options) => {
-    const afterOptions = styleOptions(styleIn(options, containerName), containerName);
+    const afterOptions = styleOptions(
+      styleIn(options, containerName),
+      containerName,
+    );
 
     return api(afterOptions);
   };

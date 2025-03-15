@@ -1,80 +1,92 @@
 /* eslint-disable guard-for-in */
-import { normalize } from '../utils';
-import { ShowToastOption, WebQueueOption } from '../types';
+import { normalize } from "../utils";
+import { ShowToastOption, WebQueueOption } from "../types";
 
 declare let window: any;
 
 const styles = {
   container: {
-    backgroundColor: 'rgba(0, 0, 0, 0.6)',
-    boxSizing: 'border-box',
-    maxWidth: '80%',
-    color: '#ffffff',
-    padding: '8px 16px',
-    position: 'fixed',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    left: '50%',
-    bottom: '50%',
-    fontSize: '16px',
-    lineHeight: '32px',
-    fontWeight: '600',
-    borderRadius: '4px',
-    textAlign: 'center',
-    transition: 'all 0.4s ease-in-out',
-    webkitTransition: 'all 0.4s ease-in-out',
-    transform: 'translateX(-50%)',
-    webkitTransform: 'translateX(-50%)',
+    backgroundColor: "rgba(0, 0, 0, 0.6)",
+    boxSizing: "border-box",
+    maxWidth: "80%",
+    color: "#ffffff",
+    padding: "8px 16px",
+    position: "fixed",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    left: "50%",
+    bottom: "50%",
+    fontSize: "16px",
+    lineHeight: "32px",
+    fontWeight: "600",
+    borderRadius: "4px",
+    textAlign: "center",
+    transition: "all 0.4s ease-in-out",
+    webkitTransition: "all 0.4s ease-in-out",
+    transform: "translateX(-50%)",
+    webkitTransform: "translateX(-50%)",
     zIndex: 9999,
   },
   icon: {
-    marginBottom: '5px',
-    width: '45px',
-    height: '45px',
+    marginBottom: "5px",
+    width: "45px",
+    height: "45px",
   },
 };
 function showToastWindow(message: string, iconUrl?: string): void {
   if (!window._uni_toast_status.toastWin) {
     window._uni_toast_status.toastIcon = null;
-    window._uni_toast_status.toastWin = document.createElement('div');
-    window._uni_toast_status.toastWin.setAttribute('role', 'alert');
+    window._uni_toast_status.toastWin = document.createElement("div");
+    window._uni_toast_status.toastWin.setAttribute("role", "alert");
     // support for ARIA, add tabindex for focus
     // https://developer.mozilla.org/zh-CN/docs/Web/HTML/Global_attributes/tabindex
-    window._uni_toast_status.toastWin.setAttribute('tabindex', '-1');
+    window._uni_toast_status.toastWin.setAttribute("tabindex", "-1");
     for (const key in styles.container) {
       window._uni_toast_status.toastWin.style[key] = styles.container[key];
     }
-    window._uni_toast_status.toastContent = document.createElement('div');
-    window._uni_toast_status.toastWin.appendChild(window._uni_toast_status.toastContent);
+    window._uni_toast_status.toastContent = document.createElement("div");
+    window._uni_toast_status.toastWin.appendChild(
+      window._uni_toast_status.toastContent,
+    );
 
     document.body.appendChild(window._uni_toast_status.toastWin);
   }
   // 创建icon
   if (window._uni_toast_status.toastIcon && !iconUrl) {
-    window._uni_toast_status.toastWin.removeChild(window._uni_toast_status.toastIcon);
+    window._uni_toast_status.toastWin.removeChild(
+      window._uni_toast_status.toastIcon,
+    );
     window._uni_toast_status.toastIcon = null;
   } else if (window._uni_toast_status.toastIcon && iconUrl) {
-    window._uni_toast_status.toastIcon.setAttribute('src', iconUrl);
+    window._uni_toast_status.toastIcon.setAttribute("src", iconUrl);
   } else if (!window._uni_toast_status.toastIcon && iconUrl) {
-    window._uni_toast_status.toastIcon = document.createElement('img');
-    window._uni_toast_status.toastIcon.setAttribute('src', iconUrl);
+    window._uni_toast_status.toastIcon = document.createElement("img");
+    window._uni_toast_status.toastIcon.setAttribute("src", iconUrl);
     for (const key in styles.icon) {
       window._uni_toast_status.toastIcon.style[key] = styles.icon[key];
     }
-    window._uni_toast_status.toastWin.insertBefore(window._uni_toast_status.toastIcon, window._uni_toast_status.toastContent);
+    window._uni_toast_status.toastWin.insertBefore(
+      window._uni_toast_status.toastIcon,
+      window._uni_toast_status.toastContent,
+    );
   }
   window._uni_toast_status.toastContent.textContent = message;
-  window._uni_toast_status.toastWin.style.transform = 'translateX(-50%)';
-  window._uni_toast_status.toastWin.style.webkitTransform = 'translateX(-50%)';
+  window._uni_toast_status.toastWin.style.transform = "translateX(-50%)";
+  window._uni_toast_status.toastWin.style.webkitTransform = "translateX(-50%)";
 }
 
 function hideToastWindow(): void {
   setTimeout((): void => {
-    if (window._uni_toast_status.toastWin && window._uni_toast_status.toastWin.style) {
-      window._uni_toast_status.toastWin.style.transform = 'translateX(-50%) scale(0.8)';
-      window._uni_toast_status.toastWin.style.webkitTransform = 'translateX(-50%) scale(0.8)';
+    if (
+      window._uni_toast_status.toastWin &&
+      window._uni_toast_status.toastWin.style
+    ) {
+      window._uni_toast_status.toastWin.style.transform =
+        "translateX(-50%) scale(0.8)";
+      window._uni_toast_status.toastWin.style.webkitTransform =
+        "translateX(-50%) scale(0.8)";
     }
   }, 0);
 }
@@ -86,7 +98,9 @@ const innerToast = {
     if (!window._uni_toast_status.queue.length) {
       if (window._uni_toast_status.toastWin) {
         // eslint-disable-next-line
-        (window._uni_toast_status.toastWin as any).parentNode.removeChild(window._uni_toast_status.toastWin);
+        (window._uni_toast_status.toastWin as any).parentNode.removeChild(
+          window._uni_toast_status.toastWin,
+        );
       }
       (window._uni_toast_status.toastWin as any) = null;
       return;
@@ -96,7 +110,8 @@ const innerToast = {
     if (window._uni_toast_status.isProcessing) return;
     window._uni_toast_status.isProcessing = true;
 
-    const toastInfo: WebQueueOption = window._uni_toast_status.queue.shift() as WebQueueOption;
+    const toastInfo: WebQueueOption =
+      window._uni_toast_status.queue.shift() as WebQueueOption;
     try {
       showToastWindow(toastInfo.title, toastInfo.icon);
     } catch (e) {
@@ -133,20 +148,21 @@ const show = normalize((options: ShowToastOption): void => {
   window._uni_toast_status = window._uni_toast_status || {
     queue: [],
     isProcessing: false,
-    toastWin: '',
-    toastContent: '',
-    toastIcon: '',
+    toastWin: "",
+    toastContent: "",
+    toastIcon: "",
   };
   const { icon, title, duration, success, fail, complete } = options;
   const iconMap = {
-    success: 'https://gw.alicdn.com/imgextra/i1/O1CN01h684sE1Td4mwYyChK_!!6000000002404-2-tps-200-200.png',
-    fail: 'https://gw.alicdn.com/imgextra/i1/O1CN01yOywus1et4ORJzafk_!!6000000003928-2-tps-200-200.png',
-    none: '',
+    success:
+      "https://gw.alicdn.com/imgextra/i1/O1CN01h684sE1Td4mwYyChK_!!6000000002404-2-tps-200-200.png",
+    fail: "https://gw.alicdn.com/imgextra/i1/O1CN01yOywus1et4ORJzafk_!!6000000003928-2-tps-200-200.png",
+    none: "",
   };
   innerToast.push({
     title,
     duration,
-    icon: iconMap[icon] || '',
+    icon: iconMap[icon] || "",
     success() {
       success && success();
     },

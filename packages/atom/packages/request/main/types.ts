@@ -1,18 +1,19 @@
-import { Uni } from '@atom-shared/interface';
-
+import { Uni } from "@atom-shared/interface";
 
 /**
  *  Common
  */
-export type DATA_TYPE = 'json' | 'text';
+export type DATA_TYPE = "json" | "text";
 export const DEFAULT_TIMEOUT = 20000;
-export const DEFAULT_JSON_CALLBACK = 'callback';
+export const DEFAULT_JSON_CALLBACK = "callback";
 export const DEFAULT_JSONP_OPTIONS = {
   timeout: DEFAULT_TIMEOUT,
   jsonpCallback: DEFAULT_JSON_CALLBACK,
-  dataType: 'json',
+  dataType: "json",
 };
-export interface AsObject { [key: string]: string | number }
+export interface AsObject {
+  [key: string]: string | number;
+}
 
 /**
  * Request
@@ -30,7 +31,7 @@ export interface RequestOptions extends Uni.COptions {
   url: string;
   headers?: AsObject;
   validateStatus?: (status: string | number) => boolean;
-  method?: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH' | 'HEAD' | 'JSONP';
+  method?: "GET" | "POST" | "PUT" | "DELETE" | "PATCH" | "HEAD" | "JSONP";
   data?: AsObject;
   timeout?: number;
   dataType?: DATA_TYPE;
@@ -75,12 +76,12 @@ export interface ErrorData {
 
 export const ERROR_REQUEST_ABORT: ErrorData = {
   code: 0,
-  message: 'Request Abort',
+  message: "Request Abort",
 };
 
 export const ERROR_REQUEST_TIMEOUT: ErrorData = {
   code: 1,
-  message: 'Request timeout',
+  message: "Request timeout",
 };
 export const ERROR_REQUEST_JSONP = (url) => ({
   code: 1,
@@ -89,5 +90,5 @@ export const ERROR_REQUEST_JSONP = (url) => ({
 
 export const ERROR_REQUEST_NOT_SUPPORT: ErrorData = {
   code: 2,
-  message: 'Request not support this platform',
+  message: "Request not support this platform",
 };

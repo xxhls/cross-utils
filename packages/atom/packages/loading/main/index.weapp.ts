@@ -9,12 +9,18 @@
 //     hideLoading
 // }
 
-import { normalizeHide,normalizeShow } from './components/common';
-import { CONTAINER_NAME } from '@atom-shared/constant';
+import { normalizeHide, normalizeShow } from "./components/common";
+import { CONTAINER_NAME } from "@atom-shared/constant";
 
-export const hideLoading = normalizeHide((args) => wx.hideLoading(args), CONTAINER_NAME.WECHAT);
-export const showLoading = normalizeShow((args) => wx.showLoading(args), CONTAINER_NAME.WECHAT);
+export const hideLoading = normalizeHide(
+  (args) => wx.hideLoading(args),
+  CONTAINER_NAME.WECHAT,
+);
+export const showLoading = normalizeShow(
+  (args) => wx.showLoading(args),
+  CONTAINER_NAME.WECHAT,
+);
 export default {
-    showLoading,
-    hideLoading
-}
+  showLoading,
+  hideLoading,
+};

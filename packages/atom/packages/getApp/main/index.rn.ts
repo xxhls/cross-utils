@@ -1,6 +1,5 @@
-export const getApp = () => global
-
+export const getApp = () => global;
 
 export default {
-    getApp
-}
+  getApp,
+};

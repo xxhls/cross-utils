@@ -1,10 +1,9 @@
+import { ConfirmOptions } from "./types";
 
-import { ConfirmOptions } from './types';
+const clsPrefix = "__universal_confirm";
 
-const clsPrefix = '__universal_confirm';
-
-import { CONTAINER_NAME } from '@atom-shared/constant';
-import { normalize } from './utils';
+import { CONTAINER_NAME } from "@atom-shared/constant";
+import { normalize } from "./utils";
 
 const styles = `.${clsPrefix} {
   position: fixed;
@@ -101,7 +100,7 @@ const styles = `.${clsPrefix} {
   100% {
     opacity: 0;
   }
-}`.replace(/\n/g, '');
+}`.replace(/\n/g, "");
 
 let styleElement: HTMLElement | null = null;
 
@@ -113,46 +112,46 @@ const confirm = (args: ConfirmOptions) => {
   try {
     if (!styleElement) {
       // create a style tag for keyframes
-      styleElement = document.createElement('style');
+      styleElement = document.createElement("style");
       styleElement.innerHTML = styles;
       document.body.appendChild(styleElement);
     }
 
     if (!confirmElement) {
       // create a actionsheet element
-      confirmElement = document.createElement('div');
+      confirmElement = document.createElement("div");
 
       // create a mask element
-      const maskEle = document.createElement('div');
+      const maskEle = document.createElement("div");
       maskEle.className = `${clsPrefix}_mask`;
       confirmElement.appendChild(maskEle);
 
       // create container element
-      const containerEle = document.createElement('div');
+      const containerEle = document.createElement("div");
       containerEle.className = clsPrefix;
 
       // add title
-      const titleEle = document.createElement('div');
+      const titleEle = document.createElement("div");
       titleEle.className = `${clsPrefix}_title`;
       titleEle.innerText = args.title;
       containerEle.appendChild(titleEle);
 
       // add content
-      const contentEle = document.createElement('div');
+      const contentEle = document.createElement("div");
       contentEle.className = `${clsPrefix}_content`;
       contentEle.innerText = args.content;
       containerEle.appendChild(contentEle);
 
       // add operators
-      const operateEle = document.createElement('div');
+      const operateEle = document.createElement("div");
 
       // add cancelButton
       if (args.showCancel !== false) {
-        const cancelButton = document.createElement('div');
+        const cancelButton = document.createElement("div");
         cancelButton.className = `${clsPrefix}_cancel`;
         cancelButton.innerText = args.cancelText;
-        cancelButton.setAttribute('tabindex', '-1');
-        cancelButton.addEventListener('click', () => {
+        cancelButton.setAttribute("tabindex", "-1");
+        cancelButton.addEventListener("click", () => {
           hideFn(() => {
             args.success({ confirm: false });
             args.complete({ confirm: false });
@@ -162,14 +161,14 @@ const confirm = (args: ConfirmOptions) => {
       }
 
       // add confirmButton
-      const confirmButton = document.createElement('div');
+      const confirmButton = document.createElement("div");
       confirmButton.className = `${clsPrefix}_confirm`;
       if (args.showCancel === false) {
-        confirmButton.style.width = '100%';
+        confirmButton.style.width = "100%";
       }
       confirmButton.innerText = args.confirmText;
-      confirmButton.setAttribute('tabindex', '-1');
-      confirmButton.addEventListener('click', () => {
+      confirmButton.setAttribute("tabindex", "-1");
+      confirmButton.addEventListener("click", () => {
         hideFn(() => {
           args.success({ confirm: true });
           args.complete({ confirm: true });
@@ -203,9 +202,7 @@ const confirm = (args: ConfirmOptions) => {
 
 const showModal = normalize(confirm, CONTAINER_NAME.WEB);
 
-export {
-  showModal
-};
+export { showModal };
 export default {
-  showModal
+  showModal,
 };

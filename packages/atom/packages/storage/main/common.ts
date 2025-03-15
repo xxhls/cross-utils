@@ -1,16 +1,21 @@
-import { promisify } from '@atom-shared/promisify';
-import { styleIn } from '@atom-shared/styleOptions';
-import { GetOrRemoveOptionStruct, SetOptionStruct, GetStorageRes } from './types';
+import { promisify } from "@atom-shared/promisify";
+import { styleIn } from "@atom-shared/styleOptions";
+import {
+  GetOrRemoveOptionStruct,
+  SetOptionStruct,
+  GetStorageRes,
+} from "./types";
 /**
  * @param params
  */
 function formatGetStorageRes(params: GetOrRemoveOptionStruct) {
-  if (params && typeof params.fail === 'function') {
+  if (params && typeof params.fail === "function") {
     const failFn = params.fail;
     params.fail = (err) => {
-      if (err.errMsg === 'getStorage:fail data not found') {
-        typeof params.success === 'function' && params.success({ data: null });
-        typeof params.complete === 'function' && params.complete({ data: null });
+      if (err.errMsg === "getStorage:fail data not found") {
+        typeof params.success === "function" && params.success({ data: null });
+        typeof params.complete === "function" &&
+          params.complete({ data: null });
         return;
       }
       failFn(err);
@@ -24,7 +29,7 @@ export const normalize = {
     return (args: GetOrRemoveOptionStruct): GetStorageRes => {
       args = styleIn(args, containerName);
       return promisify(api)(formatGetStorageRes(args)).catch((e) => {
-        if (e.errMsg === 'getStorage:fail data not found') {
+        if (e.errMsg === "getStorage:fail data not found") {
           return { data: null };
         }
       });

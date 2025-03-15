@@ -1,6 +1,10 @@
-import { CONTAINER_NAME } from '@atom-shared/constant';
+import { CONTAINER_NAME } from "@atom-shared/constant";
 
-export const styleOut = (output: any, originalInput: any, originalOutput: any) => {
+export const styleOut = (
+  output: any,
+  originalInput: any,
+  originalOutput: any,
+) => {
   return {
     ...output,
     _original: {
@@ -22,8 +26,8 @@ export const styleIn = (options: any, baseName: string) => {
 export const aliIn = (options: string, baseName: string) => {
   if (baseName === CONTAINER_NAME.ALIPAY) {
     return {
-      key: options
-    }
+      key: options,
+    };
   }
-  return options
-}
+  return options;
+};

@@ -1,9 +1,15 @@
-import { isWeb, isRN, isAliMiniProgram, isWeChatMiniProgram, isJdMiniProgram } from '@test/cross-atom-env'
+import {
+  isWeb,
+  isRN,
+  isAliMiniProgram,
+  isWeChatMiniProgram,
+  isJdMiniProgram,
+} from "@test/cross-atom-env";
 import h5Module from "./index.h5";
 import jdModule from "./index.jd";
 import weappModule from "./index.weapp";
 import alipayModule from "./index.alipay";
-import rnModule from './index.rn'
+import rnModule from "./index.rn";
 export const showModal = (option) => {
   if (isWeb) {
     return h5Module.showModal(option);
@@ -20,8 +26,6 @@ export const showModal = (option) => {
   }
 };
 
-
-
 export default {
-  showModal
+  showModal,
 };

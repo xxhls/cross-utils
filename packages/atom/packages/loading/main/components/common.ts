@@ -1,14 +1,14 @@
-import { isAliMiniProgram } from '@test/cross-atom-env';
-import { HideOptions, ShowOptions } from '../types';
-import { promisify } from '@atom-shared/promisify';
-import { styleIn } from '@atom-shared/styleOptions';
+import { isAliMiniProgram } from "@test/cross-atom-env";
+import { HideOptions, ShowOptions } from "../types";
+import { promisify } from "@atom-shared/promisify";
+import { styleIn } from "@atom-shared/styleOptions";
 
 function styleOptions(options: ShowOptions) {
   if (!options) {
     options = {};
   }
-  if (isAliMiniProgram  ) {
-    options.content = options.title || '';
+  if (isAliMiniProgram) {
+    options.content = options.title || "";
     delete options.title;
   }
   return options;
