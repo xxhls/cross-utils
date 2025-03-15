@@ -1,11 +1,8 @@
-import { imageUtils } from '../../dataUtils';
+import { imageUtils } from "../../dataUtils";
 export { imageUtils };
 
 // 导出常用方法
-export const { 
+export const {
   validateUrl,
-  format: { 
-    url: parseImgUrl,
-    advanced: imagesFormat 
-  }
-} = imageUtils; 
+  format: { url: parseImgUrl, advanced: imagesFormat },
+} = imageUtils;

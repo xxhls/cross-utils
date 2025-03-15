@@ -1,4 +1,9 @@
-import { isWeb, isJdMiniProgram, isRN, isWeChatMiniProgram } from "@test/cross-atom-env";
+import {
+  isWeb,
+  isJdMiniProgram,
+  isRN,
+  isWeChatMiniProgram,
+} from "@test/cross-atom-env";
 
 import * as h5Module from "./index.h5";
 import * as jdModule from "./index.jd";

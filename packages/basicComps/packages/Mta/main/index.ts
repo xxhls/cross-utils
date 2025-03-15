@@ -1,4 +1,4 @@
-import { isWeb, isRN } from "@test/cross-atom-env"
+import { isWeb, isRN } from "@test/cross-atom-env";
 import h5Module from "./index.h5";
 import rnModule from "./index.rn";
 import taroModule from "./index.taro";

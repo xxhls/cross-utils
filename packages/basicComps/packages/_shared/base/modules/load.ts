@@ -10,16 +10,16 @@ export const loadUtils = {
    */
   js(url: string, options?: ScriptOptions): Promise<void> {
     return new Promise((resolve, reject) => {
-      const script = document.createElement('script');
+      const script = document.createElement("script");
       script.src = url;
-      
+
       // 设置额外的属性
       if (options) {
-        Object.keys(options).forEach(key => {
+        Object.keys(options).forEach((key) => {
           script[key] = options[key];
         });
       }
-      
+
       script.onload = () => resolve();
       script.onerror = () => reject(new Error(`Failed to load script: ${url}`));
       document.head.appendChild(script);
@@ -33,14 +33,14 @@ export const loadUtils = {
    */
   css(url: string): Promise<void> {
     return new Promise((resolve, reject) => {
-      const link = document.createElement('link');
-      link.rel = 'stylesheet';
+      const link = document.createElement("link");
+      link.rel = "stylesheet";
       link.href = url;
       link.onload = () => resolve();
       link.onerror = () => reject(new Error(`Failed to load CSS: ${url}`));
       document.head.appendChild(link);
     });
-  }
+  },
 };
 
 // 为了向后兼容
@@ -49,4 +49,4 @@ export const loadjs = loadUtils.js;
 interface ScriptOptions {
   crossorigin?: string;
   [key: string]: any;
-} 
+}

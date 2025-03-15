@@ -1,4 +1,4 @@
-import { isWeb, isRN, isWeChatMiniProgram } from "@test/cross-atom-env"
+import { isWeb, isRN, isWeChatMiniProgram } from "@test/cross-atom-env";
 
 import * as h5Module from "./index.h5";
 import rnModule from "./index.rn";
@@ -15,4 +15,4 @@ export const goToLogin = (opts) => {
   } else {
     return taroModule.doLogin();
   }
-}
+};

@@ -7,8 +7,8 @@ import {
   useProcessActionQueue,
   useMount,
   useUnmount,
-  useUpdateEffect
-} from '../../hooks';
+  useUpdateEffect,
+} from "../../hooks";
 
 // 导出所有hooks
 export {
@@ -20,7 +20,7 @@ export {
   useProcessActionQueue,
   useMount,
   useUnmount,
-  useUpdateEffect
+  useUpdateEffect,
 };
 
 // 导出常用hooks组合
@@ -28,29 +28,29 @@ export const hooksUtils = {
   // 状态相关
   state: {
     useMergeState,
-    useForceUpdate
+    useForceUpdate,
   },
-  
+
   // 生命周期相关
   lifecycle: {
     useMount,
     useUnmount,
-    useUpdateEffect
+    useUpdateEffect,
   },
-  
+
   // 性能优化相关
   performance: {
     useDebounce,
-    useThrottle
+    useThrottle,
   },
-  
+
   // 队列处理相关
   queue: {
-    useProcessActionQueue
+    useProcessActionQueue,
   },
-  
+
   // 值追踪相关
   value: {
-    usePrevious
-  }
-}; 
+    usePrevious,
+  },
+};
