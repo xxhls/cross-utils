@@ -1,19 +1,29 @@
 [submodule "TaroCommon"]
-	path = TaroCommon
+	path = examples/TaroCommon
 	url = git@coding.jd.com:daojiaH5/TaroCommon.git
 	branch = master
 
 [submodule "qin"]
-	path = qin
+	path = examples/qin
 	url = git@coding.jd.com:jddj_web/qin.git
 	branch = master
 
 [submodule "DJUIComponents"]
-	path = DJUIComponents
+	path = examples/DJUIComponents
 	url = git@coding.jd.com:jddj_web/DJUIComponents.git
 	branch = master
 
 [submodule "DJTaroCommon"]
-	path = DJTaroCommon
+	path = examples/DJTaroCommon
 	url = git@coding.jd.com:daojiaH5/DJTaroCommon.git
 	branch = feature_v1.4
+
+[submodule "hourlyTaro"]
+	path = examples/hourlyTaro
+	url = git@coding.jd.com:daojiaH5/hourlyTaro.git
+	branch = moban_dev
+
+[submodule "hourly_m_develop"]
+	path = examples/hourly_m_develop
+	url = git@coding.jd.com:daojiaH5/hourly_m_develop.git
+	branch = master
