@@ -1,63 +1,45 @@
-/** @format ai create by treesea */
+import { isWeb, isJdMiniProgram } from "@test/cross-atom-env";
+import h5Module from "./index.h5";
+import taroModule from "./index.taro";
+import jdModule from "./index.jd";
 
-class TaishanReport {
-  // Private static variable to store the singleton instance
-  private static instance: TaishanReport | null = null;
-  instanse: any;
+const taishan = {
+    custom: (opt, pid) => {
+        if (isWeb) {
+            return h5Module.custom(opt, pid);
+        }
+        if (isJdMiniProgram) {
+            return jdModule.custom(opt, pid);
+        }
+        return taroModule.custom(opt, pid);
+    },
+    error: (error, pid) => {
+        if (isWeb) {
+            return h5Module.error(error, pid);
+        }
+        if (isJdMiniProgram) {
+            return jdModule.error(error, pid);
+        }
+        return taroModule.error(error, pid);
+    },
+    api: (opt, pid) => {
+        if (isWeb) {
+            return h5Module.api(opt, pid);
+        }
+        if (isJdMiniProgram) {
+            return jdModule.api(opt, pid);
+        }
+        return taroModule.api(opt);
+    },
+    userInfo: (opt) => {
+        if (isWeb) {
+            return h5Module.userInfo(opt);
+        }
+        if (isJdMiniProgram) {
+            return jdModule.userInfo(opt);
+        }
+        return taroModule.userInfo(opt);
+    },
+};
 
-  // Private constructor to prevent direct instantiation
-  private constructor() {
-    // Initialize the SgmMpSDK instance
-    this.instanse = window.__sgm__;
-  }
-
-  // Static method to get the singleton instance
-  static getInstance(): TaishanReport {
-    // If the instance is not yet created, create it
-    if (TaishanReport.instance === null) {
-      TaishanReport.instance = new TaishanReport();
-    }
-    // Return the instance
-    return TaishanReport.instance;
-  }
-
-  // Instance methods to call SgmMpSDK methods
-  custom({ type, code, msg }, pid?) {
-    return this.instanse.custom({ type, code, msg: msg }, pid);
-  }
-
-  error(error: Error, pid) {
-    return this.instanse.error(error, pid);
-  }
-
-  api({ url, status, code, msg, time, requestLength, requestType }) {
-    this.instanse.api({
-      url,
-      status,
-      code,
-      msg,
-      time,
-      requestLength,
-      requestType,
-    });
-  }
-  userInfo({ uid }) {
-    try {
-      // console.error('设置用户信息~~', uid);
-      this.instanse.userInfo({
-        uid: uid, //
-      });
-    } catch (error) {
-      // console.error('Error in TaishanReport.userInfo:', error);
-    }
-  }
-}
-
-// Export the singleton instance
-export default TaishanReport.getInstance();
-
-export enum Taishan_Type {
-  ERROR = 1,
-  WARN = 2,
-  INFO = 3,
-}
+export default taishan;

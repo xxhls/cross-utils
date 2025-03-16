@@ -1,40 +1,21 @@
-import { timeUtils } from "../../utils/dataUtils";
+import { isRN } from "@test/cross-atom-env";
 
-let _capsule;
-
-const getCapsuleShow = (value?: number) => {
-  if (_capsule) {
-    clearTimeout(_capsule);
-  }
-  _capsule = timeUtils.setTimeout(
-    () => {
-      if (jd && jd.changeMenuButtonStatus) {
-        jd.changeMenuButtonStatus({ visible: true });
-      }
-    },
-    value || 0,
-    { _from: "native/index1" },
-  );
-};
-
-const getCapsuleHide = (value?: number) => {
-  if (_capsule) {
-    clearTimeout(_capsule);
-  }
-  _capsule = timeUtils.setTimeout(
-    () => {
-      if (jd && jd.changeMenuButtonStatus) {
-        jd.changeMenuButtonStatus({ visible: false });
-      }
-    },
-    value || 0,
-    { _from: "native/index2" },
-  );
-};
+import taroModule from "./index.taro";
+import rnModule from "./index.rn";
 
 const native = {
-  getCapsuleShow,
-  getCapsuleHide,
+  getCapsuleShow: () => {
+    if (isRN) {
+      return rnModule.getCapsuleShow();
+    }
+    return taroModule.getCapsuleShow();
+  },
+  getCapsuleHide: () => {
+    if (isRN) {
+      return rnModule.getCapsuleHide();
+    }
+    return taroModule.getCapsuleHide();
+  },
 };
 
 export default native;

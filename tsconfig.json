@@ -47,6 +47,7 @@
     "packages/**/*.ts",
     "packages/**/*.tsx",
     "packages/**/*.scss",
-    "types/**/*.d.ts"
+    "types/**/*.d.ts",
+    "main/**/*.ts"
   ]
 }

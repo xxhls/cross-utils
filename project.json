@@ -58,7 +58,7 @@
     {
       "name": "@test/cross-basiccomps",
       "mainPath": "./packages/basicComps/main",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "packages": [
         {
           "name": "@test/cross-basiccomps-cookie",
@@ -93,7 +93,7 @@
         {
           "name": "@test/cross-basiccomps-native",
           "mainPath": "./packages/basicComps/packages/Native/main",
-          "version": "1.0.0"
+          "version": "1.0.1"
         },
         {
           "name": "@test/cross-basiccomps-navigator",
@@ -108,7 +108,7 @@
         {
           "name": "@test/cross-basiccomps-platform",
           "mainPath": "./packages/basicComps/packages/Platform/main",
-          "version": "1.0.1"
+          "version": "1.0.2"
         },
         {
           "name": "@test/cross-basiccomps-getqueryparam",
@@ -158,7 +158,7 @@
         {
           "name": "@test/cross-basiccomps-taishan",
           "mainPath": "./packages/basicComps/packages/taishan/main",
-          "version": "1.0.0"
+          "version": "1.0.1"
         }
       ]
     }

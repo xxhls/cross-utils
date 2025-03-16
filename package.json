@@ -32,6 +32,7 @@
   },
   "dependencies": {
     "@jd/lbs-sdk": "3.0.2",
+    "@jd/sgm-mp": "4.0.0",
     "@jdreact/jdreact-core-lib": "3.0.7",
     "@jdreact/jdreact-core-linear-gradient": "3.0.2",
     "@jdreact/jdreact-jsbundle-commonpack": "2.1.5",
@@ -41,6 +42,7 @@
     "@tarojs/shared": "3.6.6",
     "@tarojs/taro": "3.6.6",
     "@test/cross-atom-env": "1.0.1",
+    "@test/cross-basiccomps-platform": "1.0.2",
     "axios": "1.8.3",
     "js-cookie": "2.2.1",
     "pubsub-js": "1.8.0",
@@ -51,7 +53,7 @@
   "scripts": {
     "build": "rollup -c",
     "build:test": "cross-env PACKAGE_NAME=\"@test/cross-atom-env\" rollup -c",
-    "test": "cross-env PACKAGE_NAME=\"@test/cross-basiccomps-mta\" node scripts/release.mjs",
+    "test": "cross-env PACKAGE_NAME=\"@test/cross-utils\" node scripts/release.mjs",
     "generate:project": "node scripts/asyncProject.mjs",
     "load:submodule": "git submodule update --init --recursive",
     "format": "prettier --write ."

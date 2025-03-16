@@ -1,6 +1,6 @@
 {
   "name": "@test/cross-utils",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "repository": "git@coding.jd.com:heyongqi10/cross-utils.git",
   "author": "heyongqi10 <heyongqi10@jd.com>",

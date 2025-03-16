@@ -1543,13 +1543,18 @@
   resolved "http://registry.m.jd.com/@istanbuljs/schema/download/@istanbuljs/schema-0.1.3.tgz#e45e384e4b8ec16bce2fd903af78450f6bf7ec98"
   integrity sha1-5F44TkuOwWvOL9kDr3hFD2v37Jg=
 
-"@jd/lbs-sdk@3":
+"@jd/lbs-sdk@3.0.2":
   version "3.0.2"
   resolved "http://registry.m.jd.com/@jd/lbs-sdk/download/@jd/lbs-sdk-3.0.2.tgz#d28b257d14b00939a88e587e6f437920341f305a"
   integrity sha1-0oslfRSwCTmojlh+b0N5IDQfMFo=
   dependencies:
     "@jmfe/jdhybrid_xbridge" "^1.0.4"
     wxmp-rsa "1.1.1"
+
+"@jd/sgm-mp@4.0.0":
+  version "4.0.0"
+  resolved "http://registry.m.jd.com/@jd/sgm-mp/download/@jd/sgm-mp-4.0.0.tgz#ea2afa28c555522a9f78cfbf58a3156aacc2d712"
+  integrity sha1-6ir6KMVVUiqfeM+/WKMVaqzC1xI=
 
 "@jdreact/jdreact-core-debug@^1.0.3":
   version "1.0.3"
@@ -2473,6 +2478,11 @@
   version "1.0.1"
   resolved "http://registry.m.jd.com/@test/cross-atom-env/download/@test/cross-atom-env-1.0.1.tgz#c8b664d552ab299c6ccf64070cc154a78940badf"
   integrity sha1-yLZk1VKrKZxsz2QHDMFUp4lAut8=
+
+"@test/cross-basiccomps-platform@1.0.2":
+  version "1.0.2"
+  resolved "http://registry.m.jd.com/@test/cross-basiccomps-platform/download/@test/cross-basiccomps-platform-1.0.2.tgz#dd2388bc222c8b2d3d6d2deebdd443c191b59ab7"
+  integrity sha1-3SOIvCIsiy09bS3uvdRDwZG1mrc=
 
 "@types/estree@*", "@types/estree@1.0.6", "@types/estree@^1.0.0", "@types/estree@^1.0.6":
   version "1.0.6"
