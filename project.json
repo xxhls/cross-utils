@@ -63,7 +63,7 @@
         {
           "name": "@test/cross-basiccomps-cookie",
           "mainPath": "./packages/basicComps/packages/Cookie/main",
-          "version": "1.0.1"
+          "version": "1.1.1"
         },
         {
           "name": "@test/cross-basiccomps-jdidentitysystem",
