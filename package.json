@@ -55,8 +55,7 @@
   },
   "scripts": {
     "build": "rollup -c",
-    "build:test": "cross-env PACKAGE_NAME=\"@test/cross-atom-env\" rollup -c",
-    "test": "cross-env PACKAGE_NAME=\"@test/cross-utils\" node scripts/release.mjs",
+    "release": "node cli/index.mjs",
     "generate:project": "node scripts/asyncProject.mjs",
     "load:submodule": "git submodule update --init --recursive",
     "format": "prettier --write ."
