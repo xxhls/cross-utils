@@ -21,7 +21,7 @@
         {
           "name": "@test/cross-atom-env",
           "mainPath": "./packages/atom/packages/env/main",
-          "version": "1.0.2"
+          "version": "1.1.0"
         },
         {
           "name": "@test/cross-atom-getapp",
